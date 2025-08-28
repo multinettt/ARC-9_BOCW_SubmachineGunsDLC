@@ -4,734 +4,29 @@
 --   ATTACHMENTS BULK
 local ATT = {}
 --[[
-ooo        ooooo ooooooooo.     oooooooo 
-`88.       .888' `888   `Y88.  dP""""""" 
- 888b     d'888   888   .d88' d88888b.   
- 8 Y88. .P  888   888ooo88P'      `Y88b  
- 8  `888'   888   888               ]88  
- 8    Y     888   888         o.   .88P  
-o8o        o888o o888o        `8bd88P'   
+ooo        ooooo       .o.         .oooooo.             .o    .oooo.   
+`88.       .888'      .888.       d8P'  `Y8b          o888   d8P'`Y8b  
+ 888b     d'888      .8"888.     888                   888  888    888 
+ 8 Y88. .P  888     .8' `888.    888                   888  888    888 
+ 8  `888'   888    .88ooo8888.   888          8888888  888  888    888 
+ 8    Y     888   .8'     `888.  `88b    ooo           888  `88b  d88' 
+o8o        o888o o88o     o8888o  `Y8bood8P'          o888o  `Y8bd8P'  
 ]]
 --========== BARREL ===================
 ATT = {}
 
-ATT.PrintName = [[9.5" Extended]] --// 1
-ATT.CompactName = [[9.5" EXTND]]
-ATT.Icon = Material("entities/bocw_atts/barrels/mp5_extended.png", "mips smooth")
+ATT.PrintName = [[5.3" Extended]] --// 1
+ATT.CompactName = [[5.3" EXTND]]
+ATT.Icon = Material("entities/bocw_atts/barrels/mac10_extended.png", "mips smooth")
 ATT.Description = [[Thin profile barrel forged from chromoly steel. Improves bullet velocity.
 
 Within Call of Duty: Black Ops Cold War, the Long Barrel returns as the Extended barrel family of barrel attachments, giving increased muzzle velocity for most weaponry it can be attached to. However, it gives increased effective range for Shotguns and the Marshal, with the Marshal also gaining a worsened sprinting to fire time. The LAPA also gains an increased fire rate at the cost of reduced damage.]]
 
-ATT.SortOrder = 9.5
+ATT.SortOrder = 5.3
 
-ATT.Category = "bocw_mp5_barrel"
+ATT.Category = "bocw_mac10_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_barrel_extended.mdl"
-
-ATT.DrawFunc = function(swep, model)
-
-	local elements = swep:GetElements()
-
-	if elements["bocw_mp5_sd_suppcheck"] then
-        model:SetBodygroup(1,1)
-    end
-end -- i like busted a whole load when this somehow worked
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.PhysBulletMuzzleVelocityMult = 1.4
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.ActivateElements = {"barrel_extended", "bocw_mp5_sd_barrelcheck"}
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_barrel_extended")
-
-ATT = {}
-
-ATT.PrintName = [[10.1" Cavalry Lancer]] --// 2
-ATT.CompactName = [[10.1" CAVLRY]]
-ATT.Icon = Material("entities/bocw_atts/barrels/mp5_cavalry.png", "mips smooth")
-ATT.Description = [[Heavy profile barrel broach rifled to improve damage against enemy vehicles.
-
-The Cavalry Lancer barrel is an attachment type new to Call of Duty: Black Ops Cold War that acts similar to the Full Metal Jacket attachment from previous titles. It increases the damage multiplier to vehicles and various Scorestreaks. However, unlike FMJ, it only increases the damage multiplier and doesn't increase material penetration]]
-
-ATT.SortOrder = 10.1
-
-ATT.Category = "bocw_mp5_barrel"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_barrel_cavalry.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.DamageTypeOverride = DMG_AIRBOAT
-ATT.ArmorPiercingMult = 2.5
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.ActivateElements = {"barrel_cavalry"}
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_barrel_cavalry")
-
-ATT = {}
-
-ATT.PrintName = [[9.5" Reinforced Heavy]] --// 3
-ATT.CompactName = [[9.5" HEAVY]]
-ATT.Icon = Material("entities/bocw_atts/barrels/mp5_reinforced.png", "mips smooth")
-ATT.Description = [[Heavy profile barrel button rifled to improve bullet velocity and damage range.
-
-The Reinforced Heavy barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed, while for Shotguns it loses the bullet velocity in exchange for a fire rate increase. The Warsaw Pact equivalent is the VDV Reinforced Barrel.]]
-
-ATT.SortOrder = 9.5
-
-ATT.Category = "bocw_mp5_barrel"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_barrel_reinforced.mdl"
-
-ATT.DrawFunc = function(swep, model)
-
-	local elements = swep:GetElements()
-
-	if elements["bocw_mp5_sd_suppcheck"] then
-        model:SetBodygroup(1,1)
-    end
-end
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.RangeMaxMult = 1.18
-ATT.PhysBulletMuzzleVelocityMult = 1.8
-
-ATT.SpeedMultSprint = 0.94
-ATT.SpeedMultSighted = 0.8
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.ActivateElements = {"barrel_reinforced", "bocw_mp5_sd_barrelcheck"}
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_barrel_reinforced")
-
-ATT = {}
-
-ATT.PrintName = [[9.5" Ranger]] --// 4
-ATT.CompactName = [[9.5" RANGER]]
-ATT.Icon = Material("entities/bocw_atts/barrels/mp5_ranger.png", "mips smooth")
-ATT.Description = [[Durable steel barrel with phosphate coating. Button rifled to improve bullet velocity.
-
-The Ranger barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, and Shotguns in Call of Duty: Black Ops Cold War. It increases muzzle velocity of shots while reducing the aiming movement speed while for Shotguns, the muzzle velocity increase is swapped out for increased damage range. The Warsaw Pact equivalent is the Liberator Barrel.]]
-
-ATT.SortOrder = 9.5
-
-ATT.Category = "bocw_mp5_barrel"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_barrel_ranger.mdl"
-
-ATT.DrawFunc = function(swep, model)
-
-	local elements = swep:GetElements()
-
-	if elements["bocw_mp5_sd_suppcheck"] then
-        model:SetBodygroup(1,1)
-    end
-end
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.PhysBulletMuzzleVelocityMult = 2
-
-ATT.SpeedMultSighted = 0.75
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.ActivateElements = {"barrel_ranger", "bocw_mp5_sd_barrelcheck"}
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_barrel_ranger")
-
-ATT = {}
-
-ATT.PrintName = [[9.1" Rifled]]
-ATT.CompactName = [[9.1" RIFLED]]
-ATT.Icon = Material("entities/bocw_atts/barrels/mp5_rifled.png", "mips smooth")
-ATT.Description = [[Nitride-treated barrel for enhanced durability to prevent bending and improve damage range.
-
-The Rifled barrel is an attachment type available for Submachine Guns in Call of Duty: Black Ops Cold War. It increases damage range at the cost of sprinting movement speed.]]
-
-ATT.SortOrder = 9.1
-
-ATT.Category = "bocw_mp5_barrel"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_barrel_rifled.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.RangeMaxMult = 1.25
-
-ATT.SpeedMultSprint = 0.95
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.ActivateElements = {"barrel_rifled"}
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_barrel_rifled")
-
-ATT = {}
-
-ATT.PrintName = [[9.5" Task Force]] --// 6
-ATT.CompactName = [[9.5" TASKF]]
-ATT.Icon = Material("entities/bocw_atts/barrels/mp5_taskforce.png", "mips smooth")
-ATT.Description = [[Extended length steel barrel improves bullet velocity, range and damage.
-
-The Task Force barrel is an attachment type available for most Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. For Tactical Rifles, it gives the same benefits but without the loss of a starting magazine. There is an alternate type in the Spetsnaz RPK Barrel.]]
-
-ATT.SortOrder = 9.5
-
-ATT.Category = "bocw_mp5_barrel"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_barrel_taskforce.mdl"
-
-ATT.DrawFunc = function(swep, model)
-
-	local elements = swep:GetElements()
-
-	if elements["bocw_mp5_sd_suppcheck"] then
-        model:SetBodygroup(1,1)
-    end
-end
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.DamageMaxMult = 1.06
-ATT.RangeMaxMult = 1.5
-ATT.PhysBulletMuzzleVelocityMult = 1.75
-
-ATT.SupplyLimitOverride = 3
-ATT.RecoilUpMult = 1.2
-ATT.RecoilSideMult = 1.15
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.ActivateElements = {"barrel_taskforce", "bocw_mp5_sd_barrelcheck"}
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_barrel_taskforce")
---========== MAGAZINE =================
-ATT = {}
-
-ATT.PrintName = "40 Rnd Drum" --// 1
-ATT.CompactName = "40 RND"
-ATT.Icon = Material("entities/bocw_atts/magazines/mp5_ext1.png", "mips smooth")
-ATT.Description = [[Drum magazine designed for submachine guns. Contains 40 rounds.
-
-Extended Mags are a type of Magazine attachment available for Primaries, Pistols and Shotguns in Call of Duty: Black Ops Cold War. Like Modern Warfare, magazine extensions are named for their capacity. Speed Mags act as extended mags with faster reloading. Further extensions are provided by STANAG Mags, Bakelite Mags, Spetsnaz Mags, Salvo Fast Mags & VDV Fast Mags.]]
-
-ATT.SortOrder = 1
-
-ATT.Category = "bocw_mp5_mag"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_magazine_ext1.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mp5_magazine_ext1.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ClipSizeOverride = 40
-
-ATT.ReloadTimeMult = 1.1
-
-ATT.ActivateElements = {"mp5_mag_ext"}
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_magazine_ext1")
-
-ATT = {}
-
-ATT.PrintName = "Jungle-Style Mag" --// 2
-ATT.CompactName = "JUNGLE MAG"
-ATT.Icon = Material("entities/bocw_atts/magazines/mp5_dual1.png", "mips smooth")
-ATT.Description = [[Magazines secured together with duct tape to improve reload speed.
-
-The Jungle-Style Mag is a variant of Fast Mag, available for all NATO related Assault Rifles, Tactical Rifles and the MP5. It improves reload speed with no downside. The Warsaw Pact equivalent is the Taped Mags.]]
-
-ATT.SortOrder = 2
-
-ATT.Category = "bocw_mp5_mag"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_magazine_dual1.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mp5_magazine_dual1.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ReloadTimeMult = 0.82
-
-ATT.ActivateElements = {"mp5_mag_dual"}
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_magazine_dual1")
-
-ATT = {}
-
-ATT.PrintName = "40 Rnd Speed Mag" --// 3
-ATT.CompactName = "40 RND SPD"
-ATT.Icon = Material("entities/bocw_atts/magazines/mp5_mix1.png", "mips smooth")
-ATT.Description = [[Paracord pull loop improves reload speed. Contains 40 rounds.
-
-The Speed Mag is a type of Magazine attachment available for all Assault Rifles. Submachine Guns, Tactical Rifles, Light Machine Guns, Sniper Rifles and Pistols in Call of Duty: Black Ops Cold War. It increases magazine size alongside decreasing reload speeds but at the cost of increasing aiming time, however, for the XM4 and Grav, it does not affect the aiming time.]]
-
-ATT.SortOrder = 3
-
-ATT.Category = "bocw_mp5_mag"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_magazine_mix1.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mp5_magazine_mix1.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ClipSizeOverride = 40
-ATT.ReloadTimeMult = 0.75
-
-ATT.AimDownSightsTimeMult = 1.2
-
-ATT.ActivateElements = {"mp5_mag_mix"}
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_magazine_mix1")
-
-ATT = {}
-
-ATT.PrintName = "STANAG 50 Rnd" --// 4
-ATT.CompactName = "50 RND"
-ATT.Icon = Material("entities/bocw_atts/magazines/mp5_extpro.png", "mips smooth")
-ATT.Description = [[High-capacity drum magazine contains 50 rounds of ammunition.
-
-The STANAG is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time and reload speed. There are two different Warsaw Pact equivalents in the Bakelite Mag and the Spetsnaz Mag.]]
-
-ATT.SortOrder = 4
-
-ATT.Category = "bocw_mp5_mag"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_magazine_extpro.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mp5_magazine_extpro.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ClipSizeOverride = 50
-
-ATT.ReloadTimeMult = 1.1
-ATT.AimDownSightsTimeMult = 1.15
-
-ATT.ActivateElements = {"mp5_mag_ext"}
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_magazine_extpro")
-
-ATT = {}
-
-ATT.PrintName = "SAS Mag Clamp" --// 5
-ATT.CompactName = "SAS CLAMP"
-ATT.Icon = Material("entities/bocw_atts/magazines/mp5_dualpro.png", "mips smooth")
-ATT.Description = [[Magazine coupler joins an additional inverted magazine to the one in the gun for faster reloads.
-
-The SAS Mag Clamp is a Magazine attachment available for all NATO related Assault Rifles, Tactical Rifles and the MP5. It improves reload speeds in addition to giving an additional starting magazine but at the cost of a longer time to aim. The Warsaw Pact equivalent is the GRU Mag Clamp.]]
-
-ATT.SortOrder = 5
-
-ATT.Category = "bocw_mp5_mag"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_magazine_dualpro.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mp5_magazine_dualpro.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ReloadTimeMult = 0.6
-ATT.SupplyLimitOverride = 5
-
-ATT.AimDownSightsTimeMult = 1.06
-
-ATT.ActivateElements = {"mp5_mag_dual"}
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_magazine_dualpro")
-
-ATT = {}
-
-ATT.PrintName = "Salvo 40 Rnd Fast Mag" --// 6
-ATT.CompactName = "40 RND FAST"
-ATT.Icon = Material("entities/bocw_atts/magazines/mp5_mixpro.png", "mips smooth")
-ATT.Description = [[Extended magazine with a steel pull loop to improve reload speed.
-
-The Salvo Fast Mag is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The Warsaw Pact equivalent is the VDV Fast Mag.]]
-
-ATT.SortOrder = 6
-
-ATT.Category = "bocw_mp5_mag"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_magazine_mixpro.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mp5_magazine_mixpro.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ClipSizeOverride = 40
-ATT.ReloadTimeMult = 0.6
-
-ATT.MultAimDownSightsTime = 1.25
-
-ATT.ActivateElements = {"mp5_mag_mix"}
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_magazine_mixpro")
---========== HANDLE ===================
-ATT = {}
-
-ATT.PrintName = "Speed Tape" --// 1
-ATT.CompactName = "SPEED TAPE"
-ATT.Icon = Material("entities/bocw_atts/handles/mp5_speed.png", "mips smooth")
-ATT.Description = [[Duct tape applied to handle increases friction for improved aiming speed.
-
-The Speed Tape is a Handle attachment available for most Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It acts similar to the Quickdraw Handle and similar attachments from prior games. It decreases the time it takes to aim down sights. It has an alternate in the form of the Speed Grip.]]
-
-ATT.SortOrder = 0
-
-ATT.Category = "bocw_mp5_wrap"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_handle_speed.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.AimDownSightsTimeMult = 0.9
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_handle_speed")
-
-ATT = {}
-
-ATT.PrintName = "Dropshot Wrap" --// 2
-ATT.CompactName = "DROPSHOT"
-ATT.Icon = Material("entities/bocw_atts/handles/mp5_dropshot.png", "mips smooth")
-ATT.Description = [[Tightly wrapped fabric bands to improve flinch stability when aiming from different stances.
-
-The Dropshot Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It decreases flinching from changing stances while also allowing for uninterrupted aiming when changing to prone.]]
-
-ATT.SortOrder = 1
-
-ATT.Category = "bocw_mp5_wrap"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_handle_dropshot.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_handle_dropshot")
-
-ATT = {}
-
-ATT.PrintName = "Field Tape" --// 3
-ATT.CompactName = "FIELD TAPE"
-ATT.Icon = Material("entities/bocw_atts/handles/mp5_fieldtape.png", "mips smooth")
-ATT.Description = [[A layer of adhesive fabric tape absorbs shock to improve flinch stability.
-
-The Field Tape is a Handle attachment available for all weapons that allow attachments. It decreases flinching from being shot by a large degree.]]
-
-ATT.SortOrder = 3
-
-ATT.Category = "bocw_mp5_wrap"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_handle_fieldtape.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_handle_fieldtape")
-
-ATT = {}
-
-ATT.PrintName = "SASR Jungle Grip" --// 4
-ATT.CompactName = "SASR GRIP"
-ATT.Icon = Material("entities/bocw_atts/handles/mp5_sasrjungle.png", "mips smooth")
-ATT.Description = [[Makeshift combination of fabric tape and rubber bands to improve aiming speed and flinch stability.
-
-The SASR Jungle Grip is a Handle attachment available for NATO related Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It decreases flinching effect from being shot and decreases the time aiming time but at the cost of having a slower recovery time from sprinting. The Warsaw Pact equivalent is the Spetsnaz Field Grip.]]
-
-ATT.SortOrder = 4
-
-ATT.Category = "bocw_mp5_wrap"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_handle_sasrjungle.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.AimDownSightsTimeMult = 0.8
-
-ATT.SprintToFireTimeMult = 1.12
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_handle_sasrjungle")
-
-ATT = {}
-
-ATT.PrintName = "Serpent Grip" --// 5
-ATT.CompactName = "SERPENT"
-ATT.Icon = Material("entities/bocw_atts/handles/mp5_serpent.png", "mips smooth")
-ATT.Description = [[Granulated grip tape increases friction to improve aiming speed.
-
-The Serpent Grip is a Handle attachment available for some Primary Weapons, the Magnum and the Hauer 77 Call of Duty: Black Ops Cold War. It acts as a stronger Speed Tape with the downside of it increasing the sprint to firing time. It has an alternate form in the Serpent Wrap.]]
-
-ATT.SortOrder = 5
-
-ATT.Category = "bocw_mp5_wrap"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_handle_serpent.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.AimDownSightsTimeMult = 0.75
-
-ATT.SprintToFireTimeMult = 1.1
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_handle_serpent")
-
-ATT = {}
-
-ATT.PrintName = "Airborne Elastic Wrap" --// 6
-ATT.CompactName = "AIRBORNE"
-ATT.Icon = Material("entities/bocw_atts/handles/mp5_airborne.png", "mips smooth")
-ATT.Description = [[Non-abrasive grip sleeve improves shooter stability while maintaining agility.
-
-The Airborne Elastic Wrap is a Handle attachment available for NATO related Primary Weapons, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. It acts as fusion of the Dropshot Wrap and the SASR Jungle Grip, giving increased aiming speed, flinch resistance, and the ability to aim while going prone, but at the cost of reduced sprint recover speed and movement speed while firing. The Warsaw Pact equivalent is the GRU Elastic Wrap.]]
-
-ATT.SortOrder = 6
-
-ATT.Category = "bocw_mp5_wrap"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_handle_airborne.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.AimDownSightsTimeMult = 0.7
-
-ATT.SprintToFireTimeMult = 1.15
-ATT.SpeedMultShooting = 0.85
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_handle_airborne")
---========== STOCK ====================
-ATT = {}
-
-ATT.PrintName = "Tactical Stock" --// 1
-ATT.CompactName = "TAC STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/mp5_tactical.png", "mips smooth")
-ATT.Description = [[Lightweight folding stock for improved movement speed when aiming.
-
-The Tactical Stock is a Stock attachment available for all Primary Weapons and Shotguns in Call of Duty: Black Ops Cold War. It gives increased movement speed while aiming.]]
-
-ATT.SortOrder = 0
-
-ATT.Category = "bocw_mp5_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_stock_tactical.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SpeedMultSights = 1.1
-
-ATT.ActivateElements = {"stockmountgone", "stock_nonretractable"}
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_stock_tactical")
-
-ATT = {}
-
-ATT.PrintName = "Collapsed Stock" --// 2
-ATT.CompactName = "COLLAPSED"
-ATT.Icon = Material("entities/bocw_atts/stocks/mp5_collapsed.png", "mips smooth")
-ATT.Description = [[Collapsed stock enables concealment versatility to improve sprint recovery time.
-
-The Collapsed Stock is a stock attachment available for the MP5 and TEC-9 in Call of Duty: Black Ops Cold War. It decreases the delay between sprinting and firing. It has alternates in the forms of the Wire Stock, Marathon Stock, CQB Stock, and Shotgun Stock.]]
-
-ATT.SortOrder = 1
-
-ATT.Category = "bocw_mp5_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_stock_collapsed.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SprintToFireTimeMult = 0.9
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_stock_collapsed")
-
-ATT = {}
-
-ATT.PrintName = "Duster Stock" --// 3
-ATT.CompactName = "DUSTER STK"
-ATT.Icon = Material("entities/bocw_atts/stocks/mp5_duster.png", "mips smooth")
-ATT.Description = [[Lightweight extended stock durably constructed to increase sliding speed.
-
-The Duster Stock is available as a stock attachment in Call of Duty: Black Ops Cold War. It gives increases speed while sliding, giving more distance per slide. It has an alternate in the form of the Duster Pad.]]
-
-ATT.SortOrder = 2
-
-ATT.Category = "bocw_mp5_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_stock_duster.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SpeedMult = 1.05
-
-ATT.ActivateElements = {"stockmountgone", "stock_nonretractable"}
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_stock_duster")
-
-ATT = {}
-
-ATT.PrintName = "No Stock" --// 4
-ATT.CompactName = "NO STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/mp5_nostock.png", "mips smooth")
-ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
-
-The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
-
-ATT.SortOrder = 3
-
-ATT.Category = "bocw_mp5_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_stock_nostock.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SprintToFireTimeMult = 0.7
-
-ATT.SpreadMultHipFire = 1.15
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_stock_nostock")
-
-ATT = {}
-
-ATT.PrintName = "SAS Combat Stock" --// 5
-ATT.CompactName = "SAS STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/mp5_sascombat.png", "mips smooth")
-ATT.Description = [[Extended stock with aftermarket cheek rest to improve movement speeds when aiming and firing.
-
-The SAS Combat Stock is a Stock attachment available for all NATO related primary weapons and Shotguns. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The Warsaw Pact equivalent is the Spetsnaz PKM Stock and Spetsnaz Stock.]]
-
-ATT.SortOrder = 5
-
-ATT.Category = "bocw_mp5_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_stock_sascombat.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SpeedMultShooting = 1.05
-ATT.SpeedMultSighted = 1.15
-
-ATT.SpreadMultHipFire = 1.15
-
-ATT.ActivateElements = {"stockmountgone", "stock_nonretractable"}
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_stock_sascombat")
-
-ATT = {}
-
-ATT.PrintName = "Raider Stock" --// 6
-ATT.CompactName = "RAIDER STK"
-ATT.Icon = Material("entities/bocw_atts/stocks/mp5_raider.png", "mips smooth")
-ATT.Description = [[Lightweight stock provides added stability for improved sprint recovery and walking speed when aiming.
-
-The Raider Stock is a Stock attachment available for some NATO related primary weapons. It gives greatly improved sprint to fire timing with improved movement speeds while aiming at the cost of a heavily reduced hip fire accuracy. It has an alternate NATO equivalent with the Raider Pad. The Warsaw Pact equivalents are the KGB Pad and KGB Skeletal Stock. While Shotguns get the Marathon Stock. The Type 63 also gets a unique variant that replaces the Spetsnaz Stock.]]
-
-ATT.SortOrder = 6
-
-ATT.Category = "bocw_mp5_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_stock_raider.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SprintToFireTimeMult = 0.7
-ATT.SpeedMultSighted = 1.1
-
-ATT.SpreadMultHipFire = 1.3
-
-ATT.ActivateElements = {"stockmountgone", "stock_nonretractable"}
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_stock_raider")
---[[
-ooo        ooooo  o8o  oooo                                      .ooooo.     .oooo.     .o  
-`88.       .888'  `"'  `888                                     d88'   `8. .dP""Y88b  o888  
- 888b     d'888  oooo   888   .oooo.   ooo. .oo.    .ooooo.     Y88..  .8'       ]8P'  888  
- 8 Y88. .P  888  `888   888  `P  )88b  `888P"Y88b  d88' `88b     `88888b.      .d8P'   888  
- 8  `888'   888   888   888   .oP"888   888   888  888   888    .8'  ``88b   .dP'      888  
- 8    Y     888   888   888  d8(  888   888   888  888   888    `8.   .88P .oP     .o  888  
-o8o        o888o o888o o888o `Y888""8o o888o o888o `Y8bod8P'     `boood8'  8888888888 o888o 
-]]
---========== BARREL ===================
-ATT = {}
-
-ATT.PrintName = [[8.9" Extended]] --// 1
-ATT.CompactName = [[8.9" EXTND]]
-ATT.Icon = Material("entities/bocw_atts/barrels/milano821_extended.png", "mips smooth")
-ATT.Description = [[Thin profile barrel forged from chromoly steel. Improves bullet velocity.
-
-Within Call of Duty: Black Ops Cold War, the Long Barrel returns as the Extended barrel family of barrel attachments, giving increased muzzle velocity for most weaponry it can be attached to. However, it gives increased effective range for Shotguns and the Marshal, with the Marshal also gaining a worsened sprinting to fire time. The LAPA also gains an increased fire rate at the cost of reduced damage.]]
-
-ATT.SortOrder = 8.9
-
-ATT.Category = "bocw_milano821_barrel"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_barrel_extended.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_barrel_extended.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -746,22 +41,22 @@ ATT.ActivateElements = {"barrel_extended"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_barrel_extended")
+ARC9.LoadAttachment(ATT, "bocw_mac10_barrel_extended")
 
 ATT = {}
 
-ATT.PrintName = [[9.5" Cavalry Lancer]] --// 2
-ATT.CompactName = [[9.5" CAVLRY]]
-ATT.Icon = Material("entities/bocw_atts/barrels/milano821_cavalry.png", "mips smooth")
+ATT.PrintName = [[6.5" Cavalry Lancer]] --// 2
+ATT.CompactName = [[6.5" CAVLRY]]
+ATT.Icon = Material("entities/bocw_atts/barrels/mac10_cavalry.png", "mips smooth")
 ATT.Description = [[Heavy profile barrel broach rifled to improve damage against enemy vehicles.
 
 The Cavalry Lancer barrel is an attachment type new to Call of Duty: Black Ops Cold War that acts similar to the Full Metal Jacket attachment from previous titles. It increases the damage multiplier to vehicles and various Scorestreaks. However, unlike FMJ, it only increases the damage multiplier and doesn't increase material penetration]]
 
-ATT.SortOrder = 9.5
+ATT.SortOrder = 6.5
 
-ATT.Category = "bocw_milano821_barrel"
+ATT.Category = "bocw_mac10_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_barrel_cavalry.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_barrel_cavalry.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -777,28 +72,28 @@ ATT.ActivateElements = {"barrel_cavalry"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_barrel_cavalry")
+ARC9.LoadAttachment(ATT, "bocw_mac10_barrel_cavalry")
 
 ATT = {}
 
-ATT.PrintName = [[10.1" Reinforced Heavy]] --// 3
-ATT.CompactName = [[10.1" HEAVY]]
-ATT.Icon = Material("entities/bocw_atts/barrels/milano821_reinforced.png", "mips smooth")
+ATT.PrintName = [[6.1" Reinforced Heavy]] --// 3
+ATT.CompactName = [[6.1" HEAVY]]
+ATT.Icon = Material("entities/bocw_atts/barrels/mac10_reinforced.png", "mips smooth")
 ATT.Description = [[Heavy profile barrel button rifled to improve bullet velocity and damage range.
 
 The Reinforced Heavy barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed, while for Shotguns it loses the bullet velocity in exchange for a fire rate increase. The Warsaw Pact equivalent is the VDV Reinforced Barrel.]]
 
-ATT.SortOrder = 10.1
+ATT.SortOrder = 9.5
 
-ATT.Category = "bocw_milano821_barrel"
+ATT.Category = "bocw_mac10_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_barrel_reinforced.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_barrel_reinforced.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.RangeMaxMult = 1.18
+ATT.RangeMinMult = 1.18
 ATT.PhysBulletMuzzleVelocityMult = 1.8
 
 ATT.SpeedMultSprint = 0.96
@@ -811,22 +106,22 @@ ATT.ActivateElements = {"barrel_reinforced"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_barrel_reinforced")
+ARC9.LoadAttachment(ATT, "bocw_mac10_barrel_reinforced")
 
 ATT = {}
 
-ATT.PrintName = [[10.5" Ranger]] --// 4
-ATT.CompactName = [[10.5" RANGR]]
-ATT.Icon = Material("entities/bocw_atts/barrels/milano821_ranger.png", "mips smooth")
+ATT.PrintName = [[5.3" Ranger]] --// 4
+ATT.CompactName = [[5.3" RANGER]]
+ATT.Icon = Material("entities/bocw_atts/barrels/mac10_ranger.png", "mips smooth")
 ATT.Description = [[Durable steel barrel with phosphate coating. Button rifled to improve bullet velocity.
 
 The Ranger barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, and Shotguns in Call of Duty: Black Ops Cold War. It increases muzzle velocity of shots while reducing the aiming movement speed while for Shotguns, the muzzle velocity increase is swapped out for increased damage range. The Warsaw Pact equivalent is the Liberator Barrel.]]
 
-ATT.SortOrder = 10.5
+ATT.SortOrder = 5.3
 
-ATT.Category = "bocw_milano821_barrel"
+ATT.Category = "bocw_mac10_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_barrel_ranger.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_barrel_ranger.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -843,22 +138,691 @@ ATT.ActivateElements = {"barrel_ranger"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_barrel_ranger")
+ARC9.LoadAttachment(ATT, "bocw_mac10_barrel_ranger")
 
 ATT = {}
 
-ATT.PrintName = [[9.5" Rifled]]
-ATT.CompactName = [[9.5" RIFLED]]
-ATT.Icon = Material("entities/bocw_atts/barrels/milano821_rifled.png", "mips smooth")
+ATT.PrintName = [[6.5" Rifled]]
+ATT.CompactName = [[6.5" RIFLED]]
+ATT.Icon = Material("entities/bocw_atts/barrels/mac10_rifled.png", "mips smooth")
 ATT.Description = [[Nitride-treated barrel for enhanced durability to prevent bending and improve damage range.
 
 The Rifled barrel is an attachment type available for Submachine Guns in Call of Duty: Black Ops Cold War. It increases damage range at the cost of sprinting movement speed.]]
 
-ATT.SortOrder = 9.5
+ATT.SortOrder = 6.5
 
-ATT.Category = "bocw_milano821_barrel"
+ATT.Category = "bocw_mac10_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_barrel_rifled.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_barrel_rifled.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.RangeMinMult = 1.25
+
+ATT.SpeedMultSprint = 0.95
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_rifled"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_barrel_rifled")
+
+ATT = {}
+
+ATT.PrintName = [[5.9" Task Force]] --// 6
+ATT.CompactName = [[5.9" TASKF]]
+ATT.Icon = Material("entities/bocw_atts/barrels/mac10_taskforce.png", "mips smooth")
+ATT.Description = [[Extended length steel barrel improves bullet velocity, range and damage.
+
+The Task Force barrel is an attachment type available for most Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. For Tactical Rifles, it gives the same benefits but without the loss of a starting magazine. There is an alternate type in the Spetsnaz RPK Barrel.]]
+
+ATT.SortOrder = 5.9
+
+ATT.Category = "bocw_mac10_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_barrel_taskforce.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DamageMaxMult = 1.04
+ATT.RangeMaxMult = 1.5
+ATT.PhysBulletMuzzleVelocityMult = 1.75
+
+ATT.SupplyLimitOverride = 3
+ATT.RecoilUpMult = 1.2
+ATT.RecoilSideMult = 1.15
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_taskforce"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_barrel_taskforce")
+--========== MAGAZINE =================
+ATT = {}
+
+ATT.PrintName = "43 Rnd Drum" --// 1
+ATT.CompactName = "43 RND"
+ATT.Icon = Material("entities/bocw_atts/magazines/mac10_ext1.png", "mips smooth")
+ATT.Description = [[Drum magazine holds 43 rounds of ammunition.
+
+Extended Mags are a type of Magazine attachment available for Primaries, Pistols and Shotguns in Call of Duty: Black Ops Cold War. Like Modern Warfare, magazine extensions are named for their capacity. Speed Mags act as extended mags with faster reloading. Further extensions are provided by STANAG Mags, Bakelite Mags, Spetsnaz Mags, Salvo Fast Mags & VDV Fast Mags.]]
+
+ATT.SortOrder = 1
+
+ATT.Category = "bocw_mac10_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_magazine_ext1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mac10_magazine_ext1.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ClipSizeOverride = 43
+
+ATT.ReloadTimeMult = 1.1
+
+ATT.ActivateElements = {"mac10_mag_ext"}
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_magazine_ext1")
+
+ATT = {}
+
+ATT.PrintName = "Fast Mag" --// 2
+ATT.CompactName = "JUNGLE MAG"
+ATT.Icon = Material("entities/bocw_atts/magazines/mac10_dual1.png", "mips smooth")
+ATT.Description = [[Makeshift pull loop attached to magazine to improve reload speed.
+
+The Fast Mag is a Magazine attachment available for all Light Machine Guns and Pistols alongside most of the Submachine Guns and Sniper Rifles in Call of Duty: Black Ops Cold War. It increases reload speed with no penalty, same as jungle-style or taped magazines.]]
+
+ATT.SortOrder = 2
+
+ATT.Category = "bocw_mac10_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_magazine_dual1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mac10_magazine_dual1.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ReloadTimeMult = 0.82
+
+ATT.ActivateElements = {"mac10_mag_dual"}
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_magazine_dual1")
+
+ATT = {}
+
+ATT.PrintName = "43 Rnd Speed Mag" --// 3
+ATT.CompactName = "43 RND SPD"
+ATT.Icon = Material("entities/bocw_atts/magazines/mac10_mix1.png", "mips smooth")
+ATT.Description = [[High-capacity magazine with increased gripping surface for faster reloads.
+
+The Speed Mag is a type of Magazine attachment available for all Assault Rifles. Submachine Guns, Tactical Rifles, Light Machine Guns, Sniper Rifles and Pistols in Call of Duty: Black Ops Cold War. It increases magazine size alongside decreasing reload speeds but at the cost of increasing aiming time, however, for the XM4 and Grav, it does not affect the aiming time.]]
+
+ATT.SortOrder = 3
+
+ATT.Category = "bocw_mac10_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_magazine_mix1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mac10_magazine_mix1.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ClipSizeOverride = 43
+ATT.ReloadTimeMult = 0.75
+
+ATT.AimDownSightsTimeMult = 1.2
+
+ATT.ActivateElements = {"mac10_mag_mix"}
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_magazine_mix1")
+
+ATT = {}
+
+ATT.PrintName = "STANAG 53 Rnd Drum" --// 4
+ATT.CompactName = "53 RND"
+ATT.Icon = Material("entities/bocw_atts/magazines/mac10_extpro.png", "mips smooth")
+ATT.Description = [[High-capacity drum magazine contains 53 rounds of ammunition.
+
+The STANAG is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time and reload speed. There are two different Warsaw Pact equivalents in the Bakelite Mag and the Spetsnaz Mag.]]
+
+ATT.SortOrder = 4
+
+ATT.Category = "bocw_mac10_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_magazine_extpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mac10_magazine_extpro.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ClipSizeOverride = 53
+
+ATT.ReloadTimeMult = 1.1
+ATT.AimDownSightsTimeMult = 1.15
+
+ATT.ActivateElements = {"mac10_mag_ext"}
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_magazine_extpro")
+
+ATT = {}
+
+ATT.PrintName = "Vandal Speed Loader" --// 5
+ATT.CompactName = "VANDAL SPD"
+ATT.Icon = Material("entities/bocw_atts/magazines/mac10_dualpro.png", "mips smooth")
+ATT.Description = [[Leather pull loop improves reload speed. Includes additional magazine.
+
+The SAS Mag Clamp is a Magazine attachment available for all NATO related Assault Rifles, Tactical Rifles and the MP5. It improves reload speeds in addition to giving an additional starting magazine but at the cost of a longer time to aim. The Warsaw Pact equivalent is the GRU Mag Clamp.]]
+
+ATT.SortOrder = 5
+
+ATT.Category = "bocw_mac10_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_magazine_dualpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mac10_magazine_dualpro.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ReloadTimeMult = 0.6
+ATT.SupplyLimitOverride = 5
+
+ATT.AimDownSightsTimeMult = 1.06
+
+ATT.ActivateElements = {"mac10_mag_dual"}
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_magazine_dualpro")
+
+ATT = {}
+
+ATT.PrintName = "Salvo 53 Rnd Fast Mag" --// 6
+ATT.CompactName = "53 RND FAST"
+ATT.Icon = Material("entities/bocw_atts/magazines/mac10_mixpro.png", "mips smooth")
+ATT.Description = [[Extended magazine contains 53 rounds and improves reload speed.
+
+The Salvo Fast Mag is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The Warsaw Pact equivalent is the VDV Fast Mag.]]
+
+ATT.SortOrder = 6
+
+ATT.Category = "bocw_mac10_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_magazine_mixpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mac10_magazine_mixpro.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ClipSizeOverride = 53
+ATT.ReloadTimeMult = 0.6
+
+ATT.MultAimDownSightsTime = 1.25
+
+ATT.ActivateElements = {"mac10_mag_mix"}
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_magazine_mixpro")
+--========== HANDLE ===================
+ATT = {}
+
+ATT.PrintName = "Speed Tape" --// 1
+ATT.CompactName = "SPEED TAPE"
+ATT.Icon = Material("entities/bocw_atts/handles/mac10_speed.png", "mips smooth")
+ATT.Description = [[Duct tape applied to handle increases friction for improved aiming speed.
+
+The Speed Tape is a Handle attachment available for most Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It acts similar to the Quickdraw Handle and similar attachments from prior games. It decreases the time it takes to aim down sights. It has an alternate in the form of the Speed Grip.]]
+
+ATT.SortOrder = 0
+
+ATT.Category = "bocw_mac10_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_handle_speed.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.9
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_handle_speed")
+
+ATT = {}
+
+ATT.PrintName = "Dropshot Wrap" --// 2
+ATT.CompactName = "DROPSHOT"
+ATT.Icon = Material("entities/bocw_atts/handles/mac10_dropshot.png", "mips smooth")
+ATT.Description = [[Tightly wrapped fabric bands to improve flinch stability when aiming from different stances.
+
+The Dropshot Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It decreases flinching from changing stances while also allowing for uninterrupted aiming when changing to prone.]]
+
+ATT.SortOrder = 1
+
+ATT.Category = "bocw_mac10_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_handle_dropshot.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_handle_dropshot")
+
+ATT = {}
+
+ATT.PrintName = "Field Tape" --// 3
+ATT.CompactName = "FIELD TAPE"
+ATT.Icon = Material("entities/bocw_atts/handles/mac10_fieldtape.png", "mips smooth")
+ATT.Description = [[A layer of adhesive fabric tape absorbs shock to improve flinch stability.
+
+The Field Tape is a Handle attachment available for all weapons that allow attachments. It decreases flinching from being shot by a large degree.]]
+
+ATT.SortOrder = 3
+
+ATT.Category = "bocw_mac10_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_handle_fieldtape.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_handle_fieldtape")
+
+ATT = {}
+
+ATT.PrintName = "SASR Jungle Grip" --// 4
+ATT.CompactName = "SASR GRIP"
+ATT.Icon = Material("entities/bocw_atts/handles/mac10_sasrjungle.png", "mips smooth")
+ATT.Description = [[Makeshift combination of fabric tape and rubber bands to improve aiming speed and flinch stability.
+
+The SASR Jungle Grip is a Handle attachment available for NATO related Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It decreases flinching effect from being shot and decreases the time aiming time but at the cost of having a slower recovery time from sprinting. The Warsaw Pact equivalent is the Spetsnaz Field Grip.]]
+
+ATT.SortOrder = 4
+
+ATT.Category = "bocw_mac10_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_handle_sasrjungle.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.85
+
+ATT.SprintToFireTimeMult = 1.12
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_handle_sasrjungle")
+
+ATT = {}
+
+ATT.PrintName = "Serpent Wrap" --// 5
+ATT.CompactName = "SERPENT"
+ATT.Icon = Material("entities/bocw_atts/handles/mac10_serpent.png", "mips smooth")
+ATT.Description = [[Duct tape with an adhesive coating ensures a firm grip to improve aiming speed.
+
+The Serpent Wrap is a Handle attachment available for most Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It acts as a stronger Speed Tape with the downside of it increasing the sprint to firing time. It has an alternate form in the Serpent Grip.]]
+
+ATT.SortOrder = 5
+
+ATT.Category = "bocw_mac10_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_handle_serpent.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.75
+
+ATT.SprintToFireTimeMult = 1.1
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_handle_serpent")
+
+ATT = {}
+
+ATT.PrintName = "Airborne Elastic Wrap" --// 6
+ATT.CompactName = "AIRBORNE"
+ATT.Icon = Material("entities/bocw_atts/handles/mac10_airborne.png", "mips smooth")
+ATT.Description = [[Non-abrasive grip sleeve improves shooter stability while maintaining agility.
+
+The Airborne Elastic Wrap is a Handle attachment available for NATO related Primary Weapons, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. It acts as fusion of the Dropshot Wrap and the SASR Jungle Grip, giving increased aiming speed, flinch resistance, and the ability to aim while going prone, but at the cost of reduced sprint recover speed and movement speed while firing. The Warsaw Pact equivalent is the GRU Elastic Wrap.]]
+
+ATT.SortOrder = 6
+
+ATT.Category = "bocw_mac10_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_handle_airborne.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.7
+
+ATT.SprintToFireTimeMult = 1.15
+ATT.SpeedMultShooting = 0.85
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_handle_airborne")
+--========== STOCK ====================
+ATT = {}
+
+ATT.PrintName = "Tactical Stock" --// 1
+ATT.CompactName = "TAC STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/mac10_tactical.png", "mips smooth")
+ATT.Description = [[Classic stock designed to increase walking speed when aiming.
+
+The Tactical Stock is a Stock attachment available for all Primary Weapons and Shotguns in Call of Duty: Black Ops Cold War. It gives increased movement speed while aiming.]]
+
+ATT.SortOrder = 0
+
+ATT.Category = "bocw_mac10_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_stock_tactical.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SpeedMultSights = 1.1
+
+ATT.ActivateElements = {"stockmountgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_stock_tactical")
+
+ATT = {}
+
+ATT.PrintName = "Wire Stock" --// 2
+ATT.CompactName = "WIRE STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/mac10_wire.png", "mips smooth")
+ATT.Description = [[Lightweight stock reduces weapon weight to improve sprint recovery time.
+
+The Wire Stock is a Stock attachment available in Call of Duty: Black Ops Cold War. It decreases the delay between sprinting and firing. It has alternates in the forms of the Marathon Stock, Collapsed Stock, CQB Stock and Shotgun Stock.]]
+
+ATT.SortOrder = 1
+
+ATT.Category = "bocw_mac10_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_stock_wire.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SprintToFireTimeMult = 0.9
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_stock_wire")
+
+ATT = {}
+
+ATT.PrintName = "Duster Stock" --// 3
+ATT.CompactName = "DUSTER STK"
+ATT.Icon = Material("entities/bocw_atts/stocks/mac10_duster.png", "mips smooth")
+ATT.Description = [[Reliable stock durably constructed to increase sliding speed.
+
+The Duster Stock is available as a stock attachment in Call of Duty: Black Ops Cold War. It gives increases speed while sliding, giving more distance per slide. It has an alternate in the form of the Duster Pad.]]
+
+ATT.SortOrder = 2
+
+ATT.Category = "bocw_mac10_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_stock_duster.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SpeedMult = 1.05
+
+ATT.ActivateElements = {"stockmountgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_stock_duster")
+
+ATT = {}
+
+ATT.PrintName = "No Stock" --// 4
+ATT.CompactName = "NO STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/mac10_nostock.png", "mips smooth")
+ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
+
+The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
+
+ATT.SortOrder = 3
+
+ATT.Category = "bocw_mac10_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_stock_nostock.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SprintToFireTimeMult = 0.7
+
+ATT.SpreadMultHipFire = 1.15
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_stock_nostock")
+
+ATT = {}
+
+ATT.PrintName = "SAS Combat Stock" --// 5
+ATT.CompactName = "SAS STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/mac10_sascombat.png", "mips smooth")
+ATT.Description = [[Extended stock with aftermarket cheek rest to improve movement speeds when aiming and firing.
+
+The SAS Combat Stock is a Stock attachment available for all NATO related primary weapons and Shotguns. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The Warsaw Pact equivalent is the Spetsnaz PKM Stock and Spetsnaz Stock.]]
+
+ATT.SortOrder = 5
+
+ATT.Category = "bocw_mac10_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_stock_sascombat.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SpeedMultShooting = 1.05
+ATT.SpeedMultSighted = 1.15
+
+ATT.SpreadMultHipFire = 1.15
+
+ATT.ActivateElements = {"stockmountgone", "stock_nonretractable"}
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_stock_sascombat")
+
+ATT = {}
+
+ATT.PrintName = "Raider Stock" --// 6
+ATT.CompactName = "RAIDER STK"
+ATT.Icon = Material("entities/bocw_atts/stocks/mac10_raider.png", "mips smooth")
+ATT.Description = [[Lightweight stock perfectly balanced for improved sprint recovery and movement speeds when aiming.
+
+The Raider Stock is a Stock attachment available for some NATO related primary weapons. It gives greatly improved sprint to fire timing with improved movement speeds while aiming at the cost of a heavily reduced hip fire accuracy. It has an alternate NATO equivalent with the Raider Pad. The Warsaw Pact equivalents are the KGB Pad and KGB Skeletal Stock. While Shotguns get the Marathon Stock. The Type 63 also gets a unique variant that replaces the Spetsnaz Stock.]]
+
+ATT.SortOrder = 6
+
+ATT.Category = "bocw_mac10_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_stock_raider.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SprintToFireTimeMult = 0.7
+ATT.SpeedMultSighted = 1.1
+
+ATT.SpreadMultHipFire = 1.3
+
+ATT.ActivateElements = {"stockmountgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_mac10_stock_raider")
+--[[
+ooooo          .oooooo.     .o    .oooo.   
+`888'         d8P'  `Y8b  o888   d8P'`Y8b  
+ 888         888           888  888    888 
+ 888         888           888  888    888 
+ 888         888           888  888    888 
+ 888       o `88b    ooo   888  `88b  d88' 
+o888ooooood8  `Y8bood8P'  o888o  `Y8bd8P'  
+]]
+--========== BARREL ===================
+ATT = {}
+
+ATT.PrintName = [[12.5" Extended]] --// 1
+ATT.CompactName = [[12.5" EXTND]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lc10_extended.png", "mips smooth")
+ATT.Description = [[Thin profile barrel forged from chromoly steel. Improves bullet velocity.
+
+Within Call of Duty: Black Ops Cold War, the Long Barrel returns as the Extended barrel family of barrel attachments, giving increased muzzle velocity for most weaponry it can be attached to. However, it gives increased effective range for Shotguns and the Marshal, with the Marshal also gaining a worsened sprinting to fire time. The LAPA also gains an increased fire rate at the cost of reduced damage.]]
+
+ATT.SortOrder = 12.5
+
+ATT.Category = "bocw_lc10_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_barrel_extended.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.PhysBulletMuzzleVelocityMult = 1.4
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_extended"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lc10_barrel_extended")
+
+ATT = {}
+
+ATT.PrintName = [[11.4" Cavalry Lancer]] --// 2
+ATT.CompactName = [[11.4" CAVLRY]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lc10_cavalry.png", "mips smooth")
+ATT.Description = [[Heavy profile barrel broach rifled to improve damage against enemy vehicles.
+
+The Cavalry Lancer barrel is an attachment type new to Call of Duty: Black Ops Cold War that acts similar to the Full Metal Jacket attachment from previous titles. It increases the damage multiplier to vehicles and various Scorestreaks. However, unlike FMJ, it only increases the damage multiplier and doesn't increase material penetration]]
+
+ATT.SortOrder = 11.4
+
+ATT.Category = "bocw_lc10_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_barrel_cavalry.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DamageTypeOverride = DMG_AIRBOAT
+ATT.ArmorPiercingMult = 3
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_cavalry"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lc10_barrel_cavalry")
+
+ATT = {}
+
+ATT.PrintName = [[11.9" Reinforced Heavy]] --// 3
+ATT.CompactName = [[11.9" HEAVY]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lc10_reinforced.png", "mips smooth")
+ATT.Description = [[Heavy profile barrel button rifled to improve bullet velocity and damage range.
+
+The Reinforced Heavy barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed, while for Shotguns it loses the bullet velocity in exchange for a fire rate increase. The Warsaw Pact equivalent is the VDV Reinforced Barrel.]]
+
+ATT.SortOrder = 11.9
+
+ATT.Category = "bocw_lc10_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_barrel_reinforced.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.RangeMinMult = 1.18
+ATT.PhysBulletMuzzleVelocityMult = 1.8
+
+ATT.SpeedMultSprint = 0.96
+ATT.SpeedMultSighted = 0.8
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_reinforced"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lc10_barrel_reinforced")
+
+ATT = {}
+
+ATT.PrintName = [[14.5" Ranger]] --// 4
+ATT.CompactName = [[14.5" RANGR]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lc10_ranger.png", "mips smooth")
+ATT.Description = [[Durable steel barrel with phosphate coating. Button rifled to improve bullet velocity.
+
+The Ranger barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, and Shotguns in Call of Duty: Black Ops Cold War. It increases muzzle velocity of shots while reducing the aiming movement speed while for Shotguns, the muzzle velocity increase is swapped out for increased damage range. The Warsaw Pact equivalent is the Liberator Barrel.]]
+
+ATT.SortOrder = 14.5
+
+ATT.Category = "bocw_lc10_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_barrel_ranger.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.PhysBulletMuzzleVelocityMult = 2
+
+ATT.SpeedMultSighted = 0.75
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_ranger"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lc10_barrel_ranger")
+
+ATT = {}
+
+ATT.PrintName = [[13.2" Rifled]]
+ATT.CompactName = [[13.2" RIFLED]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lc10_rifled.png", "mips smooth")
+ATT.Description = [[Nitride-treated barrel for enhanced durability to prevent bending and improve damage range.
+
+The Rifled barrel is an attachment type available for Submachine Guns in Call of Duty: Black Ops Cold War. It increases damage range at the cost of sprinting movement speed.]]
+
+ATT.SortOrder = 13.2
+
+ATT.Category = "bocw_lc10_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_barrel_rifled.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -875,28 +839,28 @@ ATT.ActivateElements = {"barrel_rifled"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_barrel_rifled")
+ARC9.LoadAttachment(ATT, "bocw_lc10_barrel_rifled")
 
 ATT = {}
 
-ATT.PrintName = [[10.6" Task Force]] --// 6
-ATT.CompactName = [[10.6" TASKF]]
-ATT.Icon = Material("entities/bocw_atts/barrels/milano821_taskforce.png", "mips smooth")
+ATT.PrintName = [[13.9" Task Force]] --// 6
+ATT.CompactName = [[13.9" TASKF]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lc10_taskforce.png", "mips smooth")
 ATT.Description = [[Extended length steel barrel improves bullet velocity, range and damage.
 
 The Task Force barrel is an attachment type available for most Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. For Tactical Rifles, it gives the same benefits but without the loss of a starting magazine. There is an alternate type in the Spetsnaz RPK Barrel.]]
 
-ATT.SortOrder = 10.6
+ATT.SortOrder = 13.9
 
-ATT.Category = "bocw_milano821_barrel"
+ATT.Category = "bocw_lc10_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_barrel_taskforce.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_barrel_taskforce.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.DamageMaxMult = 1.05
+ATT.DamageMaxMult = 1.07
 ATT.RangeMaxMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.75
 
@@ -911,103 +875,104 @@ ATT.ActivateElements = {"barrel_taskforce"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_barrel_taskforce")
+ARC9.LoadAttachment(ATT, "bocw_lc10_barrel_taskforce")
 --========== MAGAZINE =================
 ATT = {}
 
-ATT.PrintName = "45 Rnd Drum" --// 1
+ATT.PrintName = "45 Rnd" --// 1
 ATT.CompactName = "45 RND"
-ATT.Icon = Material("entities/bocw_atts/magazines/milano821_ext1.png", "mips smooth")
-ATT.Description = [[Drum magazine designed for submachine guns. Contains 45 rounds.
+ATT.Icon = Material("entities/bocw_atts/magazines/lc10_ext1.png", "mips smooth")
+ATT.Description = [[Extended magazine holds 45 rounds of ammunition.
 
 Extended Mags are a type of Magazine attachment available for Primaries, Pistols and Shotguns in Call of Duty: Black Ops Cold War. Like Modern Warfare, magazine extensions are named for their capacity. Speed Mags act as extended mags with faster reloading. Further extensions are provided by STANAG Mags, Bakelite Mags, Spetsnaz Mags, Salvo Fast Mags & VDV Fast Mags.]]
 
 ATT.SortOrder = 1
 
-ATT.Category = "bocw_milano821_mag"
+ATT.Category = "bocw_lc10_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_magazine_ext1.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_magazine_ext1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_lc10_magazine_ext1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 40
+ATT.ClipSizeOverride = 45
 
 ATT.ReloadTimeMult = 1.1
 
-ATT.ActivateElements = {"milano821_mag_ext"}
+ATT.ActivateElements = {"lc10_mag_ext"}
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_magazine_ext1")
+ARC9.LoadAttachment(ATT, "bocw_lc10_magazine_ext1")
 
 ATT = {}
 
 ATT.PrintName = "Fast Mag" --// 2
 ATT.CompactName = "FAST MAG"
-ATT.Icon = Material("entities/bocw_atts/magazines/milano821_fast1.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/magazines/lc10_fast1.png", "mips smooth")
 ATT.Description = [[Lightweight magazine with a paracord pull loop to improve reload speed.
 
 The Fast Mag is a Magazine attachment available for all Light Machine Guns and Pistols alongside most of the Submachine Guns and Sniper Rifles in Call of Duty: Black Ops Cold War. It increases reload speed with no penalty, same as jungle-style or taped magazines.]]
 
 ATT.SortOrder = 2
 
-ATT.Category = "bocw_milano821_mag"
+ATT.Category = "bocw_lc10_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_magazine_fast1.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_milano821_magazine_fast1.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_magazine_fast1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_lc10_magazine_fast1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ReloadTimeMult = 0.82
+ATT.ReloadTimeMult = 0.77
 
-ATT.ActivateElements = {"milano821_mag_fast"}
+ATT.ActivateElements = {"lc10_mag_fast"}
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_magazine_fast1")
+ARC9.LoadAttachment(ATT, "bocw_lc10_magazine_fast1")
 
 ATT = {}
 
-ATT.PrintName = "35 Rnd Speed Mag" --// 3
-ATT.CompactName = "35 RND SPD"
-ATT.Icon = Material("entities/bocw_atts/magazines/milano821_mix1.png", "mips smooth")
-ATT.Description = [[Extended magazine with a paracord pull loop to improve reload speed. Contains 35 rounds.
+ATT.PrintName = "42 Rnd Speed Mag" --// 3
+ATT.CompactName = "42 RND SPD"
+ATT.Icon = Material("entities/bocw_atts/magazines/lc10_mix1.png", "mips smooth")
+ATT.Description = [[Extended magazine with a makeshift pull loop to improve reload speed.
 
 The Speed Mag is a type of Magazine attachment available for all Assault Rifles. Submachine Guns, Tactical Rifles, Light Machine Guns, Sniper Rifles and Pistols in Call of Duty: Black Ops Cold War. It increases magazine size alongside decreasing reload speeds but at the cost of increasing aiming time, however, for the XM4 and Grav, it does not affect the aiming time.]]
 
 ATT.SortOrder = 3
 
-ATT.Category = "bocw_milano821_mag"
+ATT.Category = "bocw_lc10_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_magazine_mix1.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_magazine_mix1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 35
+ATT.ClipSizeOverride = 42
 ATT.ReloadTimeMult = 0.75
 
 ATT.AimDownSightsTimeMult = 1.2
 
-ATT.ActivateElements = {"milano821_mag_mix"}
+ATT.ActivateElements = {"lc10_mag_mix"}
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_magazine_mix1")
+ARC9.LoadAttachment(ATT, "bocw_lc10_magazine_mix1")
 
 ATT = {}
 
-ATT.PrintName = "STANAG 55 Rnd Drum" --// 4
+ATT.PrintName = "STANAG 55 Rnd" --// 4
 ATT.CompactName = "55 RND"
-ATT.Icon = Material("entities/bocw_atts/magazines/milano821_extpro.png", "mips smooth")
-ATT.Description = [[High-capacity drum magazine contains 55 rounds of ammunition.
+ATT.Icon = Material("entities/bocw_atts/magazines/lc10_extpro.png", "mips smooth")
+ATT.Description = [[High-capacity magazine holds 55 rounds of ammunition.
 
 The STANAG is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time and reload speed. There are two different Warsaw Pact equivalents in the Bakelite Mag and the Spetsnaz Mag.]]
 
 ATT.SortOrder = 4
 
-ATT.Category = "bocw_milano821_mag"
+ATT.Category = "bocw_lc10_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_magazine_extpro.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_magazine_extpro.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -1018,81 +983,81 @@ ATT.ClipSizeOverride = 55
 ATT.ReloadTimeMult = 1.1
 ATT.AimDownSightsTimeMult = 1.15
 
-ATT.ActivateElements = {"milano821_mag_ext"}
+ATT.ActivateElements = {"lc10_mag_ext"}
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_magazine_extpro")
+ARC9.LoadAttachment(ATT, "bocw_lc10_magazine_extpro")
 
 ATT = {}
 
 ATT.PrintName = "Vandal Speed Loader" --// 5
 ATT.CompactName = "VANDAL SPD"
-ATT.Icon = Material("entities/bocw_atts/magazines/milano821_fastpro.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/magazines/lc10_fastpro.png", "mips smooth")
 ATT.Description = [[Makeshift steel pull loop for greatly improved reload speed. Includes additional magazine.
 
 The Vandal Speed Loader is a type of Magazine attachment available for all Light Machine Guns, Sniper Rifles and Pistols alongside a large amount of the Submachine Guns in Call of Duty: Black Ops Cold War. It decreases reload speeds and gives an additional starting magazine but at the cost of increasing aiming time, however on Light Machine Guns, an additional general movement decrease is also given (this is not the case in Warzone).]]
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_milano821_mag"
+ATT.Category = "bocw_lc10_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_magazine_fastpro.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_milano821_magazine_fastpro.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_magazine_fastpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_lc10_magazine_fastpro.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ReloadTimeMult = 0.6
+ATT.ReloadTimeMult = 0.56
 ATT.SupplyLimitOverride = 5
 
 ATT.AimDownSightsTimeMult = 1.06
 
-ATT.ActivateElements = {"milano821_mag_fast"}
+ATT.ActivateElements = {"lc10_mag_fast"}
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_magazine_fastpro")
+ARC9.LoadAttachment(ATT, "bocw_lc10_magazine_fastpro")
 
 ATT = {}
 
-ATT.PrintName = "Salvo 40 Rnd Fast Mag" --// 6
-ATT.CompactName = "40 RND FAST"
-ATT.Icon = Material("entities/bocw_atts/magazines/milano821_mixpro.png", "mips smooth")
-ATT.Description = [[Extended magazine with a steel pull loop to improve reload speed. Contains 40 rounds.
+ATT.PrintName = "Salvo 52 Rnd Fast Mag" --// 6
+ATT.CompactName = "52 RND FAST"
+ATT.Icon = Material("entities/bocw_atts/magazines/lc10_mixpro.png", "mips smooth")
+ATT.Description = [[Extended magazine with a steel pull loop to improve reload speed.
 
 The Salvo Fast Mag is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The Warsaw Pact equivalent is the VDV Fast Mag.]]
 
 ATT.SortOrder = 6
 
-ATT.Category = "bocw_milano821_mag"
+ATT.Category = "bocw_lc10_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_magazine_mixpro.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_magazine_mixpro.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 40
+ATT.ClipSizeOverride = 52
 ATT.ReloadTimeMult = 0.6
 
 ATT.MultAimDownSightsTime = 1.25
 
-ATT.ActivateElements = {"milano821_mag_mix"}
+ATT.ActivateElements = {"lc10_mag_mix"}
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_magazine_mixpro")
+ARC9.LoadAttachment(ATT, "bocw_lc10_magazine_mixpro")
 --========== HANDLE ===================
 ATT = {}
 
 ATT.PrintName = "Speed Tape" --// 1
 ATT.CompactName = "SPEED TAPE"
-ATT.Icon = Material("entities/bocw_atts/handles/milano821_speed.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/handles/lc10_speed.png", "mips smooth")
 ATT.Description = [[Duct tape applied to handle increases friction for improved aiming speed.
 
 The Speed Tape is a Handle attachment available for most Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It acts similar to the Quickdraw Handle and similar attachments from prior games. It decreases the time it takes to aim down sights. It has an alternate in the form of the Speed Grip.]]
 
 ATT.SortOrder = 0
 
-ATT.Category = "bocw_milano821_wrap"
+ATT.Category = "bocw_lc10_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_handle_speed.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_handle_speed.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -1100,89 +1065,89 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.AimDownSightsTimeMult = 0.9
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_handle_speed")
+ARC9.LoadAttachment(ATT, "bocw_lc10_handle_speed")
 
 ATT = {}
 
 ATT.PrintName = "Dropshot Wrap" --// 2
 ATT.CompactName = "DROPSHOT"
-ATT.Icon = Material("entities/bocw_atts/handles/milano821_dropshot.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/handles/lc10_dropshot.png", "mips smooth")
 ATT.Description = [[Tightly wrapped fabric bands to improve flinch stability when aiming from different stances.
 
 The Dropshot Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It decreases flinching from changing stances while also allowing for uninterrupted aiming when changing to prone.]]
 
 ATT.SortOrder = 1
 
-ATT.Category = "bocw_milano821_wrap"
+ATT.Category = "bocw_lc10_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_handle_dropshot.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_handle_dropshot.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_handle_dropshot")
+ARC9.LoadAttachment(ATT, "bocw_lc10_handle_dropshot")
 
 ATT = {}
 
 ATT.PrintName = "Field Tape" --// 3
 ATT.CompactName = "FIELD TAPE"
-ATT.Icon = Material("entities/bocw_atts/handles/milano821_fieldtape.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/handles/lc10_fieldtape.png", "mips smooth")
 ATT.Description = [[A layer of adhesive fabric tape absorbs shock to improve flinch stability.
 
 The Field Tape is a Handle attachment available for all weapons that allow attachments. It decreases flinching from being shot by a large degree.]]
 
 ATT.SortOrder = 3
 
-ATT.Category = "bocw_milano821_wrap"
+ATT.Category = "bocw_lc10_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_handle_fieldtape.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_handle_fieldtape.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_handle_fieldtape")
+ARC9.LoadAttachment(ATT, "bocw_lc10_handle_fieldtape")
 
 ATT = {}
 
 ATT.PrintName = "SASR Jungle Grip" --// 4
 ATT.CompactName = "SASR GRIP"
-ATT.Icon = Material("entities/bocw_atts/handles/milano821_sasrjungle.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/handles/lc10_sasrjungle.png", "mips smooth")
 ATT.Description = [[Makeshift combination of fabric tape and rubber bands to improve aiming speed and flinch stability.
 
 The SASR Jungle Grip is a Handle attachment available for NATO related Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It decreases flinching effect from being shot and decreases the time aiming time but at the cost of having a slower recovery time from sprinting. The Warsaw Pact equivalent is the Spetsnaz Field Grip.]]
 
 ATT.SortOrder = 4
 
-ATT.Category = "bocw_milano821_wrap"
+ATT.Category = "bocw_lc10_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_handle_sasrjungle.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_handle_sasrjungle.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.AimDownSightsTimeMult = 0.8
+ATT.AimDownSightsTimeMult = 0.85
 
 ATT.SprintToFireTimeMult = 1.12
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_handle_sasrjungle")
+ARC9.LoadAttachment(ATT, "bocw_lc10_handle_sasrjungle")
 
 ATT = {}
 
-ATT.PrintName = "Serpent Grip" --// 5
+ATT.PrintName = "Serpent Wrap" --// 5
 ATT.CompactName = "SERPENT"
-ATT.Icon = Material("entities/bocw_atts/handles/milano821_serpent.png", "mips smooth")
-ATT.Description = [[Granulated grip tape increases friction to improve aiming speed.
+ATT.Icon = Material("entities/bocw_atts/handles/lc10_serpent.png", "mips smooth")
+ATT.Description = [[Duct tape with an adhesive coating ensures a firm grip to improve aiming speed.
 
-The Serpent Grip is a Handle attachment available for some Primary Weapons, the Magnum and the Hauer 77 Call of Duty: Black Ops Cold War. It acts as a stronger Speed Tape with the downside of it increasing the sprint to firing time. It has an alternate form in the Serpent Wrap.]]
+The Serpent Wrap is a Handle attachment available for most Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It acts as a stronger Speed Tape with the downside of it increasing the sprint to firing time. It has an alternate form in the Serpent Grip.]]
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_milano821_wrap"
+ATT.Category = "bocw_lc10_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_handle_serpent.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_handle_serpent.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -1192,22 +1157,22 @@ ATT.AimDownSightsTimeMult = 0.75
 
 ATT.SprintToFireTimeMult = 1.1
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_handle_serpent")
+ARC9.LoadAttachment(ATT, "bocw_lc10_handle_serpent")
 
 ATT = {}
 
 ATT.PrintName = "Airborne Elastic Wrap" --// 6
 ATT.CompactName = "AIRBORNE"
-ATT.Icon = Material("entities/bocw_atts/handles/milano821_airborne.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/handles/lc10_airborne.png", "mips smooth")
 ATT.Description = [[Non-abrasive grip sleeve improves shooter stability while maintaining agility.
 
 The Airborne Elastic Wrap is a Handle attachment available for NATO related Primary Weapons, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. It acts as fusion of the Dropshot Wrap and the SASR Jungle Grip, giving increased aiming speed, flinch resistance, and the ability to aim while going prone, but at the cost of reduced sprint recover speed and movement speed while firing. The Warsaw Pact equivalent is the GRU Elastic Wrap.]]
 
 ATT.SortOrder = 6
 
-ATT.Category = "bocw_milano821_wrap"
+ATT.Category = "bocw_lc10_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_handle_airborne.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_handle_airborne.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -1218,758 +1183,45 @@ ATT.AimDownSightsTimeMult = 0.7
 ATT.SprintToFireTimeMult = 1.15
 ATT.SpeedMultShooting = 0.85
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_handle_airborne")
+ARC9.LoadAttachment(ATT, "bocw_lc10_handle_airborne")
 --========== STOCK ====================
 ATT = {}
 
 ATT.PrintName = "Tactical Stock" --// 1
 ATT.CompactName = "TAC STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/milano821_tactical.png", "mips smooth")
-ATT.Description = [[Durable extended stock improves walking speed when aiming down sights.
-
-The Tactical Stock is a Stock attachment available for all Primary Weapons and Shotguns in Call of Duty: Black Ops Cold War. It gives increased movement speed while aiming.]]
-
-ATT.SortOrder = 0
-
-ATT.Category = "bocw_milano821_stock_tac"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_stock_tactical.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SpeedMultSights = 1.1
-
-ARC9.LoadAttachment(ATT, "bocw_milano821_stock_tactical")
-
-ATT = {}
-
-ATT.PrintName = "Wire Stock" --// 2
-ATT.CompactName = "WIRE STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/milano821_wire.png", "mips smooth")
-ATT.Description = [[Wire stock reduces weapon weight to improve sprint to fire time.
-
-The Wire Stock is a Stock attachment available in Call of Duty: Black Ops Cold War. It decreases the delay between sprinting and firing. It has alternates in the forms of the Marathon Stock, Collapsed Stock, CQB Stock and Shotgun Stock.]]
-
-ATT.SortOrder = 1
-
-ATT.Category = "bocw_milano821_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_stock_wire.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SprintToFireTimeMult = 0.9
-
-ARC9.LoadAttachment(ATT, "bocw_milano821_stock_wire")
-
-ATT = {}
-
-ATT.PrintName = "Duster Stock" --// 3
-ATT.CompactName = "DUSTER STK"
-ATT.Icon = Material("entities/bocw_atts/stocks/milano821_duster.png", "mips smooth")
-ATT.Description = [[Lightweight extended stock durably constructed to increase sliding speed.
-
-The Duster Stock is available as a stock attachment in Call of Duty: Black Ops Cold War. It gives increases speed while sliding, giving more distance per slide. It has an alternate in the form of the Duster Pad.]]
-
-ATT.SortOrder = 2
-
-ATT.Category = "bocw_milano821_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_stock_duster.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SpeedMult = 1.05
-
-ATT.ActivateElements = {"stockgone"}
-
-ARC9.LoadAttachment(ATT, "bocw_milano821_stock_duster")
-
-ATT = {}
-
-ATT.PrintName = "Marathon Stock" --// 4
-ATT.CompactName = "MARATHON"
-ATT.Icon = Material("entities/bocw_atts/stocks/milano821_marathon.png", "mips smooth")
-ATT.Description = [[Extended stock perfectly balanced for improved sprint recovery time.
-
-The Marathon Stock is set of Stock attachments available in Call of Duty: Black Ops Cold War. It has three distinct variants that improve the delay between sprinting and firing. The first version of the attachment has alternates in the forms of the Wire Stock, Collapsed Stock, CQB Stock, and Shotgun Stock. The second has alternates in the form of the Buffer Tube, No Stock, and CQB Pad. The third version is exclusively for Shotguns.]]
-
-ATT.SortOrder = 3
-
-ATT.Category = "bocw_milano821_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_stock_marathon.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SprintToFireTimeMult = 0.7
-
-ATT.SpreadMultHipFire = 1.15
-
-ARC9.LoadAttachment(ATT, "bocw_milano821_stock_marathon")
-
-ATT = {}
-
-ATT.PrintName = "SAS Combat Stock" --// 5
-ATT.CompactName = "SAS STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/milano821_sascombat.png", "mips smooth")
-ATT.Description = [[Extended stock with aftermarket cheek rest to improve movement speeds when aiming and firing.
-
-The SAS Combat Stock is a Stock attachment available for all NATO related primary weapons and Shotguns. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The Warsaw Pact equivalent is the Spetsnaz PKM Stock and Spetsnaz Stock.]]
-
-ATT.SortOrder = 5
-
-ATT.Category = "bocw_milano821_stock_tac"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_stock_sascombat.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SpeedMultShooting = 1.05
-ATT.SpeedMultSighted = 1.15
-
-ATT.SpreadMultHipFire = 1.15
-
-ARC9.LoadAttachment(ATT, "bocw_milano821_stock_sascombat")
-
-ATT = {}
-
-ATT.PrintName = "Raider Stock" --// 6
-ATT.CompactName = "RAIDER STK"
-ATT.Icon = Material("entities/bocw_atts/stocks/milano821_raider.png", "mips smooth")
-ATT.Description = [[Lightweight stock perfectly balanced for improved sprint recovery and walking speed when aiming.
-
-The Raider Stock is a Stock attachment available for some NATO related primary weapons. It gives greatly improved sprint to fire timing with improved movement speeds while aiming at the cost of a heavily reduced hip fire accuracy. It has an alternate NATO equivalent with the Raider Pad. The Warsaw Pact equivalents are the KGB Pad and KGB Skeletal Stock. While Shotguns get the Marathon Stock. The Type 63 also gets a unique variant that replaces the Spetsnaz Stock.]]
-
-ATT.SortOrder = 6
-
-ATT.Category = "bocw_milano821_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_milano821_stock_raider.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SprintToFireTimeMult = 0.7
-ATT.SpeedMultSighted = 1.1
-
-ATT.SpreadMultHipFire = 1.3
-
-ARC9.LoadAttachment(ATT, "bocw_milano821_stock_raider")
---[[
-      .o.       oooo    oooo          ooooooooo       .o               
-     .888.      `888   .8P'          d"""""""8'     .d88               
-    .8"888.      888  d8'                  .8'    .d'888   oooo  oooo  
-   .8' `888.     88888[                   .8'   .d'  888   `888  `888  
-  .88ooo8888.    888`88b.    8888888     .8'    88ooo888oo  888   888  
- .8'     `888.   888  `88b.             .8'          888    888   888  
-o88o     o8888o o888o  o888o           .8'          o888o   `V88V"V8P' 
-]]
---========== BARREL ===================
-ATT = {}
-
-ATT.PrintName = [[9.3" Extended]] --// 1
-ATT.CompactName = [[9.3" EXTND]]
-ATT.Icon = Material("entities/bocw_atts/barrels/ak74u_extended.png", "mips smooth")
-ATT.Description = [[Thin profile barrel forged from chromoly steel. Improves bullet velocity.
-
-Within Call of Duty: Black Ops Cold War, the Long Barrel returns as the Extended barrel family of barrel attachments, giving increased muzzle velocity for most weaponry it can be attached to. However, it gives increased effective range for Shotguns and the Marshal, with the Marshal also gaining a worsened sprinting to fire time. The LAPA also gains an increased fire rate at the cost of reduced damage.]]
-
-ATT.SortOrder = 9.3
-
-ATT.Category = "bocw_ak74u_barrel"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_barrel_extended.mdl"
-
-ATT.DrawFunc = function(swep, model)
-
-	local elements = swep:GetElements()
-
-	if elements["ak74u_mag_ext"] then
-        model:SetBodygroup(1,1)
-    end
-end
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.PhysBulletMuzzleVelocityMult = 1.4
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.ActivateElements = {"barrel_extended", "bocw_ak74u_val_barrelcheck"}
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_barrel_extended")
-
-ATT = {}
-
-ATT.PrintName = [[8.4" Cavalry Lancer]] --// 2
-ATT.CompactName = [[8.4" CAVLRY]]
-ATT.Icon = Material("entities/bocw_atts/barrels/ak74u_cavalry.png", "mips smooth")
-ATT.Description = [[Heavy profile barrel broach rifled to improve damage against enemy vehicles.
-
-The Cavalry Lancer barrel is an attachment type new to Call of Duty: Black Ops Cold War that acts similar to the Full Metal Jacket attachment from previous titles. It increases the damage multiplier to vehicles and various Scorestreaks. However, unlike FMJ, it only increases the damage multiplier and doesn't increase material penetration]]
-
-ATT.SortOrder = 8.4
-
-ATT.Category = "bocw_ak74u_barrel_heavy"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_barrel_cavalry.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.DamageTypeOverride = DMG_AIRBOAT
-ATT.ArmorPiercingMult = 2.5
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.ActivateElements = {"barrel_cavalry"}
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_barrel_cavalry")
-
-ATT = {}
-
-ATT.PrintName = [[9.5" VDV Reinforced]] --// 3
-ATT.CompactName = [[9.5" VDV]]
-ATT.Icon = Material("entities/bocw_atts/barrels/ak74u_reinforced.png", "mips smooth")
-ATT.Description = [[Heavy profile barrel button rifled to improve bullet velocity and damage range.
-
-The VDV Reinforced barrel is an attachment type available for Warsaw Pact related Assault Rifles, and Submachine Guns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed. The NATO equivalent is the Reinforced Heavy Barrel.]]
-
-ATT.SortOrder = 9.5
-
-ATT.Category = "bocw_ak74u_barrel"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_barrel_reinforced.mdl"
-
-ATT.DrawFunc = function(swep, model)
-
-	local elements = swep:GetElements()
-
-	if elements["ak74u_mag_ext"] then
-        model:SetBodygroup(1,1)
-    end
-end
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.RangeMaxMult = 1.18
-ATT.PhysBulletMuzzleVelocityMult = 1.8
-
-ATT.SpeedMultSprint = 0.96
-ATT.SpeedMultSighted = 0.8
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.ActivateElements = {"barrel_reinforced", "bocw_ak74u_val_barrelcheck"}
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_barrel_reinforced")
-
-ATT = {}
-
-ATT.PrintName = [[10.3" Liberator]] --// 4
-ATT.CompactName = [[10.3" LBRTR]]
-ATT.Icon = Material("entities/bocw_atts/barrels/ak74u_liberator.png", "mips smooth")
-ATT.Description = [[Durable steel barrel with phosphate coating. Button rifled to improve bullet velocity.
-
-The Liberator barrel is an attachment type available for Warsaw Pact related Assault Rifles and Submachine Guns in Call of Duty: Black Ops Cold War. It increases muzzle velocity of shots while reducing the aiming movement speed. The NATO equivalent is the Ranger Barrel.]]
-
-ATT.SortOrder = 10.3
-
-ATT.Category = "bocw_ak74u_barrel"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_barrel_liberator.mdl"
-
-ATT.DrawFunc = function(swep, model)
-
-	local elements = swep:GetElements()
-
-	if elements["ak74u_mag_ext"] then
-        model:SetBodygroup(1,1)
-    end
-
-	if elements["bocw_ak74u_val_suppcheck"] then
-        model:SetBodygroup(2,1)
-    end
-end
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.PhysBulletMuzzleVelocityMult = 2
-
-ATT.SpeedMultSighted = 0.75
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.ActivateElements = {"barrel_liberator", "bocw_ak74u_val_barrelcheck"}
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_barrel_liberator")
-
-ATT = {}
-
-ATT.PrintName = [[8.4" Rifled]]
-ATT.CompactName = [[8.4" RIFLED]]
-ATT.Icon = Material("entities/bocw_atts/barrels/ak74u_rifled.png", "mips smooth")
-ATT.Description = [[Nitride-treated barrel for enhanced durability to prevent bending and improve damage range.
-
-The Rifled barrel is an attachment type available for Submachine Guns in Call of Duty: Black Ops Cold War. It increases damage range at the cost of sprinting movement speed.]]
-
-ATT.SortOrder = 8.4
-
-ATT.Category = "bocw_ak74u_barrel_heavy"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_barrel_rifled.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.RangeMaxMult = 1.25
-
-ATT.SpeedMultSprint = 0.95
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.ActivateElements = {"barrel_rifled"}
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_barrel_rifled")
-
-ATT = {}
-
-ATT.PrintName = [[10.3" Task Force]] --// 6
-ATT.CompactName = [[10.3" TASKF]]
-ATT.Icon = Material("entities/bocw_atts/barrels/ak74u_taskforce.png", "mips smooth")
-ATT.Description = [[Extended length steel barrel improves bullet velocity, range and damage.
-
-The Task Force barrel is an attachment type available for most Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. For Tactical Rifles, it gives the same benefits but without the loss of a starting magazine. There is an alternate type in the Spetsnaz RPK Barrel.]]
-
-ATT.SortOrder = 10.3
-
-ATT.Category = "bocw_ak74u_barrel"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_barrel_taskforce.mdl"
-
-ATT.DrawFunc = function(swep, model)
-
-	local elements = swep:GetElements()
-
-	if elements["ak74u_mag_ext"] then
-        model:SetBodygroup(1,1)
-    end
-
-	if elements["bocw_ak74u_val_suppcheck"] then
-        model:SetBodygroup(2,1)
-    end
-end
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.DamageMaxMult = 1.08
-ATT.RangeMaxMult = 1.5
-ATT.PhysBulletMuzzleVelocityMult = 1.75
-
-ATT.SupplyLimitOverride = 3
-ATT.RecoilUpMult = 1.2
-ATT.RecoilSideMult = 1.15
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.ActivateElements = {"barrel_taskforce", "bocw_ak74u_val_barrelcheck"}
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_barrel_taskforce")
---========== MAGAZINE =================
-ATT = {}
-
-ATT.PrintName = "40 Rnd Drum" --// 1
-ATT.CompactName = "40 RND"
-ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_ext1.png", "mips smooth")
-ATT.Description = [[Drum magazine designed for submachine guns. Contains 40 rounds.
-
-Extended Mags are a type of Magazine attachment available for Primaries, Pistols and Shotguns in Call of Duty: Black Ops Cold War. Like Modern Warfare, magazine extensions are named for their capacity. Speed Mags act as extended mags with faster reloading. Further extensions are provided by STANAG Mags, Bakelite Mags, Spetsnaz Mags, Salvo Fast Mags & VDV Fast Mags.]]
-
-ATT.SortOrder = 1
-
-ATT.Category = "bocw_ak74u_mag"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_magazine_ext1.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ak74u_magazine_ext1.mdl"
-ATT.DropMagazineVelocityOverride = Vector(0, 0, 0)
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ClipSizeOverride = 40
-
-ATT.ReloadTimeMult = 1.1
-
-ATT.ActivateElements = {"ak74u_mag_ext"}
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_magazine_ext1")
-
-ATT = {}
-
-ATT.PrintName = "Taped Mags" --// 2
-ATT.CompactName = "TAPED MAGS"
-ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_dual1.png", "mips smooth")
-ATT.Description = [[Magazines secured together with duct tape to improve reload speed.
-
-The Taped Mags is a Magazine attachment available for all Warsaw Pact related Assault Rifles, Tactical Rifles and the AK-74U. It improves reload speeds. The NATO equivalent is the Jungle-Style Mag.]]
-
-ATT.SortOrder = 2
-
-ATT.Category = "bocw_ak74u_mag"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_magazine_dual1.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ak74u_magazine_dual1.mdl"
-ATT.DropMagazineVelocityOverride = Vector(0, 0, 0)
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ReloadTimeMult = 0.82
-
-ATT.ActivateElements = {"ak74u_mag_dual"}
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_magazine_dual1")
-
-ATT = {}
-
-ATT.PrintName = "30 Rnd Speed Mag" --// 3
-ATT.CompactName = "30 RND SPD"
-ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_mix1.png", "mips smooth")
-ATT.Description = [[Magazine with a makeshift pull loop to improve reload speed.
-
-The Speed Mag is a type of Magazine attachment available for all Assault Rifles. Submachine Guns, Tactical Rifles, Light Machine Guns, Sniper Rifles and Pistols in Call of Duty: Black Ops Cold War. It increases magazine size alongside decreasing reload speeds but at the cost of increasing aiming time, however, for the XM4 and Grav, it does not affect the aiming time.]]
-
-ATT.SortOrder = 3
-
-ATT.Category = "bocw_ak74u_mag"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_magazine_mix1.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ak74u_magazine_mix1.mdl"
-ATT.DropMagazineVelocityOverride = Vector(0, 0, 0)
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ReloadTimeMult = 0.75
-
-ATT.AimDownSightsTimeMult = 1.2
-
-ATT.ActivateElements = {"ak74u_mag_mix"}
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_magazine_mix1")
-
-ATT = {}
-
-ATT.PrintName = "Spetsnaz 50 Rnd Drum" --// 4
-ATT.CompactName = "50 RND"
-ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_extpro.png", "mips smooth")
-ATT.Description = [[High-capacity drum magazine contains 50 rounds of ammunition.
-
-The Spetsnaz is a type of Magazine attachment available for some Warsaw Pact weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time. The NATO equivalent is the STANAG Mag, alongside the Bakelite Mag which is also Warsaw Pact.]]
-
-ATT.SortOrder = 4
-
-ATT.Category = "bocw_ak74u_mag"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_magazine_extpro.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ak74u_magazine_extpro.mdl"
-ATT.DropMagazineVelocityOverride = Vector(0, 0, 0)
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ClipSizeOverride = 50
-
-ATT.ReloadTimeMult = 1.1
-ATT.AimDownSightsTimeMult = 1.15
-
-ATT.ActivateElements = {"ak74u_mag_ext"}
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_magazine_extpro")
-
-ATT = {}
-
-ATT.PrintName = "GRU Mag Clamp" --// 5
-ATT.CompactName = "GRU CLAMP"
-ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_dualpro.png", "mips smooth")
-ATT.Description = [[Magazine coupler joins an additional inverted magazine to the one in the gun for faster reloads.
-
-The GRU Mag Clamp is a Magazine attachment available for all Warsaw Pact related Assault Rifles, Tactical Rifles and the AK-74U. It improves reload speeds in addition to giving an additional starting magazine but at the cost of a longer time to aim. The NATO equivalent is the SAS Mag Clamp.]]
-
-ATT.SortOrder = 5
-
-ATT.Category = "bocw_ak74u_mag"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_magazine_dualpro.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ak74u_magazine_dualpro.mdl"
-ATT.DropMagazineVelocityOverride = Vector(0, 0, 0)
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ReloadTimeMult = 0.6
-ATT.SupplyLimitOverride = 5
-
-ATT.AimDownSightsTimeMult = 1.06
-
-ATT.ActivateElements = {"ak74u_mag_dual"}
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_magazine_dualpro")
-
-ATT = {}
-
-ATT.PrintName = "VDV 30 Rnd Fast Mag" --// 6
-ATT.CompactName = "30 RND FAST"
-ATT.Icon = Material("entities/bocw_atts/magazines/ak74u_mixpro.png", "mips smooth")
-ATT.Description = [[Paracord pull loop improves reload speed. Contains 30 rounds.
-
-The VDV Fast Mag is a type of Magazine attachment available for all Warsaw Pact weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The NATO equivalent is the Salvo Fast Mag.]]
-
-ATT.SortOrder = 6
-
-ATT.Category = "bocw_ak74u_mag"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_magazine_mixpro.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ak74u_magazine_mixpro.mdl"
-ATT.DropMagazineVelocityOverride = Vector(0, 0, 0)
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.ReloadTimeMult = 0.6
-
-ATT.AimDownSightsTimeMult = 1.25
-
-ATT.ActivateElements = {"ak74u_mag_mix"}
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_magazine_mixpro")
---========== HANDLE ===================
-ATT = {}
-
-ATT.PrintName = "Speed Tape" --// 1
-ATT.CompactName = "SPEED TAPE"
-ATT.Icon = Material("entities/bocw_atts/handles/ak74u_speed.png", "mips smooth")
-ATT.Description = [[Duct tape applied to handle increases friction for improved aiming speed.
-
-The Speed Tape is a Handle attachment available for most Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It acts similar to the Quickdraw Handle and similar attachments from prior games. It decreases the time it takes to aim down sights. It has an alternate in the form of the Speed Grip.]]
-
-ATT.SortOrder = 0
-
-ATT.Category = "bocw_ak74u_wrap"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_handle_speed.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.AimDownSightsTimeMult = 0.9
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_handle_speed")
-
-ATT = {}
-
-ATT.PrintName = "Dropshot Wrap" --// 2
-ATT.CompactName = "DRPSHT WRP"
-ATT.Icon = Material("entities/bocw_atts/handles/ak74u_dropshot.png", "mips smooth")
-ATT.Description = [[Tightly wrapped fabric bands to improve flinch stability when aiming from different stances.
-
-The Dropshot Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It decreases flinching from changing stances while also allowing for uninterrupted aiming when changing to prone.]]
-
-ATT.SortOrder = 1
-
-ATT.Category = "bocw_ak74u_wrap"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_handle_dropshot.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_handle_dropshot")
-
-ATT = {}
-
-ATT.PrintName = "Field Tape" --// 3
-ATT.CompactName = "FIELD TAPE"
-ATT.Icon = Material("entities/bocw_atts/handles/ak74u_fieldtape.png", "mips smooth")
-ATT.Description = [[A layer of adhesive fabric tape absorbs shock to improve flinch stability.
-
-The Field Tape is a Handle attachment available for all weapons that allow attachments. It decreases flinching from being shot by a large degree.]]
-
-ATT.SortOrder = 3
-
-ATT.Category = "bocw_ak74u_wrap"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_handle_fieldtape.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_handle_fieldtape")
-
-ATT = {}
-
-ATT.PrintName = "Spetsnaz Field Grip" --// 4
-ATT.CompactName = "SPTSNZ GRIP"
-ATT.Icon = Material("entities/bocw_atts/handles/ak74u_spetsnaz.png", "mips smooth")
-ATT.Description = [[Makeshift combination of fabric tape and rubber bands to improve aiming speed and flinch stability.
-
-The Spetsnaz Field Grip is a Handle attachment available for Warsaw Pact related Primary Weapons in Call of Duty: Black Ops Cold War. It decreases flinching effect from being shot and decreases the time aiming time but at the cost of having a slower recovery time from sprinting. The NATO equivalent is the SASR Jungle Grip.]]
-
-ATT.SortOrder = 4
-
-ATT.Category = "bocw_ak74u_wrap"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_handle_spetsnaz.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.AimDownSightsTimeMult = 0.8
-
-ATT.SprintToFireTimeMult = 1.12
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_handle_spetsnaz")
-
-ATT = {}
-
-ATT.PrintName = "Serpent Wrap" --// 5
-ATT.CompactName = "SRPNT WRAP"
-ATT.Icon = Material("entities/bocw_atts/handles/ak74u_serpent.png", "mips smooth")
-ATT.Description = [[Duct tape with an adhesive coating ensures a firm grip to improve aiming speed.
-
-The Serpent Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It acts as a stronger Speed Tape with the downside of it increasing the sprint to firing time.]]
-
-ATT.SortOrder = 5
-
-ATT.Category = "bocw_ak74u_wrap"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_handle_serpent.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.AimDownSightsTimeMult = 0.75
-
-ATT.SprintToFireTimeMult = 1.1
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_handle_serpent")
-
-ATT = {}
-
-ATT.PrintName = "GRU Elastic Wrap" --// 6
-ATT.CompactName = "GRU WRAP"
-ATT.Icon = Material("entities/bocw_atts/handles/ak74u_gruelastic.png", "mips smooth")
-ATT.Description = [[Non-abrasive grip sleeve improves shooter stability while maintaining agility.
-
-The GRU Elastic Wrap is a Handle attachment available for Warsaw Pact related Primary Weapons in Call of Duty: Black Ops Cold War. It acts as fusion of the Dropshot Tape and the Spetsnaz Field Grip, giving the effects of both alongside the downside of the SASR Jungle Grip and the added downside of decreased movement speed whiled aiming. The NATO equivalent is the Airborne Elastic Wrap.]]
-
-ATT.SortOrder = 6
-
-ATT.Category = "bocw_ak74u_wrap"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_handle_gruelastic.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.AimDownSightsTimeMult = 0.7
-
-ATT.SprintToFireTimeMult = 1.15
-ATT.SpeedMultShootingMult = 0.85
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_handle_gruelastic")
---========== STOCK ====================
-ATT = {}
-
-ATT.PrintName = "Tactical Stock" --// 1
-ATT.CompactName = "TAC STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ak74u_tactical.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/stocks/lc10_tactical.png", "mips smooth")
 ATT.Description = [[MIL-SPEC stock with integrated cheek rest to improve walking speed when aiming.
 
 The Tactical Stock is a Stock attachment available for all Primary Weapons and Shotguns in Call of Duty: Black Ops Cold War. It gives increased movement speed while aiming.]]
 
 ATT.SortOrder = 0
 
-ATT.Category = "bocw_ak74u_stock"
+ATT.Category = "bocw_lc10_stock_tac"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_stock_tactical.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_stock_tactical.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0.012)
+ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMultSights = 1.1
 
-ATT.ActivateElements = {"gripgone"}
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_stock_tactical")
+ARC9.LoadAttachment(ATT, "bocw_lc10_stock_tactical")
 
 ATT = {}
 
 ATT.PrintName = "Wire Stock" --// 2
 ATT.CompactName = "WIRE STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ak74u_wire.png", "mips smooth")
-ATT.Description = [[Wire stock reduces weapon weight to improve sprint to fire time.
+ATT.Icon = Material("entities/bocw_atts/stocks/lc10_wire.png", "mips smooth")
+ATT.Description = [[Wire stock frame reduces bulk and weapon weight to improve sprint recovery.
 
 The Wire Stock is a Stock attachment available in Call of Duty: Black Ops Cold War. It decreases the delay between sprinting and firing. It has alternates in the forms of the Marathon Stock, Collapsed Stock, CQB Stock and Shotgun Stock.]]
 
 ATT.SortOrder = 1
 
-ATT.Category = "bocw_ak74u_stock"
+ATT.Category = "bocw_lc10_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_stock_wire.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_stock_wire.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -1977,22 +1229,22 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SprintToFireTimeMult = 0.9
 
-ARC9.LoadAttachment(ATT, "bocw_ak74u_stock_wire")
+ARC9.LoadAttachment(ATT, "bocw_lc10_stock_wire")
 
 ATT = {}
 
 ATT.PrintName = "Duster Stock" --// 3
 ATT.CompactName = "DUSTER STK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ak74u_duster.png", "mips smooth")
-ATT.Description = [[Folding stock enables movement versatility to increase sliding speed.
+ATT.Icon = Material("entities/bocw_atts/stocks/lc10_duster.png", "mips smooth")
+ATT.Description = [[Reliable stock durably constructed to increase sliding speed.
 
 The Duster Stock is available as a stock attachment in Call of Duty: Black Ops Cold War. It gives increases speed while sliding, giving more distance per slide. It has an alternate in the form of the Duster Pad.]]
 
 ATT.SortOrder = 2
 
-ATT.Category = "bocw_ak74u_stock"
+ATT.Category = "bocw_lc10_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_stock_duster.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_stock_duster.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2000,24 +1252,24 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMult = 1.05
 
-ATT.ActivateElements = {"gripgone"}
+ATT.ActivateElements = {"stockgone"}
 
-ARC9.LoadAttachment(ATT, "bocw_ak74u_stock_duster")
+ARC9.LoadAttachment(ATT, "bocw_lc10_stock_duster")
 
 ATT = {}
 
 ATT.PrintName = "No Stock" --// 4
 ATT.CompactName = "NO STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ak74u_nostock.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/stocks/lc10_nostock.png", "mips smooth")
 ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
 
-The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and shotgun Stock.]]
+The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
 
 ATT.SortOrder = 3
 
-ATT.Category = "bocw_ak74u_stock"
+ATT.Category = "bocw_lc10_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_stock_nostock.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_stock_marathon.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2027,24 +1279,22 @@ ATT.SprintToFireTimeMult = 0.7
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stockgone"}
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_stock_nostock")
+ARC9.LoadAttachment(ATT, "bocw_lc10_stock_marathon")
 
 ATT = {}
 
-ATT.PrintName = "Spetsnaz PKM Stock" --// 5
-ATT.CompactName = "PKM STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ak74u_spetsnazpkm.png", "mips smooth")
-ATT.Description = [[Lightweight stock provides stability to improve movement speeds when aiming and firing.
+ATT.PrintName = "SAS Combat Stock" --// 5
+ATT.CompactName = "SAS STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/lc10_sascombat.png", "mips smooth")
+ATT.Description = [[Tactical cheek rest to improve movement speeds when aiming and firing.
 
-The Spetsnaz PKM Stock is one of the Stock attachments for Warsaw Pact related primary weapons alongside the Spetsnaz Stock. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The NATO equivalent is the SAS Combat Stock.]]
+The SAS Combat Stock is a Stock attachment available for all NATO related primary weapons and Shotguns. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The Warsaw Pact equivalent is the Spetsnaz PKM Stock and Spetsnaz Stock.]]
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_ak74u_stock"
+ATT.Category = "bocw_lc10_stock_tac"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_stock_spetsnazpkm.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_stock_sascombat.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2055,24 +1305,22 @@ ATT.SpeedMultSighted = 1.15
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"gripgone"}
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_stock_spetsnazpkm")
+ARC9.LoadAttachment(ATT, "bocw_lc10_stock_sascombat")
 
 ATT = {}
 
-ATT.PrintName = "KGB Skeletal Stock" --// 6
-ATT.CompactName = "KGB STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ak74u_kgbskeletal.png", "mips smooth")
-ATT.Description = [[Folding stock enables concealment for improved sprint recovery and walking speed when aiming.
+ATT.PrintName = "Raider Stock" --// 6
+ATT.CompactName = "RAIDER STK"
+ATT.Icon = Material("entities/bocw_atts/stocks/lc10_raider.png", "mips smooth")
+ATT.Description = [[Lightweight stock provides added stability for improved sprint recovery and walking speed when aiming.
 
-The KGB Skeletal Stock is a Stock attachment available for some Warsaw Pact related primary weapons. It gives greatly improved sprint to fire timing with improved movement speeds while aiming at the cost of a heavily reduced hip fire accuracy. It has an alternate Warsaw Pact equivalent with the KGB Pad. The NATO equivalents are the Raider Pad and Raider Stock, while Shotguns get the Marathon Stock.]]
+The Raider Stock is a Stock attachment available for some NATO related primary weapons. It gives greatly improved sprint to fire timing with improved movement speeds while aiming at the cost of a heavily reduced hip fire accuracy. It has an alternate NATO equivalent with the Raider Pad. The Warsaw Pact equivalents are the KGB Pad and KGB Skeletal Stock. While Shotguns get the Marathon Stock. The Type 63 also gets a unique variant that replaces the Spetsnaz Stock.]]
 
 ATT.SortOrder = 6
 
-ATT.Category = "bocw_ak74u_stock"
+ATT.Category = "bocw_lc10_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_stock_kgbskeletal.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_stock_raider.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2083,33 +1331,31 @@ ATT.SpeedMultSighted = 1.1
 
 ATT.SpreadMultHipFire = 1.3
 
-ATT.ActivateElements = {"gripgone"}
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_stock_kgbskeletal")
+ARC9.LoadAttachment(ATT, "bocw_lc10_stock_raider")
 --[[
-oooo    oooo  .oooooo..o ooooooooo.            .o     oooooooo 
-`888   .8P'  d8P'    `Y8 `888   `Y88.        .d88    dP""""""" 
- 888  d8'    Y88bo.       888   .d88'      .d'888   d88888b.   
- 88888[       `"Y8888o.   888ooo88P'     .d'  888       `Y88b  
- 888`88b.         `"Y88b  888            88ooo888oo       ]88  
- 888  `88b.  oo     .d8P  888                 888   o.   .88P  
-o888o  o888o 8""88888P'  o888o               o888o  `8bd88P'   
+ooooooooo.   ooooooooo.    .oooooo..o oooo                      .o     .o  
+`888   `Y88. `888   `Y88. d8P'    `Y8 `888                    .d88   o888  
+ 888   .d88'  888   .d88' Y88bo.       888 .oo.             .d'888    888  
+ 888ooo88P'   888ooo88P'   `"Y8888o.   888P"Y88b          .d'  888    888  
+ 888          888              `"Y88b  888   888  8888888 88ooo888oo  888  
+ 888          888         oo     .d8P  888   888               888    888  
+o888o        o888o        8""88888P'  o888o o888o             o888o  o888o 
 ]]
 --========== BARREL ===================
 ATT = {}
 
-ATT.PrintName = [[8.9" Extended]] --// 1
-ATT.CompactName = [[8.9" EXTND]]
-ATT.Icon = Material("entities/bocw_atts/barrels/ksp45_extended.png", "mips smooth")
+ATT.PrintName = [[14.3" Extended]] --// 1
+ATT.CompactName = [[14.3" EXTND]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ppsh41_extended.png", "mips smooth")
 ATT.Description = [[Thin profile barrel forged from chromoly steel. Improves bullet velocity.
 
 Within Call of Duty: Black Ops Cold War, the Long Barrel returns as the Extended barrel family of barrel attachments, giving increased muzzle velocity for most weaponry it can be attached to. However, it gives increased effective range for Shotguns and the Marshal, with the Marshal also gaining a worsened sprinting to fire time. The LAPA also gains an increased fire rate at the cost of reduced damage.]]
 
-ATT.SortOrder = 8.9
+ATT.SortOrder = 14.3
 
-ATT.Category = "bocw_ksp45_barrel"
+ATT.Category = "bocw_ppsh41_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_barrel_extended.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_barrel_extended.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2124,29 +1370,29 @@ ATT.ActivateElements = {"barrel_extended"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_barrel_extended")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_barrel_extended")
 
 ATT = {}
 
-ATT.PrintName = [[9.6" Cavalry Lancer]] --// 2
-ATT.CompactName = [[9.6" CAVLRY]]
-ATT.Icon = Material("entities/bocw_atts/barrels/ksp45_cavalry.png", "mips smooth")
+ATT.PrintName = [[12.7" Cavalry Lancer]] --// 2
+ATT.CompactName = [[12.7" CAVLRY]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ppsh41_cavalry.png", "mips smooth")
 ATT.Description = [[Heavy profile barrel broach rifled to improve damage against enemy vehicles.
 
 The Cavalry Lancer barrel is an attachment type new to Call of Duty: Black Ops Cold War that acts similar to the Full Metal Jacket attachment from previous titles. It increases the damage multiplier to vehicles and various Scorestreaks. However, unlike FMJ, it only increases the damage multiplier and doesn't increase material penetration]]
 
-ATT.SortOrder = 9.6
+ATT.SortOrder = 12.7
 
-ATT.Category = "bocw_ksp45_barrel"
+ATT.Category = "bocw_ppsh41_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_barrel_cavalry.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_barrel_cavalry.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.DamageTypeOverride = DMG_AIRBOAT
-ATT.ArmorPiercingMult = 2.5
+ATT.ArmorPiercingMult = 3
 
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
@@ -2155,28 +1401,28 @@ ATT.ActivateElements = {"barrel_cavalry"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_barrel_cavalry")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_barrel_cavalry")
 
 ATT = {}
 
-ATT.PrintName = [[10.5" Reinforced Heavy]] --// 3
-ATT.CompactName = [[10.5" HEAVY]]
-ATT.Icon = Material("entities/bocw_atts/barrels/ksp45_reinforced.png", "mips smooth")
+ATT.PrintName = [[14.9" Reinforced Heavy]] --// 3
+ATT.CompactName = [[14.9" HEAVY]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ppsh41_reinforced.png", "mips smooth")
 ATT.Description = [[Heavy profile barrel button rifled to improve bullet velocity and damage range.
 
 The Reinforced Heavy barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed, while for Shotguns it loses the bullet velocity in exchange for a fire rate increase. The Warsaw Pact equivalent is the VDV Reinforced Barrel.]]
 
-ATT.SortOrder = 10.5
+ATT.SortOrder = 14.9
 
-ATT.Category = "bocw_ksp45_barrel"
+ATT.Category = "bocw_ppsh41_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_barrel_reinforced.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_barrel_reinforced.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.RangeMaxMult = 1.18
+ATT.RangeMinMult = 1.18
 ATT.PhysBulletMuzzleVelocityMult = 1.8
 
 ATT.SpeedMultSprint = 0.96
@@ -2189,22 +1435,22 @@ ATT.ActivateElements = {"barrel_reinforced"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_barrel_reinforced")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_barrel_reinforced")
 
 ATT = {}
 
-ATT.PrintName = [[9.5" Ranger]] --// 4
-ATT.CompactName = [[9.5" RANGER]]
-ATT.Icon = Material("entities/bocw_atts/barrels/ksp45_ranger.png", "mips smooth")
+ATT.PrintName = [[14.9" Ranger]] --// 4
+ATT.CompactName = [[14.9" RANGER]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ppsh41_ranger.png", "mips smooth")
 ATT.Description = [[Durable steel barrel with phosphate coating. Button rifled to improve bullet velocity.
 
 The Ranger barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, and Shotguns in Call of Duty: Black Ops Cold War. It increases muzzle velocity of shots while reducing the aiming movement speed while for Shotguns, the muzzle velocity increase is swapped out for increased damage range. The Warsaw Pact equivalent is the Liberator Barrel.]]
 
-ATT.SortOrder = 9.5
+ATT.SortOrder = 14.9
 
-ATT.Category = "bocw_ksp45_barrel"
+ATT.Category = "bocw_ppsh41_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_barrel_ranger.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_barrel_ranger.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2221,28 +1467,28 @@ ATT.ActivateElements = {"barrel_ranger"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_barrel_ranger")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_barrel_ranger")
 
 ATT = {}
 
-ATT.PrintName = [[10.2" Rifled]]
-ATT.CompactName = [[10.2" RIFLED]]
-ATT.Icon = Material("entities/bocw_atts/barrels/ksp45_rifled.png", "mips smooth")
+ATT.PrintName = [[14.9" Rifled]]
+ATT.CompactName = [[14.9" RIFLED]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ppsh41_rifled.png", "mips smooth")
 ATT.Description = [[Nitride-treated barrel for enhanced durability to prevent bending and improve damage range.
 
 The Rifled barrel is an attachment type available for Submachine Guns in Call of Duty: Black Ops Cold War. It increases damage range at the cost of sprinting movement speed.]]
 
-ATT.SortOrder = 10.2
+ATT.SortOrder = 14.9
 
-ATT.Category = "bocw_ksp45_barrel"
+ATT.Category = "bocw_ppsh41_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_barrel_rifled.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_barrel_rifled.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.RangeMaxMult = 1.25
+ATT.RangeMinMult = 1.25
 
 ATT.SpeedMultSprint = 0.95
 
@@ -2253,28 +1499,28 @@ ATT.ActivateElements = {"barrel_rifled"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_barrel_rifled")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_barrel_rifled")
 
 ATT = {}
 
-ATT.PrintName = [[10.5" Task Force]] --// 6
-ATT.CompactName = [[10.5" TASKF]]
-ATT.Icon = Material("entities/bocw_atts/barrels/ksp45_taskforce.png", "mips smooth")
+ATT.PrintName = [[15.7" Task Force]] --// 6
+ATT.CompactName = [[15.7" TASKF]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ppsh41_taskforce.png", "mips smooth")
 ATT.Description = [[Extended length steel barrel improves bullet velocity, range and damage.
 
 The Task Force barrel is an attachment type available for most Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. For Tactical Rifles, it gives the same benefits but without the loss of a starting magazine. There is an alternate type in the Spetsnaz RPK Barrel.]]
 
-ATT.SortOrder = 10.5
+ATT.SortOrder = 15.7
 
-ATT.Category = "bocw_ksp45_barrel"
+ATT.Category = "bocw_ppsh41_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_barrel_taskforce.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_barrel_taskforce.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.DamageMaxMult = 1.08
+ATT.DamageMaxMult = 1.07
 ATT.RangeMaxMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.75
 
@@ -2289,49 +1535,52 @@ ATT.ActivateElements = {"barrel_taskforce"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_barrel_taskforce")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_barrel_taskforce")
 --========== MAGAZINE =================
 ATT = {}
 
-ATT.PrintName = "42 Rnd" --// 1
-ATT.CompactName = "42 RND"
-ATT.Icon = Material("entities/bocw_atts/magazines/ksp45_ext1.png", "mips smooth")
-ATT.Description = [[Extended drum magazine. Contains 42 rounds.
+ATT.PrintName = "55 Rnd Drum" --// 1
+ATT.CompactName = "55 RND"
+ATT.Icon = Material("entities/bocw_atts/magazines/ppsh41_ext1.png", "mips smooth")
+ATT.Description = [[Extended drum magazine holds 55 rounds.
 
 Extended Mags are a type of Magazine attachment available for Primaries, Pistols and Shotguns in Call of Duty: Black Ops Cold War. Like Modern Warfare, magazine extensions are named for their capacity. Speed Mags act as extended mags with faster reloading. Further extensions are provided by STANAG Mags, Bakelite Mags, Spetsnaz Mags, Salvo Fast Mags & VDV Fast Mags.]]
 
 ATT.SortOrder = 1
 
-ATT.Category = "bocw_ksp45_mag"
+ATT.Category = "bocw_ppsh41_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_magazine_ext1.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_magazine_ext1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ppsh41_magazine_ext1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 42
+ATT.ClipSizeOverride = 55
 
-ATT.ReloadTimeMult = 1.1
+ATT.ReloadTimeMult = 1.36
 
-ATT.ActivateElements = {"ksp45_mag_ext"}
+ATT.ActivateElements = {"ppsh41_mag_ext"}
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_magazine_ext1")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_magazine_ext1")
 
 ATT = {}
 
 ATT.PrintName = "Fast Mag" --// 2
 ATT.CompactName = "FAST MAG"
-ATT.Icon = Material("entities/bocw_atts/magazines/ksp45_fast1.png", "mips smooth")
-ATT.Description = [[Lightweight magazine with a paracord pull loop to improve reload speed.
+ATT.Icon = Material("entities/bocw_atts/magazines/ppsh41_dual1.png", "mips smooth")
+ATT.Description = [[Makeshift pull loop attached to magazine to improve reload speed.
 
 The Fast Mag is a Magazine attachment available for all Light Machine Guns and Pistols alongside most of the Submachine Guns and Sniper Rifles in Call of Duty: Black Ops Cold War. It increases reload speed with no penalty, same as jungle-style or taped magazines.]]
 
 ATT.SortOrder = 2
 
-ATT.Category = "bocw_ksp45_mag"
+ATT.Category = "bocw_ppsh41_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_magazine_fast1.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_magazine_fast1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ppsh41_magazine_fast1.mdl"
+ATT.DropMagazineVelocityOverride = Vector(0, 0, 0)
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2339,136 +1588,140 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ReloadTimeMult = 0.82
 
-ATT.ActivateElements = {"ksp45_mag_fast"}
+ATT.ActivateElements = {"ppsh41_mag_fast"}
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_magazine_fast1")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_magazine_fast1")
 
 ATT = {}
 
-ATT.PrintName = "42 Rnd Speed Mag" --// 3
-ATT.CompactName = "42 RND SPD"
-ATT.Icon = Material("entities/bocw_atts/magazines/ksp45_mix1.png", "mips smooth")
-ATT.Description = [[High-capacity magazine with increased gripping surface for faster reloads. Holds 42 rounds.
+ATT.PrintName = "40 Rnd Speed Mag" --// 3
+ATT.CompactName = "40 RND SPD"
+ATT.Icon = Material("entities/bocw_atts/magazines/ppsh41_mix1.png", "mips smooth")
+ATT.Description = [[Extended lightweight magazine contains 40 rounds and improves reload speed.
 
 The Speed Mag is a type of Magazine attachment available for all Assault Rifles. Submachine Guns, Tactical Rifles, Light Machine Guns, Sniper Rifles and Pistols in Call of Duty: Black Ops Cold War. It increases magazine size alongside decreasing reload speeds but at the cost of increasing aiming time, however, for the XM4 and Grav, it does not affect the aiming time.]]
 
 ATT.SortOrder = 3
 
-ATT.Category = "bocw_ksp45_mag"
+ATT.Category = "bocw_ppsh41_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_magazine_mix1.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_magazine_mix1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ppsh41_magazine_mix1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 42
-ATT.ReloadTimeMult = 0.75
+ATT.ClipSizeOverride = 40
+ATT.ReloadTimeMult = 0.8
 
 ATT.AimDownSightsTimeMult = 1.2
 
-ATT.ActivateElements = {"ksp45_mag_mix"}
+ATT.ActivateElements = {"ppsh41_mag_mix"}
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_magazine_mix1")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_magazine_mix1")
 
 ATT = {}
 
-ATT.PrintName = "STANAG 48 Rnd" --// 4
-ATT.CompactName = "48 RND"
-ATT.Icon = Material("entities/bocw_atts/magazines/ksp45_extpro.png", "mips smooth")
-ATT.Description = [[Drum magazine contains 48 rounds secured inside an olive drab pouch.
+ATT.PrintName = "Spetsnaz 71 Rnd Drum" --// 4
+ATT.CompactName = "71 RND"
+ATT.Icon = Material("entities/bocw_atts/magazines/ppsh41_extpro.png", "mips smooth")
+ATT.Description = [[High-capacity drum magazine holds 71 rounds.
 
-The STANAG is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time and reload speed. There are two different Warsaw Pact equivalents in the Bakelite Mag and the Spetsnaz Mag.]]
+The Spetsnaz is a type of Magazine attachment available for some Warsaw Pact weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time. The NATO equivalent is the STANAG Mag, alongside the Bakelite Mag which is also Warsaw Pact.]]
 
 ATT.SortOrder = 4
 
-ATT.Category = "bocw_ksp45_mag"
+ATT.Category = "bocw_ppsh41_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_magazine_extpro.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_magazine_extpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ppsh41_magazine_extpro.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 48
+ATT.ClipSizeOverride = 71
 
-ATT.ReloadTimeMult = 1.1
-ATT.AimDownSightsTimeMult = 1.15
+ATT.ReloadTimeMult = 1.42
+ATT.AimDownSightsTimeMult = 1.18
 
-ATT.ActivateElements = {"ksp45_mag_ext"}
+ATT.ActivateElements = {"ppsh41_mag_ext"}
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_magazine_extpro")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_magazine_extpro")
 
 ATT = {}
 
 ATT.PrintName = "Vandal Speed Loader" --// 5
 ATT.CompactName = "VANDAL SPD"
-ATT.Icon = Material("entities/bocw_atts/magazines/ksp45_fastpro.png", "mips smooth")
-ATT.Description = [[Makeshift steel pull loop for greatly improved reload speed. Includes additional magazine.
+ATT.Icon = Material("entities/bocw_atts/magazines/ppsh41_fastpro.png", "mips smooth")
+ATT.Description = [[Leather pull loop improves reload speed. Includes additional magazine.
 
 The Vandal Speed Loader is a type of Magazine attachment available for all Light Machine Guns, Sniper Rifles and Pistols alongside a large amount of the Submachine Guns in Call of Duty: Black Ops Cold War. It decreases reload speeds and gives an additional starting magazine but at the cost of increasing aiming time, however on Light Machine Guns, an additional general movement decrease is also given (this is not the case in Warzone).]]
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_ksp45_mag"
+ATT.Category = "bocw_ppsh41_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_magazine_fastpro.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_magazine_fastpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ppsh41_magazine_fastpro.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ReloadTimeMult = 0.6
+ATT.ReloadTimeMult = 0.4
 ATT.SupplyLimitOverride = 5
 
 ATT.AimDownSightsTimeMult = 1.06
 
-ATT.ActivateElements = {"ksp45_mag_fast"}
+ATT.ActivateElements = {"ppsh41_mag_fast"}
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_magazine_fastpro")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_magazine_fastpro")
 
 ATT = {}
 
-ATT.PrintName = "Salvo 48 Rnd Fast Mag" --// 6
-ATT.CompactName = "48 RND FAST"
-ATT.Icon = Material("entities/bocw_atts/magazines/ksp45_mixpro.png", "mips smooth")
-ATT.Description = [[High-capacity magazine contains 48 rounds. Improves reload speed.
+ATT.PrintName = "VDV 50 Rnd Fast Mag" --// 6
+ATT.CompactName = "50 RND FAST"
+ATT.Icon = Material("entities/bocw_atts/magazines/ppsh41_mixpro.png", "mips smooth")
+ATT.Description = [[Extended lightweight magazine to improve reload speed. Contains 50 rounds.
 
-The Salvo Fast Mag is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The Warsaw Pact equivalent is the VDV Fast Mag.]]
+The VDV Fast Mag is a type of Magazine attachment available for all Warsaw Pact weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The NATO equivalent is the Salvo Fast Mag.]]
 
 ATT.SortOrder = 6
 
-ATT.Category = "bocw_ksp45_mag"
+ATT.Category = "bocw_ppsh41_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_magazine_mixpro.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_magazine_mixpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ppsh41_magazine_mixpro.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 48
+ATT.ClipSizeOverride = 50
 ATT.ReloadTimeMult = 0.6
 
-ATT.MultAimDownSightsTime = 1.25
+ATT.AimDownSightsTimeMult = 1.25
 
-ATT.ActivateElements = {"ksp45_mag_mix"}
+ATT.ActivateElements = {"ppsh41_mag_mix"}
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_magazine_mixpro")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_magazine_mixpro")
 --========== HANDLE ===================
 ATT = {}
 
-ATT.PrintName = "Speed Tape" --// 1
-ATT.CompactName = "SPEED TAPE"
-ATT.Icon = Material("entities/bocw_atts/handles/ksp45_speed.png", "mips smooth")
-ATT.Description = [[Duct tape applied to handle increases friction for improved aiming speed.
+ATT.PrintName = "Speed Grip" --// 1
+ATT.CompactName = "SPEED GRIP"
+ATT.Icon = Material("entities/bocw_atts/handles/ppsh41_speed.png", "mips smooth")
+ATT.Description = [[Fabric wrapping increases grip for improve aiming speed.
 
-The Speed Tape is a Handle attachment available for most Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It acts similar to the Quickdraw Handle and similar attachments from prior games. It decreases the time it takes to aim down sights. It has an alternate in the form of the Speed Grip.]]
+The Speed Grip is a Handle attachment available for some Primary weaponry. It acts similar to the Quickdraw Handle and similar attachments from prior games. It decreases the time it takes to aim down sights. It has an alternate in the form of the Speed Tape.]]
 
 ATT.SortOrder = 0
 
-ATT.Category = "bocw_ksp45_wrap"
+ATT.Category = "bocw_ppsh41_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_handle_speed.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_handle_speed.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2476,64 +1729,64 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.AimDownSightsTimeMult = 0.9
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_handle_speed")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_handle_speed")
 
 ATT = {}
 
 ATT.PrintName = "Dropshot Wrap" --// 2
-ATT.CompactName = "DROPSHOT"
-ATT.Icon = Material("entities/bocw_atts/handles/ksp45_dropshot.png", "mips smooth")
+ATT.CompactName = "DRPSHT WRP"
+ATT.Icon = Material("entities/bocw_atts/handles/ppsh41_dropshot.png", "mips smooth")
 ATT.Description = [[Tightly wrapped fabric bands to improve flinch stability when aiming from different stances.
 
 The Dropshot Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It decreases flinching from changing stances while also allowing for uninterrupted aiming when changing to prone.]]
 
 ATT.SortOrder = 1
 
-ATT.Category = "bocw_ksp45_wrap"
+ATT.Category = "bocw_ppsh41_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_handle_dropshot.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_handle_dropshot.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_handle_dropshot")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_handle_dropshot")
 
 ATT = {}
 
 ATT.PrintName = "Field Tape" --// 3
 ATT.CompactName = "FIELD TAPE"
-ATT.Icon = Material("entities/bocw_atts/handles/ksp45_fieldtape.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/handles/ppsh41_fieldtape.png", "mips smooth")
 ATT.Description = [[A layer of adhesive fabric tape absorbs shock to improve flinch stability.
 
 The Field Tape is a Handle attachment available for all weapons that allow attachments. It decreases flinching from being shot by a large degree.]]
 
 ATT.SortOrder = 3
 
-ATT.Category = "bocw_ksp45_wrap"
+ATT.Category = "bocw_ppsh41_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_handle_fieldtape.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_handle_fieldtape.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_handle_fieldtape")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_handle_fieldtape")
 
 ATT = {}
 
-ATT.PrintName = "SASR Jungle Grip" --// 4
-ATT.CompactName = "SASR GRIP"
-ATT.Icon = Material("entities/bocw_atts/handles/ksp45_sasrjungle.png", "mips smooth")
+ATT.PrintName = "Spetsnaz Field Grip" --// 4
+ATT.CompactName = "SPTSNZ GRIP"
+ATT.Icon = Material("entities/bocw_atts/handles/ppsh41_spetsnaz.png", "mips smooth")
 ATT.Description = [[Makeshift combination of fabric tape and rubber bands to improve aiming speed and flinch stability.
 
-The SASR Jungle Grip is a Handle attachment available for NATO related Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It decreases flinching effect from being shot and decreases the time aiming time but at the cost of having a slower recovery time from sprinting. The Warsaw Pact equivalent is the Spetsnaz Field Grip.]]
+The Spetsnaz Field Grip is a Handle attachment available for Warsaw Pact related Primary Weapons in Call of Duty: Black Ops Cold War. It decreases flinching effect from being shot and decreases the time aiming time but at the cost of having a slower recovery time from sprinting. The NATO equivalent is the SASR Jungle Grip.]]
 
 ATT.SortOrder = 4
 
-ATT.Category = "bocw_ksp45_wrap"
+ATT.Category = "bocw_ppsh41_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_handle_sasrjungle.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_handle_spetsnaz.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2543,22 +1796,22 @@ ATT.AimDownSightsTimeMult = 0.8
 
 ATT.SprintToFireTimeMult = 1.12
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_handle_sasrjungle")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_handle_spetsnaz")
 
 ATT = {}
 
 ATT.PrintName = "Serpent Wrap" --// 5
-ATT.CompactName = "SERPENT"
-ATT.Icon = Material("entities/bocw_atts/handles/ksp45_serpent.png", "mips smooth")
+ATT.CompactName = "SRPNT WRAP"
+ATT.Icon = Material("entities/bocw_atts/handles/ppsh41_serpent.png", "mips smooth")
 ATT.Description = [[Duct tape with an adhesive coating ensures a firm grip to improve aiming speed.
 
-The Serpent Wrap is a Handle attachment available for most Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It acts as a stronger Speed Tape with the downside of it increasing the sprint to firing time. It has an alternate form in the Serpent Grip.]]
+The Serpent Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It acts as a stronger Speed Tape with the downside of it increasing the sprint to firing time.]]
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_ksp45_wrap"
+ATT.Category = "bocw_ppsh41_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_handle_serpent.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_handle_serpent.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2568,22 +1821,22 @@ ATT.AimDownSightsTimeMult = 0.75
 
 ATT.SprintToFireTimeMult = 1.1
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_handle_serpent")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_handle_serpent")
 
 ATT = {}
 
-ATT.PrintName = "Airborne Elastic Wrap" --// 6
-ATT.CompactName = "AIRBORNE"
-ATT.Icon = Material("entities/bocw_atts/handles/ksp45_airborne.png", "mips smooth")
+ATT.PrintName = "GRU Elastic Wrap" --// 6
+ATT.CompactName = "GRU WRAP"
+ATT.Icon = Material("entities/bocw_atts/handles/ppsh41_gruelastic.png", "mips smooth")
 ATT.Description = [[Non-abrasive grip sleeve improves shooter stability while maintaining agility.
 
-The Airborne Elastic Wrap is a Handle attachment available for NATO related Primary Weapons, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. It acts as fusion of the Dropshot Wrap and the SASR Jungle Grip, giving increased aiming speed, flinch resistance, and the ability to aim while going prone, but at the cost of reduced sprint recover speed and movement speed while firing. The Warsaw Pact equivalent is the GRU Elastic Wrap.]]
+The GRU Elastic Wrap is a Handle attachment available for Warsaw Pact related Primary Weapons in Call of Duty: Black Ops Cold War. It acts as fusion of the Dropshot Tape and the Spetsnaz Field Grip, giving the effects of both alongside the downside of the SASR Jungle Grip and the added downside of decreased movement speed whiled aiming. The NATO equivalent is the Airborne Elastic Wrap.]]
 
 ATT.SortOrder = 6
 
-ATT.Category = "bocw_ksp45_wrap"
+ATT.Category = "bocw_ppsh41_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_handle_airborne.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_handle_gruelastic.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2592,47 +1845,49 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 ATT.AimDownSightsTimeMult = 0.7
 
 ATT.SprintToFireTimeMult = 1.15
-ATT.SpeedMultShooting = 0.85
+ATT.SpeedMultShootingMult = 0.85
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_handle_airborne")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_handle_gruelastic")
 --========== STOCK ====================
 ATT = {}
 
 ATT.PrintName = "Tactical Stock" --// 1
 ATT.CompactName = "TAC STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ksp45_tactical.png", "mips smooth")
-ATT.Description = [[Extended stock provides added stability for improved walking speed when aiming.
+ATT.Icon = Material("entities/bocw_atts/stocks/ppsh41_tactical.png", "mips smooth")
+ATT.Description = [[Leather cheek rest for improved walking speed when aiming down sights.
 
 The Tactical Stock is a Stock attachment available for all Primary Weapons and Shotguns in Call of Duty: Black Ops Cold War. It gives increased movement speed while aiming.]]
 
 ATT.SortOrder = 0
 
-ATT.Category = "bocw_ksp45_stock"
+ATT.Category = "bocw_ppsh41_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_stock_tactical.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_stock_tactical.mdl"
 
 ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelOffset = Vector(0, 0, 0.012)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMultSights = 1.1
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_stock_tactical")
+ATT.ActivateElements = {"gripgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_stock_tactical")
 
 ATT = {}
 
-ATT.PrintName = "Wire Stock" --// 2
-ATT.CompactName = "WIRE STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ksp45_wire.png", "mips smooth")
-ATT.Description = [[Wire stock reduces weapon weight to improve sprint to fire time.
+ATT.PrintName = "Marathon Stock" --// 2
+ATT.CompactName = "MARATHON"
+ATT.Icon = Material("entities/bocw_atts/stocks/ppsh41_marathon.png", "mips smooth")
+ATT.Description = [[Removed stock reduces weapon weight to improve sprint to fire time.
 
-The Wire Stock is a Stock attachment available in Call of Duty: Black Ops Cold War. It decreases the delay between sprinting and firing. It has alternates in the forms of the Marathon Stock, Collapsed Stock, CQB Stock and Shotgun Stock.]]
+The Marathon Stock is set of Stock attachments available in Call of Duty: Black Ops Cold War. It has three distinct variants that improve the delay between sprinting and firing. The first version of the attachment has alternates in the forms of the Wire Stock, Collapsed Stock, CQB Stock, and Shotgun Stock. The second has alternates in the form of the Buffer Tube, No Stock, and CQB Pad. The third version is exclusively for Shotguns.]]
 
 ATT.SortOrder = 1
 
-ATT.Category = "bocw_ksp45_stock"
+ATT.Category = "bocw_ppsh41_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_stock_wire.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_stock_wire.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2640,22 +1895,22 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SprintToFireTimeMult = 0.9
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_stock_wire")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_stock_marathon")
 
 ATT = {}
 
 ATT.PrintName = "Duster Stock" --// 3
 ATT.CompactName = "DUSTER STK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ksp45_duster.png", "mips smooth")
-ATT.Description = [[Lightweight extended stock durably constructed to increase sliding speed.
+ATT.Icon = Material("entities/bocw_atts/stocks/ppsh41_duster.png", "mips smooth")
+ATT.Description = [[Removed stock reduces weapon weight to increase sliding speed.
 
 The Duster Stock is available as a stock attachment in Call of Duty: Black Ops Cold War. It gives increases speed while sliding, giving more distance per slide. It has an alternate in the form of the Duster Pad.]]
 
 ATT.SortOrder = 2
 
-ATT.Category = "bocw_ksp45_stock"
+ATT.Category = "bocw_ppsh41_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_stock_duster.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_stock_duster.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2663,24 +1918,24 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMult = 1.05
 
-ATT.ActivateElements = {"stockgone"}
+ATT.ActivateElements = {"gripgone"}
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_stock_duster")
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_stock_duster")
 
 ATT = {}
 
-ATT.PrintName = "No Stock" --// 4
-ATT.CompactName = "NO STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ksp45_nostock.png", "mips smooth")
+ATT.PrintName = "CQB Stock" --// 4
+ATT.CompactName = "CQB STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/ppsh41_cqb.png", "mips smooth")
 ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
 
-The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
+The CQB Stock is a Stock attachment in Call of Duty: Black Ops Cold War. There are two variants, both which decrease the delay time between firing from sprinting while one has a stronger affect and decreases hip fire accuracy. It has alternates in the forms of the Wire Stock, Marathon Stock, Collapsed Stock, and Shotgun Stock.]]
 
 ATT.SortOrder = 3
 
-ATT.Category = "bocw_ksp45_stock"
+ATT.Category = "bocw_ppsh41_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_stock_nostock.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_stock_cqb.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2690,22 +1945,24 @@ ATT.SprintToFireTimeMult = 0.7
 
 ATT.SpreadMultHipFire = 1.15
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_stock_nostock")
+ATT.ActivateElements = {"stockgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_stock_cqb")
 
 ATT = {}
 
-ATT.PrintName = "SAS Combat Stock" --// 5
-ATT.CompactName = "SAS STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ksp45_sascombat.png", "mips smooth")
-ATT.Description = [[Tactical cheek rest to improve movement speeds when aiming and firing.
+ATT.PrintName = "Spetsnaz Stock" --// 5
+ATT.CompactName = "SPETSNAZ"
+ATT.Icon = Material("entities/bocw_atts/stocks/ppsh41_spetsnaz.png", "mips smooth")
+ATT.Description = [[Retrofitted cheek rest to improve movement speeds when aiming and firing.
 
-The SAS Combat Stock is a Stock attachment available for all NATO related primary weapons and Shotguns. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The Warsaw Pact equivalent is the Spetsnaz PKM Stock and Spetsnaz Stock.]]
+The Spetsnaz Stock is one of the Stock attachments for Warsaw Pact related primary weapons alongside the Spetsnaz PKM Stock. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The NATO equivalent is the SAS Combat Stock.]]
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_ksp45_stock"
+ATT.Category = "bocw_ppsh41_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_stock_sascombat.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_stock_spetsnaz.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2716,22 +1973,24 @@ ATT.SpeedMultSighted = 1.15
 
 ATT.SpreadMultHipFire = 1.15
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_stock_sascombat")
+ATT.ActivateElements = {"gripgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_stock_spetsnaz")
 
 ATT = {}
 
 ATT.PrintName = "Raider Stock" --// 6
-ATT.CompactName = "RAIDER STK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ksp45_raider.png", "mips smooth")
-ATT.Description = [[Lightweight cheek rest provides added stability for improved sprint recovery and walking speed when aiming.
+ATT.CompactName = "RAIDER"
+ATT.Icon = Material("entities/bocw_atts/stocks/ppsh41_raider.png", "mips smooth")
+ATT.Description = [[Lightweight stock perfectly balanced for improved sprint recovery and movement speeds when aiming.
 
 The Raider Stock is a Stock attachment available for some NATO related primary weapons. It gives greatly improved sprint to fire timing with improved movement speeds while aiming at the cost of a heavily reduced hip fire accuracy. It has an alternate NATO equivalent with the Raider Pad. The Warsaw Pact equivalents are the KGB Pad and KGB Skeletal Stock. While Shotguns get the Marathon Stock. The Type 63 also gets a unique variant that replaces the Spetsnaz Stock.]]
 
 ATT.SortOrder = 6
 
-ATT.Category = "bocw_ksp45_stock"
+ATT.Category = "bocw_ppsh41_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_stock_raider.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_stock_raider.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2742,34 +2001,33 @@ ATT.SpeedMultSighted = 1.1
 
 ATT.SpreadMultHipFire = 1.3
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_stock_raider")
---[[
+ATT.ActivateElements = {"gripgone"}
 
-oooooooooo.              oooo  oooo   .o88o.                               
-`888'   `Y8b             `888  `888   888 `"                               
- 888     888 oooo  oooo   888   888  o888oo  oooo d8b  .ooooo.   .oooooooo 
- 888oooo888' `888  `888   888   888   888    `888""8P d88' `88b 888' `88b  
- 888    `88b  888   888   888   888   888     888     888   888 888   888  
- 888    .88P  888   888   888   888   888     888     888   888 `88bod8P'  
-o888bood8P'   `V88V"V8P' o888o o888o o888o   d888b    `Y8bod8P' `8oooooo.  
-                                                                d"     YD  
-                                                                "Y88888P'  
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_stock_raider")
+--[[
+  .oooooo.   ooooooooooooo              .ooooo.   
+ d8P'  `Y8b  8'   888   `8             888' `Y88. 
+888      888      888       .oooo.o    888    888 
+888      888      888      d88(  "8     `Vbood888 
+888      888      888      `"Y88b.           888' 
+`88b    d88'      888      o.  )88b        .88P'  
+ `Y8bood8P'      o888o     8""888P'      .oP'     
 ]]
 --========== BARREL ===================
 ATT = {}
 
-ATT.PrintName = [[7.1" Extended]] --// 1
-ATT.CompactName = [[7.1" EXTEND]]
-ATT.Icon = Material("entities/bocw_atts/barrels/bullfrog_extended.png", "mips smooth")
+ATT.PrintName = [[6.6" Extended]] --// 1
+ATT.CompactName = [[6.6" EXTND]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ots9_extended.png", "mips smooth")
 ATT.Description = [[Thin profile barrel forged from chromoly steel. Improves bullet velocity.
 
 Within Call of Duty: Black Ops Cold War, the Long Barrel returns as the Extended barrel family of barrel attachments, giving increased muzzle velocity for most weaponry it can be attached to. However, it gives increased effective range for Shotguns and the Marshal, with the Marshal also gaining a worsened sprinting to fire time. The LAPA also gains an increased fire rate at the cost of reduced damage.]]
 
-ATT.SortOrder = 7.1
+ATT.SortOrder = 6.6
 
-ATT.Category = "bocw_bullfrog_barrel"
+ATT.Category = "bocw_ots9_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_barrel_extended.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_barrel_extended.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2784,22 +2042,22 @@ ATT.ActivateElements = {"barrel_extended"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_barrel_extended")
+ARC9.LoadAttachment(ATT, "bocw_ots9_barrel_extended")
 
 ATT = {}
 
-ATT.PrintName = [[7" Cavalry Lancer]] --// 2
-ATT.CompactName = [[7" CAVALRY]]
-ATT.Icon = Material("entities/bocw_atts/barrels/bullfrog_cavalry.png", "mips smooth")
+ATT.PrintName = [[5.8" Cavalry Lancer]] --// 2
+ATT.CompactName = [[5.8" CAVLRY]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ots9_cavalry.png", "mips smooth")
 ATT.Description = [[Heavy profile barrel broach rifled to improve damage against enemy vehicles.
 
 The Cavalry Lancer barrel is an attachment type new to Call of Duty: Black Ops Cold War that acts similar to the Full Metal Jacket attachment from previous titles. It increases the damage multiplier to vehicles and various Scorestreaks. However, unlike FMJ, it only increases the damage multiplier and doesn't increase material penetration]]
 
-ATT.SortOrder = 7
+ATT.SortOrder = 5.8
 
-ATT.Category = "bocw_bullfrog_barrel"
+ATT.Category = "bocw_ots9_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_barrel_cavalry.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_barrel_cavalry.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2815,28 +2073,28 @@ ATT.ActivateElements = {"barrel_cavalry"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_barrel_cavalry")
+ARC9.LoadAttachment(ATT, "bocw_ots9_barrel_cavalry")
 
 ATT = {}
 
-ATT.PrintName = [[6.7" VDV Reinforced]] --// 3
-ATT.CompactName = [[6.7" VDV]]
-ATT.Icon = Material("entities/bocw_atts/barrels/bullfrog_reinforced.png", "mips smooth")
+ATT.PrintName = [[7.5" VDV Reinforced]] --// 3
+ATT.CompactName = [[7.5" VDV]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ots9_reinforced.png", "mips smooth")
 ATT.Description = [[Heavy profile barrel button rifled to improve bullet velocity and damage range.
 
 The VDV Reinforced barrel is an attachment type available for Warsaw Pact related Assault Rifles, and Submachine Guns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed. The NATO equivalent is the Reinforced Heavy Barrel.]]
 
-ATT.SortOrder = 6.7
+ATT.SortOrder = 7.5
 
-ATT.Category = "bocw_bullfrog_barrel"
+ATT.Category = "bocw_ots9_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_barrel_reinforced.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_barrel_reinforced.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.RangeMaxMult = 1.18
+ATT.RangeMinMult = 1.18
 ATT.PhysBulletMuzzleVelocityMult = 1.8
 
 ATT.SpeedMultSprint = 0.96
@@ -2849,22 +2107,22 @@ ATT.ActivateElements = {"barrel_reinforced"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_barrel_reinforced")
+ARC9.LoadAttachment(ATT, "bocw_ots9_barrel_reinforced")
 
 ATT = {}
 
-ATT.PrintName = [[8.1" Liberator]] --// 4
-ATT.CompactName = [[8.1" LIBERATR]]
-ATT.Icon = Material("entities/bocw_atts/barrels/bullfrog_liberator.png", "mips smooth")
+ATT.PrintName = [[7.1" Liberator]] --// 4
+ATT.CompactName = [[7.1" LIBERATR]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ots9_liberator.png", "mips smooth")
 ATT.Description = [[Durable steel barrel with phosphate coating. Button rifled to improve bullet velocity.
 
 The Liberator barrel is an attachment type available for Warsaw Pact related Assault Rifles and Submachine Guns in Call of Duty: Black Ops Cold War. It increases muzzle velocity of shots while reducing the aiming movement speed. The NATO equivalent is the Ranger Barrel.]]
 
-ATT.SortOrder = 8.1
+ATT.SortOrder = 7.1
 
-ATT.Category = "bocw_bullfrog_barrel"
+ATT.Category = "bocw_ots9_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_barrel_liberator.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_barrel_liberator.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2881,22 +2139,693 @@ ATT.ActivateElements = {"barrel_liberator"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_barrel_liberator")
+ARC9.LoadAttachment(ATT, "bocw_ots9_barrel_liberator")
 
 ATT = {}
 
-ATT.PrintName = [[7.6" Rifled]]
-ATT.CompactName = [[7.6" RIFLED]]
-ATT.Icon = Material("entities/bocw_atts/barrels/bullfrog_rifled.png", "mips smooth")
+ATT.PrintName = [[7.5" Rifled]]
+ATT.CompactName = [[7.5" RIFLED]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ots9_rifled.png", "mips smooth")
 ATT.Description = [[Nitride-treated barrel for enhanced durability to prevent bending and improve damage range.
 
 The Rifled barrel is an attachment type available for Submachine Guns in Call of Duty: Black Ops Cold War. It increases damage range at the cost of sprinting movement speed.]]
 
-ATT.SortOrder = 7.6
+ATT.SortOrder = 7.5
 
-ATT.Category = "bocw_bullfrog_barrel"
+ATT.Category = "bocw_ots9_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_barrel_rifled.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_barrel_rifled.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.RangeMinMult = 1.25
+
+ATT.SpeedMultSprint = 0.95
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_rifled"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_barrel_rifled")
+
+ATT = {}
+
+ATT.PrintName = [[8.1" Task Force]] --// 6
+ATT.CompactName = [[8.1" TASKF]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ots9_taskforce.png", "mips smooth")
+ATT.Description = [[Extended length steel barrel improves bullet velocity, range and damage.
+
+The Task Force barrel is an attachment type available for most Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. For Tactical Rifles, it gives the same benefits but without the loss of a starting magazine. There is an alternate type in the Spetsnaz RPK Barrel.]]
+
+ATT.SortOrder = 8.1
+
+ATT.Category = "bocw_ots9_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_barrel_taskforce.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DamageMaxMult = 1.06
+ATT.RangeMaxMult = 1.5
+ATT.PhysBulletMuzzleVelocityMult = 1.75
+
+ATT.SupplyLimitOverride = 3
+ATT.RecoilUpMult = 1.2
+ATT.RecoilSideMult = 1.15
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_taskforce"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_barrel_taskforce")
+--========== MAGAZINE =================
+ATT = {}
+
+ATT.PrintName = "30 Rnd" --// 1
+ATT.CompactName = "55 RND"
+ATT.Icon = Material("entities/bocw_atts/magazines/ots9_ext1.png", "mips smooth")
+ATT.Description = [[Extended magazine holds 30 rounds.
+
+Extended Mags are a type of Magazine attachment available for Primaries, Pistols and Shotguns in Call of Duty: Black Ops Cold War. Like Modern Warfare, magazine extensions are named for their capacity. Speed Mags act as extended mags with faster reloading. Further extensions are provided by STANAG Mags, Bakelite Mags, Spetsnaz Mags, Salvo Fast Mags & VDV Fast Mags.]]
+
+ATT.SortOrder = 1
+
+ATT.Category = "bocw_ots9_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_magazine_ext1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ots9_magazine_ext1.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ClipSizeOverride = 30
+
+ATT.ReloadTimeMult = 1.36
+
+ATT.ActivateElements = {"ots9_mag_ext"}
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_magazine_ext1")
+
+ATT = {}
+
+ATT.PrintName = "Fast Mag" --// 2
+ATT.CompactName = "FAST MAG"
+ATT.Icon = Material("entities/bocw_atts/magazines/ots9_dual1.png", "mips smooth")
+ATT.Description = [[Makeshift pull loop attached to magazine to improve reload speed.
+
+The Fast Mag is a Magazine attachment available for all Light Machine Guns and Pistols alongside most of the Submachine Guns and Sniper Rifles in Call of Duty: Black Ops Cold War. It increases reload speed with no penalty, same as jungle-style or taped magazines.]]
+
+ATT.SortOrder = 2
+
+ATT.Category = "bocw_ots9_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_magazine_fast1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ots9_magazine_fast1.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ReloadTimeMult = 0.8
+
+ATT.ActivateElements = {"ots9_mag_fast"}
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_magazine_fast1")
+
+ATT = {}
+
+ATT.PrintName = "25 Rnd Speed Mag" --// 3
+ATT.CompactName = "25 RND SPD"
+ATT.Icon = Material("entities/bocw_atts/magazines/ots9_mix1.png", "mips smooth")
+ATT.Description = [[Extended lightweight magazine contains 25 rounds and improves reload speed.
+
+The Speed Mag is a type of Magazine attachment available for all Assault Rifles. Submachine Guns, Tactical Rifles, Light Machine Guns, Sniper Rifles and Pistols in Call of Duty: Black Ops Cold War. It increases magazine size alongside decreasing reload speeds but at the cost of increasing aiming time, however, for the XM4 and Grav, it does not affect the aiming time.]]
+
+ATT.SortOrder = 3
+
+ATT.Category = "bocw_ots9_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_magazine_mix1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ots9_magazine_mix1.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ClipSizeOverride = 25
+ATT.ReloadTimeMult = 0.8
+
+ATT.AimDownSightsTimeMult = 1.2
+
+ATT.ActivateElements = {"ots9_mag_mix"}
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_magazine_mix1")
+
+ATT = {}
+
+ATT.PrintName = "Spetsnaz 40 Rnd" --// 4
+ATT.CompactName = "40 RND"
+ATT.Icon = Material("entities/bocw_atts/magazines/ots9_extpro.png", "mips smooth")
+ATT.Description = [[High-capacity magazine holds 40 rounds.
+
+The Spetsnaz is a type of Magazine attachment available for some Warsaw Pact weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time. The NATO equivalent is the STANAG Mag, alongside the Bakelite Mag which is also Warsaw Pact.]]
+
+ATT.SortOrder = 4
+
+ATT.Category = "bocw_ots9_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_magazine_extpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ots9_magazine_extpro.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ClipSizeOverride = 40
+
+ATT.ReloadTimeMult = 1.1
+ATT.AimDownSightsTimeMult = 1.15
+
+ATT.ActivateElements = {"ots9_mag_ext"}
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_magazine_extpro")
+
+ATT = {}
+
+ATT.PrintName = "Vandal Speed Loader" --// 5
+ATT.CompactName = "VANDAL SPD"
+ATT.Icon = Material("entities/bocw_atts/magazines/ots9_fastpro.png", "mips smooth")
+ATT.Description = [[Leather pull loop improves reload speed. Includes additional magazine.
+
+The Vandal Speed Loader is a type of Magazine attachment available for all Light Machine Guns, Sniper Rifles and Pistols alongside a large amount of the Submachine Guns in Call of Duty: Black Ops Cold War. It decreases reload speeds and gives an additional starting magazine but at the cost of increasing aiming time, however on Light Machine Guns, an additional general movement decrease is also given (this is not the case in Warzone).]]
+
+ATT.SortOrder = 5
+
+ATT.Category = "bocw_ots9_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_magazine_fastpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ots9_magazine_fastpro.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ReloadTimeMult = 0.4
+ATT.SupplyLimitOverride = 5
+
+ATT.AimDownSightsTimeMult = 1.06
+
+ATT.ActivateElements = {"ots9_mag_fast"}
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_magazine_fastpro")
+
+ATT = {}
+
+ATT.PrintName = "VDV 32 Rnd Fast Mag" --// 6
+ATT.CompactName = "32 RND FAST"
+ATT.Icon = Material("entities/bocw_atts/magazines/ots9_mixpro.png", "mips smooth")
+ATT.Description = [[Extended lightweight magazine to improve reload speed. Contains 32 rounds.
+
+The VDV Fast Mag is a type of Magazine attachment available for all Warsaw Pact weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The NATO equivalent is the Salvo Fast Mag.]]
+
+ATT.SortOrder = 6
+
+ATT.Category = "bocw_ots9_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_magazine_mixpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_ots9_magazine_mixpro.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ClipSizeOverride = 32
+ATT.ReloadTimeMult = 0.6
+
+ATT.AimDownSightsTimeMult = 1.25
+
+ATT.ActivateElements = {"ots9_mag_mix"}
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_magazine_mixpro")
+--========== HANDLE ===================
+ATT = {}
+
+ATT.PrintName = "Speed Tape" --// 1
+ATT.CompactName = "SPEED TAPE"
+ATT.Icon = Material("entities/bocw_atts/handles/ots9speed.png", "mips smooth")
+ATT.Description = [[Duct tape applied to handle increases friction for improved aiming speed.
+
+The Speed Tape is a Handle attachment available for most Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It acts similar to the Quickdraw Handle and similar attachments from prior games. It decreases the time it takes to aim down sights. It has an alternate in the form of the Speed Grip.]]
+
+ATT.SortOrder = 0
+
+ATT.Category = "bocw_ots9_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_handle_speed.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.9
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_handle_speed")
+
+ATT = {}
+
+ATT.PrintName = "Dropshot Wrap" --// 2
+ATT.CompactName = "DRPSHT WRP"
+ATT.Icon = Material("entities/bocw_atts/handles/ots9_dropshot.png", "mips smooth")
+ATT.Description = [[Tightly wrapped fabric bands to improve flinch stability when aiming from different stances.
+
+The Dropshot Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It decreases flinching from changing stances while also allowing for uninterrupted aiming when changing to prone.]]
+
+ATT.SortOrder = 1
+
+ATT.Category = "bocw_ots9_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_handle_dropshot.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_handle_dropshot")
+
+ATT = {}
+
+ATT.PrintName = "Field Tape" --// 3
+ATT.CompactName = "FIELD TAPE"
+ATT.Icon = Material("entities/bocw_atts/handles/ots9_fieldtape.png", "mips smooth")
+ATT.Description = [[A layer of adhesive fabric tape absorbs shock to improve flinch stability.
+
+The Field Tape is a Handle attachment available for all weapons that allow attachments. It decreases flinching from being shot by a large degree.]]
+
+ATT.SortOrder = 3
+
+ATT.Category = "bocw_ots9_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_handle_fieldtape.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_handle_fieldtape")
+
+ATT = {}
+
+ATT.PrintName = "Spetsnaz Field Grip" --// 4
+ATT.CompactName = "SPTSNZ GRIP"
+ATT.Icon = Material("entities/bocw_atts/handles/ots9_spetsnaz.png", "mips smooth")
+ATT.Description = [[Makeshift combination of fabric tape and rubber bands to improve aiming speed and flinch stability.
+
+The Spetsnaz Field Grip is a Handle attachment available for Warsaw Pact related Primary Weapons in Call of Duty: Black Ops Cold War. It decreases flinching effect from being shot and decreases the time aiming time but at the cost of having a slower recovery time from sprinting. The NATO equivalent is the SASR Jungle Grip.]]
+
+ATT.SortOrder = 4
+
+ATT.Category = "bocw_ots9_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_handle_spetsnaz.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.8
+
+ATT.SprintToFireTimeMult = 1.12
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_handle_spetsnaz")
+
+ATT = {}
+
+ATT.PrintName = "Serpent Wrap" --// 5
+ATT.CompactName = "SRPNT WRAP"
+ATT.Icon = Material("entities/bocw_atts/handles/ots9_serpent.png", "mips smooth")
+ATT.Description = [[Duct tape with an adhesive coating ensures a firm grip to improve aiming speed.
+
+The Serpent Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It acts as a stronger Speed Tape with the downside of it increasing the sprint to firing time.]]
+
+ATT.SortOrder = 5
+
+ATT.Category = "bocw_ots9_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_handle_serpent.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.75
+
+ATT.SprintToFireTimeMult = 1.1
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_handle_serpent")
+
+ATT = {}
+
+ATT.PrintName = "GRU Elastic Wrap" --// 6
+ATT.CompactName = "GRU WRAP"
+ATT.Icon = Material("entities/bocw_atts/handles/ots9_gruelastic.png", "mips smooth")
+ATT.Description = [[Non-abrasive grip sleeve improves shooter stability while maintaining agility.
+
+The GRU Elastic Wrap is a Handle attachment available for Warsaw Pact related Primary Weapons in Call of Duty: Black Ops Cold War. It acts as fusion of the Dropshot Tape and the Spetsnaz Field Grip, giving the effects of both alongside the downside of the SASR Jungle Grip and the added downside of decreased movement speed whiled aiming. The NATO equivalent is the Airborne Elastic Wrap.]]
+
+ATT.SortOrder = 6
+
+ATT.Category = "bocw_ots9_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_handle_gruelastic.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.7
+
+ATT.SprintToFireTimeMult = 1.15
+ATT.SpeedMultShootingMult = 0.85
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_handle_gruelastic")
+--========== STOCK ====================
+ATT = {}
+
+ATT.PrintName = "Tactical Stock" --// 1
+ATT.CompactName = "TAC STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/ots9_tactical.png", "mips smooth")
+ATT.Description = [[Leather cheek rest for improved walking speed when aiming down sights.
+
+The Tactical Stock is a Stock attachment available for all Primary Weapons and Shotguns in Call of Duty: Black Ops Cold War. It gives increased movement speed while aiming.]]
+
+ATT.SortOrder = 0
+
+ATT.Category = "bocw_ots9_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_stock_tactical.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0.012)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SpeedMultSights = 1.1
+
+ATT.ActivateElements = {"gripgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_stock_tactical")
+
+ATT = {}
+
+ATT.PrintName = "Wire Stock" --// 2
+ATT.CompactName = "WIRE STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/ots9_wire.png", "mips smooth")
+ATT.Description = [[Removed stock reduces weapon weight to improve sprint to fire time.
+
+The Wire Stock is a Stock attachment available in Call of Duty: Black Ops Cold War. It decreases the delay between sprinting and firing. It has alternates in the forms of the Marathon Stock, Collapsed Stock, CQB Stock and Shotgun Stock.]]
+
+ATT.SortOrder = 1
+
+ATT.Category = "bocw_ots9_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_stock_wire.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SprintToFireTimeMult = 0.9
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_stock_wire")
+
+ATT = {}
+
+ATT.PrintName = "Duster Stock" --// 3
+ATT.CompactName = "DUSTER STK"
+ATT.Icon = Material("entities/bocw_atts/stocks/ots9_duster.png", "mips smooth")
+ATT.Description = [[Removed stock reduces weapon weight to increase sliding speed.
+
+The Duster Stock is available as a stock attachment in Call of Duty: Black Ops Cold War. It gives increases speed while sliding, giving more distance per slide. It has an alternate in the form of the Duster Pad.]]
+
+ATT.SortOrder = 2
+
+ATT.Category = "bocw_ots9_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_stock_duster.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SpeedMult = 1.05
+
+ATT.ActivateElements = {"gripgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_stock_duster")
+
+ATT = {}
+
+ATT.PrintName = "Spetsnaz Stock" --// 4
+ATT.CompactName = "SPETSNAZ"
+ATT.Icon = Material("entities/bocw_atts/stocks/ots9_cqb.png", "mips smooth")
+ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
+
+The Spetsnaz Stock is one of the Stock attachments for Warsaw Pact related primary weapons alongside the Spetsnaz PKM Stock. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The NATO equivalent is the SAS Combat Stock.]]
+
+ATT.SortOrder = 3
+
+ATT.Category = "bocw_ots9_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_stock_cqb.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SprintToFireTimeMult = 0.7
+
+ATT.SpreadMultHipFire = 1.15
+
+ATT.ActivateElements = {"stockgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_stock_cqb")
+
+ATT = {}
+
+ATT.PrintName = "Spetsnaz Stock" --// 5
+ATT.CompactName = "SPETSNAZ"
+ATT.Icon = Material("entities/bocw_atts/stocks/ots9_spetsnaz.png", "mips smooth")
+ATT.Description = [[Retrofitted cheek rest to improve movement speeds when aiming and firing.
+
+The Spetsnaz Stock is one of the Stock attachments for Warsaw Pact related primary weapons alongside the Spetsnaz PKM Stock. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The NATO equivalent is the SAS Combat Stock.]]
+
+ATT.SortOrder = 5
+
+ATT.Category = "bocw_ots9_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_stock_spetsnaz.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SpeedMultShooting = 1.05
+ATT.SpeedMultSighted = 1.15
+
+ATT.SpreadMultHipFire = 1.15
+
+ATT.ActivateElements = {"gripgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_stock_spetsnaz")
+
+ATT = {}
+
+ATT.PrintName = "KGB Skeletal Stock" --// 6
+ATT.CompactName = "KGB SKELETAL"
+ATT.Icon = Material("entities/bocw_atts/stocks/ots9_kgbskeletal.png", "mips smooth")
+ATT.Description = [[Lightweight stock perfectly balanced for improved sprint recovery and movement speeds when aiming.
+
+The KGB Skeletal Stock is a Stock attachment available for some Warsaw Pact related primary weapons. It gives greatly improved sprint to fire timing with improved movement speeds while aiming at the cost of a heavily reduced hip fire accuracy. It has an alternate Warsaw Pact equivalent with the KGB Pad. The NATO equivalents are the Raider Pad and Raider Stock, while Shotguns get the Marathon Stock.]]
+
+ATT.SortOrder = 6
+
+ATT.Category = "bocw_ots9_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_stock_kgbskeletal.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SprintToFireTimeMult = 0.7
+ATT.SpeedMultSighted = 1.1
+
+ATT.SpreadMultHipFire = 1.3
+
+ATT.ActivateElements = {"gripgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_stock_kgbskeletal")
+--[[
+ooooooooooooo oooooooooooo   .oooooo.            .ooooo.   
+8'   888   `8 `888'     `8  d8P'  `Y8b          888' `Y88. 
+     888       888         888                  888    888 
+     888       888oooo8    888                   `Vbood888 
+     888       888    "    888          8888888       888' 
+     888       888       o `88b    ooo              .88P'  
+    o888o     o888ooooood8  `Y8bood8P'            .oP'     
+]]
+--========== BARREL ===================
+ATT = {}
+
+ATT.PrintName = [[5.8" Extended]] --// 1
+ATT.CompactName = [[5.8" EXTND]]
+ATT.Icon = Material("entities/bocw_atts/barrels/tec9_extended.png", "mips smooth")
+ATT.Description = [[Thin profile barrel forged from chromoly steel. Improves bullet velocity.
+
+Within Call of Duty: Black Ops Cold War, the Long Barrel returns as the Extended barrel family of barrel attachments, giving increased muzzle velocity for most weaponry it can be attached to. However, it gives increased effective range for Shotguns and the Marshal, with the Marshal also gaining a worsened sprinting to fire time. The LAPA also gains an increased fire rate at the cost of reduced damage.]]
+
+ATT.SortOrder = 5.8
+
+ATT.Category = "bocw_tec9_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_barrel_extended.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.PhysBulletMuzzleVelocityMult = 1.4
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_extended"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_tec9_barrel_extended")
+
+ATT = {}
+
+ATT.PrintName = [[5.4" Cavalry Lancer]] --// 2
+ATT.CompactName = [[5.4" CAVLRY]]
+ATT.Icon = Material("entities/bocw_atts/barrels/tec9_cavalry.png", "mips smooth")
+ATT.Description = [[Heavy profile barrel broach rifled to improve damage against enemy vehicles.
+
+The Cavalry Lancer barrel is an attachment type new to Call of Duty: Black Ops Cold War that acts similar to the Full Metal Jacket attachment from previous titles. It increases the damage multiplier to vehicles and various Scorestreaks. However, unlike FMJ, it only increases the damage multiplier and doesn't increase material penetration]]
+
+ATT.SortOrder = 5.4
+
+ATT.Category = "bocw_tec9_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_barrel_cavalry.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DamageTypeOverride = DMG_AIRBOAT
+ATT.ArmorPiercingMult = 3
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_cavalry"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_tec9_barrel_cavalry")
+
+ATT = {}
+
+ATT.PrintName = [[7.3" Reinforced Heavy]] --// 3
+ATT.CompactName = [[7.3" HEAVY]]
+ATT.Icon = Material("entities/bocw_atts/barrels/tec9_reinforced.png", "mips smooth")
+ATT.Description = [[Heavy profile barrel button rifled to improve bullet velocity and damage range.
+
+The Reinforced Heavy barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed, while for Shotguns it loses the bullet velocity in exchange for a fire rate increase. The Warsaw Pact equivalent is the VDV Reinforced Barrel.]]
+
+ATT.SortOrder = 7.3
+
+ATT.Category = "bocw_tec9_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_barrel_reinforced.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.RangeMinMult = 1.18
+ATT.PhysBulletMuzzleVelocityMult = 1.8
+
+ATT.SpeedMultSprint = 0.96
+ATT.SpeedMultSighted = 0.8
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_reinforced"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_tec9_barrel_reinforced")
+
+ATT = {}
+
+ATT.PrintName = [[6.7" Ranger]] --// 4
+ATT.CompactName = [[6.7" RANGR]]
+ATT.Icon = Material("entities/bocw_atts/barrels/tec9_ranger.png", "mips smooth")
+ATT.Description = [[Durable steel barrel with phosphate coating. Button rifled to improve bullet velocity.
+
+The Ranger barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, and Shotguns in Call of Duty: Black Ops Cold War. It increases muzzle velocity of shots while reducing the aiming movement speed while for Shotguns, the muzzle velocity increase is swapped out for increased damage range. The Warsaw Pact equivalent is the Liberator Barrel.]]
+
+ATT.SortOrder = 6.7
+
+ATT.Category = "bocw_tec9_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_barrel_ranger.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.PhysBulletMuzzleVelocityMult = 2
+
+ATT.SpeedMultSighted = 0.75
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_ranger"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_tec9_barrel_ranger")
+
+ATT = {}
+
+ATT.PrintName = [[7.7" Rifled]]
+ATT.CompactName = [[7.7" RIFLED]]
+ATT.Icon = Material("entities/bocw_atts/barrels/tec9_rifled.png", "mips smooth")
+ATT.Description = [[Nitride-treated barrel for enhanced durability to prevent bending and improve damage range.
+
+The Rifled barrel is an attachment type available for Submachine Guns in Call of Duty: Black Ops Cold War. It increases damage range at the cost of sprinting movement speed.]]
+
+ATT.SortOrder = 7.7
+
+ATT.Category = "bocw_tec9_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_barrel_rifled.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2913,28 +2842,28 @@ ATT.ActivateElements = {"barrel_rifled"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_barrel_rifled")
+ARC9.LoadAttachment(ATT, "bocw_tec9_barrel_rifled")
 
 ATT = {}
 
-ATT.PrintName = [[7.4" Task Force]] --// 6
-ATT.CompactName = [[7.4" TASKF]]
-ATT.Icon = Material("entities/bocw_atts/barrels/bullfrog_taskforce.png", "mips smooth")
+ATT.PrintName = [[8.1" Task Force]] --// 6
+ATT.CompactName = [[8.1" TASKF]]
+ATT.Icon = Material("entities/bocw_atts/barrels/tec9_taskforce.png", "mips smooth")
 ATT.Description = [[Extended length steel barrel improves bullet velocity, range and damage.
 
 The Task Force barrel is an attachment type available for most Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. For Tactical Rifles, it gives the same benefits but without the loss of a starting magazine. There is an alternate type in the Spetsnaz RPK Barrel.]]
 
-ATT.SortOrder = 7.4
+ATT.SortOrder = 8.1
 
-ATT.Category = "bocw_bullfrog_barrel"
+ATT.Category = "bocw_tec9_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_barrel_taskforce.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_barrel_taskforce.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.DamageMaxMult = 1.03
+ATT.DamageMaxMult = 1.06
 ATT.RangeMaxMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.75
 
@@ -2949,297 +2878,133 @@ ATT.ActivateElements = {"barrel_taskforce"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_barrel_taskforce")
---========== UNDERBARREL =================
-ATT = {}
-
-ATT.PrintName = "Foregrip"
-ATT.CompactName = "FOREGRIP"
-ATT.Icon = Material("entities/bocw_atts/underbarrels/bullfrog_foregrip.png", "mips smooth")
-ATT.Description = [[Bakelite grip plates for improved recoil control.
-
-The Grip returns in Call of Duty: Black Ops Cold War as the Foregrip and it is an Underbarrel attachment available for Assault Rifles, Light Machine Guns and Submachine Guns. It increases control over horizontal recoil. For the MAC-10, it also helps with controlling vertical recoil. The KSP 45 lacks the Foregrip in favor of the Front Grip.]]
-
-ATT.SortOrder = 1
-
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_underbarrel_foregrip.mdl"
-
-ATT.Category = {"bocw_bullfrog_underbarrel"}
-
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.RecoilSideMult = 0.85
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_underbarrel_foregrip")
-
-ATT = {}
-
-ATT.PrintName = "Red Cell Foregrip"
-ATT.CompactName = "INFIL GRIP"
-ATT.Icon = Material("entities/bocw_atts/underbarrels/bullfrog_redcell.png", "mips smooth")
-ATT.Description = [[Segmented polymer grip plates for faster weapon melee combat and improved sprint speed.
-
-The Red Cell Foregrip is an Underbarrel attachment available for all Submachine Guns in Call of Duty: Black Ops Cold War. It increases the speed of sprinting and giving a increased speed to melee attacks but at the cost of general movement speeds.]]
-
-ATT.SortOrder = 2
-
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_underbarrel_redcell.mdl"
-
-ATT.Category = {"bocw_bullfrog_underbarrel"}
-
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SpeedMultSprint = 1.04
-ATT.BashSpeedMult = 1.30
-
-ATT.SpeedMult = 0.97
-ATT.SpeedMultShooting = 0.97
-ATT.SpeedMultSighted = 0.97
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_underbarrel_redcell")
-
-ATT = {}
-
-ATT.PrintName = "Patrol Grip"
-ATT.CompactName = "PATROL GRIP"
-ATT.Icon = Material("entities/bocw_atts/underbarrels/bullfrog_patrol.png", "mips smooth")
-ATT.Description = [[Segmented polymer grip plates for faster sprint speed and improved sprint recovery.
-
-The Patrol Grip is an Underbarrel attachment available for all Primary Weapons in Call of Duty: Black Ops Cold War. It increases the speed of sprinting.]]
-
-ATT.SortOrder = 3
-
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_underbarrel_patrol.mdl"
-
-ATT.Category = {"bocw_bullfrog_underbarrel"}
-
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SpeedMultSprint = 1.04
-ATT.SprintToFireTimeMult = 0.97
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_underbarrel_patrol")
-
-ATT = {}
-
-ATT.PrintName = "Bruiser Grip"
-ATT.CompactName = "BRUISR GRIP"
-ATT.Icon = Material("entities/bocw_atts/underbarrels/bullfrog_bruiser.png", "mips smooth")
-ATT.Description = [[Stubby polymer foregrip for faster weapon melee combat and movement speeds.
-
-The Bruiser Grip is an Underbarrel attachment available for all Primary Weapons in Call of Duty: Black Ops Cold War. It gives a minor increase to movement speeds alongside an increase to melee swing speeds.]]
-
-ATT.SortOrder = 4
-
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_underbarrel_bruiser.mdl"
-
-ATT.Category = {"bocw_bullfrog_underbarrel"}
-
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SpeedMult = 1.03
-ATT.SpeedMultSprint = 1.03
-ATT.SpeedMultShooting = 1.03
-ATT.SpeedMultSighted = 1.03
-ATT.BashSpeedMult = 1.40
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_underbarrel_bruiser")
-
-ATT = {}
-
-ATT.PrintName = "Spetsnaz Grip"
-ATT.CompactName = "SPTSNZ GRP"
-ATT.Icon = Material("entities/bocw_atts/underbarrels/bullfrog_spetsnaz.png", "mips smooth")
-ATT.Description = [[Sectioned polymer grip plates for improved recoil control.
-
-The Spetsnaz Grip is an Underbarrel attachment available for all Warsaw Pact related Primary weapons. It improves recoil in both horizontal and vertical, primary horizontal but at the cost of a lowered movement speed while shooting. The NATO equivalent is the Field Agent Grip.]]
-
-ATT.SortOrder = 5
-
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_underbarrel_spetsnaz.mdl"
-
-ATT.Category = {"bocw_bullfrog_underbarrel"}
-
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.RecoilUpMult = 0.94
-ATT.RecoilSideMult = 0.8
-
-ATT.SpeedMultShooting = 0.7
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_underbarrel_spetsnaz")
-
-ATT = {}
-
-ATT.PrintName = "VDV Speedgrip"
-ATT.CompactName = "VDV SPEED"
-ATT.Icon = Material("entities/bocw_atts/underbarrels/bullfrog_vdvspeed.png", "mips smooth")
-ATT.Description = [[Solid polymer grip for improved sprint speed and recoil control.
-
-The VDV Speedgrip is an Underbarrel attachment available for Warsaw Pact related Primary weapons. It improves horizontal recoil and movement speed while sprinting but at the cost of a lowered general movement speeds. The NATO equivalent is the SFOD Speedgrip alongside another Warsaw Pact alternative in the Spetsnaz Speedgrip.]]
-
-ATT.SortOrder = 6
-
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_underbarrel_vdvspeed.mdl"
-
-ATT.Category = {"bocw_bullfrog_underbarrel"}
-
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.LHIK = true
-ATT.LHIK_Priority = 5
-
-ATT.SpeedMultSprint = 1.03
-ATT.RecoilSideMult = 0.85
-
-ATT.SpeedMult = 0.94
-ATT.SpeedMultShooting = 0.94
-ATT.SpeedMultSighted = 0.94
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_underbarrel_vdvspeed")
+ARC9.LoadAttachment(ATT, "bocw_tec9_barrel_taskforce")
 --========== MAGAZINE =================
 ATT = {}
 
-ATT.PrintName = "65 Rnd" --// 1
-ATT.CompactName = "65 RND"
-ATT.Icon = Material("entities/bocw_atts/magazines/bullfrog_ext1.png", "mips smooth")
-ATT.Description = [[Helical magazine with ammo arranged in a spiral formation. Large capacity in a compact design.
+ATT.PrintName = "30 Rnd" --// 1
+ATT.CompactName = "30 RND"
+ATT.Icon = Material("entities/bocw_atts/magazines/tec9_ext1.png", "mips smooth")
+ATT.Description = [[Extended magazine holds 30 rounds of ammunition.
 
 Extended Mags are a type of Magazine attachment available for Primaries, Pistols and Shotguns in Call of Duty: Black Ops Cold War. Like Modern Warfare, magazine extensions are named for their capacity. Speed Mags act as extended mags with faster reloading. Further extensions are provided by STANAG Mags, Bakelite Mags, Spetsnaz Mags, Salvo Fast Mags & VDV Fast Mags.]]
 
 ATT.SortOrder = 1
 
-ATT.Category = "bocw_bullfrog_mag"
+ATT.Category = "bocw_tec9_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_magazine_ext1.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_magazine_ext1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_tec9_magazine_ext1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 65
+ATT.ClipSizeOverride = 30
 
 ATT.ReloadTimeMult = 1.1
 
-ATT.ActivateElements = {"bullfrog_mag_ext"}
+ATT.ActivateElements = {"tec9_mag_ext"}
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_magazine_ext1")
+ARC9.LoadAttachment(ATT, "bocw_tec9_magazine_ext1")
 
 ATT = {}
 
 ATT.PrintName = "Fast Mag" --// 2
 ATT.CompactName = "FAST MAG"
-ATT.Icon = Material("entities/bocw_atts/magazines/bullfrog_fast1.png", "mips smooth")
-ATT.Description = [[Helical magazine with thin strips of grip tape. Tighter grip improves reload speed.
+ATT.Icon = Material("entities/bocw_atts/magazines/tec9_fast1.png", "mips smooth")
+ATT.Description = [[Makeshift pull loop attached to magazine to improve reload speed.
 
 The Fast Mag is a Magazine attachment available for all Light Machine Guns and Pistols alongside most of the Submachine Guns and Sniper Rifles in Call of Duty: Black Ops Cold War. It increases reload speed with no penalty, same as jungle-style or taped magazines.]]
 
 ATT.SortOrder = 2
 
-ATT.Category = "bocw_bullfrog_mag"
+ATT.Category = "bocw_tec9_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_magazine_fast1.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_bullfrog_magazine_fast1.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_magazine_fast1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_tec9_magazine_fast1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ReloadTimeMult = 0.82
+ATT.ReloadTimeMult = 0.8
 
-ATT.ActivateElements = {"bullfrog_mag_fast"}
+ATT.ActivateElements = {"tec9_mag_fast"}
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_magazine_fast1")
+ARC9.LoadAttachment(ATT, "bocw_tec9_magazine_fast1")
 
 ATT = {}
 
-ATT.PrintName = "65 Rnd Speed Mag" --// 3
-ATT.CompactName = "65 RND SPD"
-ATT.Icon = Material("entities/bocw_atts/magazines/bullfrog_mix1.png", "mips smooth")
-ATT.Description = [[Extended helical magazine made from lightweight materials. Contains 65 rounds.
+ATT.PrintName = "27 Rnd Speed Mag" --// 3
+ATT.CompactName = "27 RND SPD"
+ATT.Icon = Material("entities/bocw_atts/magazines/tec9_mix1.png", "mips smooth")
+ATT.Description = [[Extended lightweight magazine contains 27 rounds and improves reload speed.
 
 The Speed Mag is a type of Magazine attachment available for all Assault Rifles. Submachine Guns, Tactical Rifles, Light Machine Guns, Sniper Rifles and Pistols in Call of Duty: Black Ops Cold War. It increases magazine size alongside decreasing reload speeds but at the cost of increasing aiming time, however, for the XM4 and Grav, it does not affect the aiming time.]]
 
 ATT.SortOrder = 3
 
-ATT.Category = "bocw_bullfrog_mag"
+ATT.Category = "bocw_tec9_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_magazine_mix1.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_magazine_mix1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 65
+ATT.ClipSizeOverride = 27
 ATT.ReloadTimeMult = 0.75
 
 ATT.AimDownSightsTimeMult = 1.2
 
-ATT.ActivateElements = {"bullfrog_mag_mix"}
+ATT.ActivateElements = {"tec9_mag_mix"}
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_magazine_mix1")
+ARC9.LoadAttachment(ATT, "bocw_tec9_magazine_mix1")
 
 ATT = {}
 
-ATT.PrintName = "Spetsnaz 85 Rnd" --// 4
-ATT.CompactName = "85 RND"
-ATT.Icon = Material("entities/bocw_atts/magazines/bullfrog_extpro.png", "mips smooth")
-ATT.Description = [[Extended helical magazine holds 85 rounds in a spiral formation.
+ATT.PrintName = "STANAG 39 Rnd" --// 4
+ATT.CompactName = "39 RND"
+ATT.Icon = Material("entities/bocw_atts/magazines/tec9_extpro.png", "mips smooth")
+ATT.Description = [[High-capacity magazine holds 39 rounds of ammunition.
 
-The Spetsnaz is a type of Magazine attachment available for some Warsaw Pact weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time. The NATO equivalent is the STANAG Mag, alongside the Bakelite Mag which is also Warsaw Pact.]]
+The STANAG is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time and reload speed. There are two different Warsaw Pact equivalents in the Bakelite Mag and the Spetsnaz Mag.]]
 
 ATT.SortOrder = 4
 
-ATT.Category = "bocw_bullfrog_mag"
+ATT.Category = "bocw_tec9_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_magazine_extpro.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_magazine_extpro.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 85
+ATT.ClipSizeOverride = 39
 
 ATT.ReloadTimeMult = 1.1
 ATT.AimDownSightsTimeMult = 1.15
 
-ATT.ActivateElements = {"bullfrog_mag_ext"}
+ATT.ActivateElements = {"tec9_mag_ext"}
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_magazine_extpro")
+ARC9.LoadAttachment(ATT, "bocw_tec9_magazine_extpro")
 
 ATT = {}
 
 ATT.PrintName = "Vandal Speed Loader" --// 5
 ATT.CompactName = "VANDAL SPD"
-ATT.Icon = Material("entities/bocw_atts/magazines/bullfrog_fastpro.png", "mips smooth")
-ATT.Description = [[Helical magazine with thick patches of grip tape to improve reload speed.
+ATT.Icon = Material("entities/bocw_atts/magazines/tec9_fastpro.png", "mips smooth")
+ATT.Description = [[Leather pull loop improves reload speed. Includes additional magazine.
 
 The Vandal Speed Loader is a type of Magazine attachment available for all Light Machine Guns, Sniper Rifles and Pistols alongside a large amount of the Submachine Guns in Call of Duty: Black Ops Cold War. It decreases reload speeds and gives an additional starting magazine but at the cost of increasing aiming time, however on Light Machine Guns, an additional general movement decrease is also given (this is not the case in Warzone).]]
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_bullfrog_mag"
+ATT.Category = "bocw_tec9_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_magazine_fastpro.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_bullfrog_magazine_fastpro.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_magazine_fastpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_tec9_magazine_fastpro.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -3250,52 +3015,52 @@ ATT.SupplyLimitOverride = 5
 
 ATT.AimDownSightsTimeMult = 1.06
 
-ATT.ActivateElements = {"bullfrog_mag_fast"}
+ATT.ActivateElements = {"tec9_mag_fast"}
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_magazine_fastpro")
+ARC9.LoadAttachment(ATT, "bocw_tec9_magazine_fastpro")
 
 ATT = {}
 
-ATT.PrintName = "VDV 85 Rnd Fast Mag" --// 6
-ATT.CompactName = "85 RND FAST"
-ATT.Icon = Material("entities/bocw_atts/magazines/bullfrog_mixpro.png", "mips smooth")
-ATT.Description = [[Lightweight helical magazine. Improved reload speed and ammo capacity.
+ATT.PrintName = "Salvo 33 Rnd Fast Mag" --// 6
+ATT.CompactName = "33 RND FAST"
+ATT.Icon = Material("entities/bocw_atts/magazines/tec9_mixpro.png", "mips smooth")
+ATT.Description = [[Extended magazine made from lightweight materials for greatly improved reload speed. Contains 33 rounds.
 
-The VDV Fast Mag is a type of Magazine attachment available for all Warsaw Pact weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The NATO equivalent is the Salvo Fast Mag.]]
+The Salvo Fast Mag is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The Warsaw Pact equivalent is the VDV Fast Mag.]]
 
 ATT.SortOrder = 6
 
-ATT.Category = "bocw_bullfrog_mag"
+ATT.Category = "bocw_tec9_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_magazine_mixpro.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_magazine_mixpro.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ClipSizeOverride = 85
+ATT.ClipSizeOverride = 33
 ATT.ReloadTimeMult = 0.6
 
-ATT.AimDownSightsTimeMult = 1.25
+ATT.MultAimDownSightsTime = 1.25
 
-ATT.ActivateElements = {"bullfrog_mag_mix"}
+ATT.ActivateElements = {"tec9_mag_mix"}
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_magazine_mixpro")
+ARC9.LoadAttachment(ATT, "bocw_tec9_magazine_mixpro")
 --========== HANDLE ===================
 ATT = {}
 
 ATT.PrintName = "Speed Tape" --// 1
 ATT.CompactName = "SPEED TAPE"
-ATT.Icon = Material("entities/bocw_atts/handles/bullfrog_speed.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/handles/tec9_speed.png", "mips smooth")
 ATT.Description = [[Duct tape applied to handle increases friction for improved aiming speed.
 
 The Speed Tape is a Handle attachment available for most Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It acts similar to the Quickdraw Handle and similar attachments from prior games. It decreases the time it takes to aim down sights. It has an alternate in the form of the Speed Grip.]]
 
 ATT.SortOrder = 0
 
-ATT.Category = "bocw_bullfrog_wrap"
+ATT.Category = "bocw_tec9_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_handle_speed.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_handle_speed.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -3303,89 +3068,89 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.AimDownSightsTimeMult = 0.9
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_handle_speed")
+ARC9.LoadAttachment(ATT, "bocw_tec9_handle_speed")
 
 ATT = {}
 
 ATT.PrintName = "Dropshot Wrap" --// 2
-ATT.CompactName = "DRPSHT WRP"
-ATT.Icon = Material("entities/bocw_atts/handles/bullfrog_dropshot.png", "mips smooth")
+ATT.CompactName = "DROPSHOT"
+ATT.Icon = Material("entities/bocw_atts/handles/tec9_dropshot.png", "mips smooth")
 ATT.Description = [[Tightly wrapped fabric bands to improve flinch stability when aiming from different stances.
 
 The Dropshot Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It decreases flinching from changing stances while also allowing for uninterrupted aiming when changing to prone.]]
 
 ATT.SortOrder = 1
 
-ATT.Category = "bocw_bullfrog_wrap"
+ATT.Category = "bocw_tec9_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_handle_dropshot.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_handle_dropshot.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_handle_dropshot")
+ARC9.LoadAttachment(ATT, "bocw_tec9_handle_dropshot")
 
 ATT = {}
 
 ATT.PrintName = "Field Tape" --// 3
 ATT.CompactName = "FIELD TAPE"
-ATT.Icon = Material("entities/bocw_atts/handles/bullfrog_fieldtape.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/handles/tec9_fieldtape.png", "mips smooth")
 ATT.Description = [[A layer of adhesive fabric tape absorbs shock to improve flinch stability.
 
 The Field Tape is a Handle attachment available for all weapons that allow attachments. It decreases flinching from being shot by a large degree.]]
 
 ATT.SortOrder = 3
 
-ATT.Category = "bocw_bullfrog_wrap"
+ATT.Category = "bocw_tec9_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_handle_fieldtape.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_handle_fieldtape.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_handle_fieldtape")
+ARC9.LoadAttachment(ATT, "bocw_tec9_handle_fieldtape")
 
 ATT = {}
 
-ATT.PrintName = "Spetsnaz Field Grip" --// 4
-ATT.CompactName = "SPTSNZ GRIP"
-ATT.Icon = Material("entities/bocw_atts/handles/bullfrog_spetsnaz.png", "mips smooth")
+ATT.PrintName = "SASR Jungle Grip" --// 4
+ATT.CompactName = "SASR GRIP"
+ATT.Icon = Material("entities/bocw_atts/handles/tec9_sasrjungle.png", "mips smooth")
 ATT.Description = [[Makeshift combination of fabric tape and rubber bands to improve aiming speed and flinch stability.
 
-The Spetsnaz Field Grip is a Handle attachment available for Warsaw Pact related Primary Weapons in Call of Duty: Black Ops Cold War. It decreases flinching effect from being shot and decreases the time aiming time but at the cost of having a slower recovery time from sprinting. The NATO equivalent is the SASR Jungle Grip.]]
+The SASR Jungle Grip is a Handle attachment available for NATO related Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It decreases flinching effect from being shot and decreases the time aiming time but at the cost of having a slower recovery time from sprinting. The Warsaw Pact equivalent is the Spetsnaz Field Grip.]]
 
 ATT.SortOrder = 4
 
-ATT.Category = "bocw_bullfrog_wrap"
+ATT.Category = "bocw_tec9_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_handle_spetsnaz.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_handle_sasrjungle.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.AimDownSightsTimeMult = 0.8
+ATT.AimDownSightsTimeMult = 0.85
 
 ATT.SprintToFireTimeMult = 1.12
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_handle_spetsnaz")
+ARC9.LoadAttachment(ATT, "bocw_tec9_handle_sasrjungle")
 
 ATT = {}
 
 ATT.PrintName = "Serpent Wrap" --// 5
-ATT.CompactName = "SRPNT WRAP"
-ATT.Icon = Material("entities/bocw_atts/handles/bullfrog_serpent.png", "mips smooth")
+ATT.CompactName = "SERPENT"
+ATT.Icon = Material("entities/bocw_atts/handles/tec9_serpent.png", "mips smooth")
 ATT.Description = [[Duct tape with an adhesive coating ensures a firm grip to improve aiming speed.
 
-The Serpent Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It acts as a stronger Speed Tape with the downside of it increasing the sprint to firing time.]]
+The Serpent Wrap is a Handle attachment available for most Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It acts as a stronger Speed Tape with the downside of it increasing the sprint to firing time. It has an alternate form in the Serpent Grip.]]
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_bullfrog_wrap"
+ATT.Category = "bocw_tec9_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_handle_serpent.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_handle_serpent.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -3395,22 +3160,22 @@ ATT.AimDownSightsTimeMult = 0.75
 
 ATT.SprintToFireTimeMult = 1.1
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_handle_serpent")
+ARC9.LoadAttachment(ATT, "bocw_tec9_handle_serpent")
 
 ATT = {}
 
-ATT.PrintName = "GRU Elastic Wrap" --// 6
-ATT.CompactName = "GRU WRAP"
-ATT.Icon = Material("entities/bocw_atts/handles/bullfrog_gruelastic.png", "mips smooth")
+ATT.PrintName = "Airborne Elastic Wrap" --// 6
+ATT.CompactName = "AIRBORNE"
+ATT.Icon = Material("entities/bocw_atts/handles/tec9_airborne.png", "mips smooth")
 ATT.Description = [[Non-abrasive grip sleeve improves shooter stability while maintaining agility.
 
-The GRU Elastic Wrap is a Handle attachment available for Warsaw Pact related Primary Weapons in Call of Duty: Black Ops Cold War. It acts as fusion of the Dropshot Tape and the Spetsnaz Field Grip, giving the effects of both alongside the downside of the SASR Jungle Grip and the added downside of decreased movement speed whiled aiming. The NATO equivalent is the Airborne Elastic Wrap.]]
+The Airborne Elastic Wrap is a Handle attachment available for NATO related Primary Weapons, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. It acts as fusion of the Dropshot Wrap and the SASR Jungle Grip, giving increased aiming speed, flinch resistance, and the ability to aim while going prone, but at the cost of reduced sprint recover speed and movement speed while firing. The Warsaw Pact equivalent is the GRU Elastic Wrap.]]
 
 ATT.SortOrder = 6
 
-ATT.Category = "bocw_bullfrog_wrap"
+ATT.Category = "bocw_tec9_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_handle_gruelastic.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_handle_airborne.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -3419,24 +3184,24 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 ATT.AimDownSightsTimeMult = 0.7
 
 ATT.SprintToFireTimeMult = 1.15
-ATT.SpeedMultShootingMult = 0.85
+ATT.SpeedMultShooting = 0.85
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_handle_gruelastic")
+ARC9.LoadAttachment(ATT, "bocw_tec9_handle_airborne")
 --========== STOCK ====================
 ATT = {}
 
 ATT.PrintName = "Tactical Stock" --// 1
 ATT.CompactName = "TAC STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/bullfrog_tactical.png", "mips smooth")
-ATT.Description = [[Classic stock designed to improve walking speed when aiming.
+ATT.Icon = Material("entities/bocw_atts/stocks/tec9_tactical.png", "mips smooth")
+ATT.Description = [[Classic stock designed to increase walking speed when aiming.
 
 The Tactical Stock is a Stock attachment available for all Primary Weapons and Shotguns in Call of Duty: Black Ops Cold War. It gives increased movement speed while aiming.]]
 
 ATT.SortOrder = 0
 
-ATT.Category = "bocw_bullfrog_stock"
+ATT.Category = "bocw_tec9_stock_tac"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_stock_tactical.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_stock_tactical.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -3444,66 +3209,72 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMultSights = 1.1
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_stock_tactical")
+ARC9.LoadAttachment(ATT, "bocw_tec9_stock_tactical")
 
 ATT = {}
 
-ATT.PrintName = "Wire Stock" --// 2
-ATT.CompactName = "WIRE STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/bullfrog_wire.png", "mips smooth")
-ATT.Description = [[Wire stock reduces weapon weight to improve sprint to fire time.
-
-The Wire Stock is a Stock attachment available in Call of Duty: Black Ops Cold War. It decreases the delay between sprinting and firing. It has alternates in the forms of the Marathon Stock, Collapsed Stock, CQB Stock and Shotgun Stock.]]
-
-ATT.SortOrder = 1
-
-ATT.Category = "bocw_bullfrog_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_stock_wire.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.SprintToFireTimeMult = 0.9
-
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_stock_wire")
-
-ATT = {}
-
-ATT.PrintName = "Duster Stock" --// 3
-ATT.CompactName = "DUSTER STK"
-ATT.Icon = Material("entities/bocw_atts/stocks/bullfrog_duster.png", "mips smooth")
-ATT.Description = [[Lightweight stock durably constructed to increase sliding speed.
+ATT.PrintName = "Collapsed Stock" --// 2
+ATT.CompactName = "COLLAPSED"
+ATT.Icon = Material("entities/bocw_atts/stocks/tec9_collapsed.png", "mips smooth")
+ATT.Description = [[Collapsed wire stock reduces weight to improve sprint recovery time.
 
 The Duster Stock is available as a stock attachment in Call of Duty: Black Ops Cold War. It gives increases speed while sliding, giving more distance per slide. It has an alternate in the form of the Duster Pad.]]
 
 ATT.SortOrder = 2
 
-ATT.Category = "bocw_bullfrog_stock"
+ATT.Category = "bocw_tec9_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_stock_duster.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_stock_collapsed.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_stock_duster")
+ATT.SpeedMult = 1.05
+
+ATT.ActivateElements = {"stockgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_tec9_stock_collapsed")
+
+ATT = {}
+
+ATT.PrintName = "Duster Stock" --// 3
+ATT.CompactName = "DUSTER STK"
+ATT.Icon = Material("entities/bocw_atts/stocks/tec9_duster.png", "mips smooth")
+ATT.Description = [[Reliable stock durably constructed to increase sliding speed.
+
+The Duster Stock is available as a stock attachment in Call of Duty: Black Ops Cold War. It gives increases speed while sliding, giving more distance per slide. It has an alternate in the form of the Duster Pad.]]
+
+ATT.SortOrder = 2
+
+ATT.Category = "bocw_tec9_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_stock_duster.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SpeedMult = 1.05
+
+ATT.ActivateElements = {"stockgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_tec9_stock_duster")
 
 ATT = {}
 
 ATT.PrintName = "No Stock" --// 4
 ATT.CompactName = "NO STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/bullfrog_nostock.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/stocks/tec9_nostock.png", "mips smooth")
 ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
 
-The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and shotgun Stock.]]
+The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
 
 ATT.SortOrder = 3
 
-ATT.Category = "bocw_bullfrog_stock"
+ATT.Category = "bocw_tec9_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_stock_nostock.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_stock_nostock.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -3513,24 +3284,22 @@ ATT.SprintToFireTimeMult = 0.7
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stockgone"}
-
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_stock_nostock")
+ARC9.LoadAttachment(ATT, "bocw_tec9_stock_nostock")
 
 ATT = {}
 
-ATT.PrintName = "Spetsnaz Stock" --// 5
-ATT.CompactName = "SPETSNAZ"
-ATT.Icon = Material("entities/bocw_atts/stocks/bullfrog_spetsnaz.png", "mips smooth")
-ATT.Description = [[Extended stock with aftermarket cheek rest to improve movement speeds when aiming and firing.
+ATT.PrintName = "SAS Combat Stock" --// 5
+ATT.CompactName = "SAS STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/tec9_sascombat.png", "mips smooth")
+ATT.Description = [[MIL-SPEC collapsible stock kit for improved movement speed when aiming and firing.
 
-The Spetsnaz Stock is one of the Stock attachments for Warsaw Pact related primary weapons alongside the Spetsnaz PKM Stock. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The NATO equivalent is the SAS Combat Stock.]]
+The SAS Combat Stock is a Stock attachment available for all NATO related primary weapons and Shotguns. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The Warsaw Pact equivalent is the Spetsnaz PKM Stock and Spetsnaz Stock.]]
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_bullfrog_stock"
+ATT.Category = "bocw_tec9_stock_tac"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_stock_spetsnaz.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_stock_sascombat.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -3541,22 +3310,22 @@ ATT.SpeedMultSighted = 1.15
 
 ATT.SpreadMultHipFire = 1.15
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_stock_spetsnaz")
+ARC9.LoadAttachment(ATT, "bocw_tec9_stock_sascombat")
 
 ATT = {}
 
-ATT.PrintName = "KGB Skeletal Stock" --// 6
-ATT.CompactName = "KGB STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/bullfrog_kgbskeletal.png", "mips smooth")
+ATT.PrintName = "Raider Stock" --// 6
+ATT.CompactName = "RAIDER STK"
+ATT.Icon = Material("entities/bocw_atts/stocks/tec9_raider.png", "mips smooth")
 ATT.Description = [[Lightweight stock provides added stability for improved sprint recovery and walking speed when aiming.
 
-The KGB Skeletal Stock is a Stock attachment available for some Warsaw Pact related primary weapons. It gives greatly improved sprint to fire timing with improved movement speeds while aiming at the cost of a heavily reduced hip fire accuracy. It has an alternate Warsaw Pact equivalent with the KGB Pad. The NATO equivalents are the Raider Pad and Raider Stock, while Shotguns get the Marathon Stock.]]
+The Raider Stock is a Stock attachment available for some NATO related primary weapons. It gives greatly improved sprint to fire timing with improved movement speeds while aiming at the cost of a heavily reduced hip fire accuracy. It has an alternate NATO equivalent with the Raider Pad. The Warsaw Pact equivalents are the KGB Pad and KGB Skeletal Stock. While Shotguns get the Marathon Stock. The Type 63 also gets a unique variant that replaces the Spetsnaz Stock.]]
 
 ATT.SortOrder = 6
 
-ATT.Category = "bocw_bullfrog_stock"
+ATT.Category = "bocw_tec9_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_stock_kgbskeletal.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_stock_raider.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -3567,297 +3336,1202 @@ ATT.SpeedMultSighted = 1.1
 
 ATT.SpreadMultHipFire = 1.3
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_stock_kgbskeletal")
-
---
-
+ARC9.LoadAttachment(ATT, "bocw_tec9_stock_raider")
+--[[
+ooooo              .o.       ooooooooo.         .o.       
+`888'             .888.      `888   `Y88.      .888.      
+ 888             .8"888.      888   .d88'     .8"888.     
+ 888            .8' `888.     888ooo88P'     .8' `888.    
+ 888           .88ooo8888.    888           .88ooo8888.   
+ 888       o  .8'     `888.   888          .8'     `888.  
+o888ooooood8 o88o     o8888o o888o        o88o     o8888o 
+]]
 ATT = {}
 
-ATT.PrintName = "MP5 Muzzle Device"
-ATT.CompactName = "MUZZLE"
-ATT.Icon = Material("entities/bocw_atts/muzzles/mp5_base.png", "mips smooth")
-ATT.Description = [[Default MP5 muzzle device.]]
+ATT.PrintName = [[8.9" Extended]] --// 1
+ATT.CompactName = [[8.9" EXTND]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lapa_extended.png", "mips smooth")
+ATT.Description = [[Extended bead blasted barrel features a thin profile for improved fire rate and bullet velocity.
 
-ATT.SortOrder = -10
+Within Call of Duty: Black Ops Cold War, the Long Barrel returns as the Extended barrel family of barrel attachments, giving increased muzzle velocity for most weaponry it can be attached to. However, it gives increased effective range for Shotguns and the Marshal, with the Marshal also gaining a worsened sprinting to fire time. The LAPA also gains an increased fire rate at the cost of reduced damage.]]
 
-ATT.Model = "models/weapons/arc9/atts/bocw_mp5_muzzle.mdl"
+ATT.SortOrder = 8.9
 
-ATT.Category = {"bocw_mp5_muzzle"}
+ATT.Category = "bocw_lapa_barrel"
 
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_mp5_muzzle_base")
-
-ATT = {}
-
-ATT.PrintName = "AK-74U Muzzle Device"
-ATT.CompactName = "MUZZLE"
-ATT.Icon = Material("entities/bocw_atts/muzzles/ak74u_base.png", "mips smooth")
-ATT.Description = [[Default AK-74u muzzle device.]]
-
-ATT.SortOrder = -10
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ak74u_muzzle.mdl"
-
-ATT.Category = {"bocw_ak74u_muzzle"}
-
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_ak74u_muzzle_base")
-
-ATT = {}
-
-ATT.PrintName = "KSP 45 Muzzle Device"
-ATT.CompactName = "MUZZLE"
-ATT.Icon = Material("entities/bocw_atts/muzzles/ksp45_base.png", "mips smooth")
-ATT.Description = [[Default KSP 45 muzzle device.]]
-
-ATT.SortOrder = -10
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_muzzle.mdl"
-
-ATT.Category = {"bocw_ksp45_muzzle"}
-
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.MuzzleParticleOverride = "muzzleflash_3"
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_ksp45_muzzle_base")
-
-ATT = {}
-
-ATT.PrintName = "Bullfrog Muzzle Device"
-ATT.CompactName = "MUZZLE"
-ATT.Icon = Material("entities/bocw_atts/muzzles/bullfrog_base.png", "mips smooth")
-ATT.Description = [[Default Bullfrog muzzle device.]]
-
-ATT.SortOrder = -10
-
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_muzzle.mdl"
-
-ATT.Category = {"bocw_bullfrog_muzzle"}
-
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
-ATT.MuzzleParticleOverride_Priority = 100
-ATT.MuzzleDevice = true
-
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_muzzle_base")
-
---
-
-ATT = {}
-
-ATT.PrintName = "Laser Mount"
-ATT.CompactName = "LASER MNT"
-ATT.Icon = Material("entities/bocw_atts/mounts/lasermixbody.png", "mips smooth")
-ATT.Description = [[Barrel installed mount for laser body attachments on the KSP 45.]]
-ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-ATT.Free = true
-
-ATT.Category = {"bocw_ksp45_body"}
-
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_mount_body.mdl"
-ATT.ModelBodygroups = "00"
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_barrel_extended.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.Attachments = {
-    {
-        PrintName = "BODY",
-        Bone = "tag_weapon",
-        Pos = Vector(-1.4, 0, 1.9),
-        Ang = Angle(0, 0, 90),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_submachineguns_body_laserwest", "bocw_submachineguns_body_mixwest"},
-    }
-}
+ATT.RPMMult = 1.08
+ATT.PhysBulletMuzzleVelocityMult = 1.33
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_mount_lasermix")
+ATT.DamageMaxMult = 0.94
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_extended"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_barrel_extended")
 
 ATT = {}
 
-ATT.PrintName = "Flashlight Mount"
-ATT.CompactName = "FLASH MNT"
-ATT.Icon = Material("entities/bocw_atts/mounts/flashlight.png", "mips smooth")
-ATT.Description = [[Barrel installed mount for flashlights on the KSP 45.]]
+ATT.PrintName = [[12.4" Cavalry Lancer]] --// 2
+ATT.CompactName = [[12.4" CAVLRY]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lapa_cavalry.png", "mips smooth")
+ATT.Description = [[Extended barrel broach rifled for improved range and damage against enemy vehicles.
+
+The Cavalry Lancer barrel is an attachment type new to Call of Duty: Black Ops Cold War that acts similar to the Full Metal Jacket attachment from previous titles. It increases the damage multiplier to vehicles and various Scorestreaks. However, unlike FMJ, it only increases the damage multiplier and doesn't increase material penetration]]
+
+ATT.SortOrder = 12.4
+
+ATT.Category = "bocw_lapa_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_barrel_cavalry.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DamageTypeOverride = DMG_AIRBOAT
+ATT.RangeMinMult = 1.25
+ATT.ArmorPiercingMult = 2.66
+
+ATT.SpeedMultShooting = 0.94
+ATT.SpeedMultSighted = 0.8
+ATT.AimDownSightsTimeMult = 1.06
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_cavalry"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_barrel_cavalry")
+
+ATT = {}
+
+ATT.PrintName = [[12.4" M03 Reinforced]] --// 3
+ATT.CompactName = [[12.4" M03]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lapa_reinforced.png", "mips smooth")
+ATT.Description = [[Extended barrel reinforced with a graphite fiber wrapping includes a vented heat shroud for improved damage range and fire rate.
+
+The M03 Reinforced barrel is a unique attachment available for the LAPA in Call of Duty: Black Ops Cold War. It give increased damage range alongside a minor increase to the rate of fire at the cost of a worsened aimed movement speed and aiming speed.]]
+
+ATT.SortOrder = 12.4
+
+ATT.Category = "bocw_lapa_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_barrel_reinforced.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.RangeMinMult = 1.17
+ATT.RPMMult = 1.04
+
+ATT.SpeedMultSighted = 0.8
+ATT.AimDownSightsTimeMult = 1.06
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_reinforced"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_barrel_reinforced")
+
+ATT = {}
+
+ATT.PrintName = [[10.2" Ranger]] --// 4
+ATT.CompactName = [[10.2" RANGR]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lapa_ranger.png", "mips smooth")
+ATT.Description = [[Phosphate coated extended barrel for improved damage range and bullet velocity.
+
+The Ranger barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, and Shotguns in Call of Duty: Black Ops Cold War. It increases muzzle velocity of shots while reducing the aiming movement speed while for Shotguns, the muzzle velocity increase is swapped out for increased damage range. The Warsaw Pact equivalent is the Liberator Barrel.]]
+
+ATT.SortOrder = 10.2
+
+ATT.Category = "bocw_lapa_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_barrel_ranger.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.RangeMinMult = 1.17
+ATT.PhysBulletMuzzleVelocityMult = 1.66
+
+ATT.SpeedMultSighted = 0.8
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_ranger"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_barrel_ranger")
+
+ATT = {}
+
+ATT.PrintName = [[7.9" Light Tactical]]
+ATT.CompactName = [[7.9" LIGHT]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lapa_lighttactical.png", "mips smooth")
+ATT.Description = [[Compact barrel button rifled with an adjustable gas block for improved damage and fire rate.
+
+The Light Tactical barrel is a unique attachment available for the LAPA in Call of Duty: Black Ops Cold War. It give increased damage alongside a minor increase to the rate of fire at the cost of a lowered damage range and slower bullet velocity.]]
+
+ATT.SortOrder = 7.9
+
+ATT.Category = "bocw_lapa_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_barrel_lighttactical.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DamageMaxMult = 1.03
+ATT.RPMMult = 1.04
+
+ATT.RangeMinMult = 0.75
+ATT.PhysBulletMuzzleVelocityMult = 0.87
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_lighttactical"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_barrel_lighttactical")
+
+ATT = {}
+
+ATT.PrintName = [[7.9" BR Compact]] --// 6
+ATT.CompactName = [[7.9" TASKF]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lapa_taskforce.png", "mips smooth")
+ATT.Description = [[Compact barrel precision machined from stainless steel for improved damage and horizontal recoil control.
+
+The BR Compact barrel is a unique attachment available for the LAPA in Call of Duty: Black Ops Cold War. It give increased damage alongside better horizontal recoil control at the cost of a worsened damage range and vertical recoil.]]
+
+ATT.SortOrder = 7.9
+
+ATT.Category = "bocw_lapa_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_barrel_taskforce.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DamageMaxMult = 1.06
+ATT.RecoilSideMult = 0.88
+
+ATT.RangeMinMult = 0.67
+ATT.RecoilUpMult = 1.13
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_brcompact"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_barrel_taskforce")
+--========== MAGAZINE =================
+ATT = {}
+
+ATT.PrintName = "40 Rnd" --// 1
+ATT.CompactName = "40 RND"
+ATT.Icon = Material("entities/bocw_atts/magazines/lapa_ext1.png", "mips smooth")
+ATT.Description = [[Extended magazine holds 40 rounds of ammunition.
+
+Extended Mags are a type of Magazine attachment available for Primaries, Pistols and Shotguns in Call of Duty: Black Ops Cold War. Like Modern Warfare, magazine extensions are named for their capacity. Speed Mags act as extended mags with faster reloading. Further extensions are provided by STANAG Mags, Bakelite Mags, Spetsnaz Mags, Salvo Fast Mags & VDV Fast Mags.]]
+
 ATT.SortOrder = 1
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-ATT.Free = true
 
-ATT.Category = {"bocw_ksp45_body"}
+ATT.Category = "bocw_lapa_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_mount_body.mdl"
-ATT.ModelBodygroups = "01"
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_magazine_ext1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_lapa_magazine_ext1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.Attachments = {
-    {
-        PrintName = "BODY",
-        Bone = "tag_weapon",
-        Pos = Vector(-1.4, 0, 2.42),
-        Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0.65, 0, 0),
-        Category = {"bocw_submachineguns_body_flashwest"},
-    }
-}
+ATT.ClipSizeOverride = 40
 
-ARC9.LoadAttachment(ATT, "bocw_ksp45_mount_flashlight")
+ATT.ReloadTimeMult = 1.1
 
---
+ATT.ActivateElements = {"lapa_mag_ext"}
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_magazine_ext1")
 
 ATT = {}
 
-ATT.PrintName = "Laser Mount"
-ATT.CompactName = "LASER MNT"
-ATT.Icon = Material("entities/bocw_atts/mounts/lasermixbody.png", "mips smooth")
-ATT.Description = [[Barrel installed mount for laser body attachments on the Milano 821.]]
+ATT.PrintName = "Fast Mag" --// 2
+ATT.CompactName = "FAST MAG"
+ATT.Icon = Material("entities/bocw_atts/magazines/lapa_fast1.png", "mips smooth")
+ATT.Description = [[Lightweight magazine wtih a makeshift pull loop to improve reload speed.
+
+The Fast Mag is a Magazine attachment available for all Light Machine Guns and Pistols alongside most of the Submachine Guns and Sniper Rifles in Call of Duty: Black Ops Cold War. It increases reload speed with no penalty, same as jungle-style or taped magazines.]]
+
+ATT.SortOrder = 2
+
+ATT.Category = "bocw_lapa_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_magazine_fast1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_lapa_magazine_fast1.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ReloadTimeMult = 0.8
+
+ATT.ActivateElements = {"lapa_mag_fast"}
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_magazine_fast1")
+
+ATT = {}
+
+ATT.PrintName = "AX Primer Short Mag" --// 3
+ATT.CompactName = "AX PRIMER"
+ATT.Icon = Material("entities/bocw_atts/magazines/lapa_mix1.png", "mips smooth")
+ATT.Description = [[Lightweight magazine contains 25 rounds using advanced alloy primers for high kinetic transmission.
+
+The AX Primer Short Mag is a unique attachment available for the LAPA in Call of Duty: Black Ops Cold War, Call of Duty: Warzone and Call of Duty: Mobile. In Black Ops Cold War , the AX Primer Short Mag gives increased reload speed, bullet velocity and a minor increase to aiming speed while reducing magazine capacity, max starting ammo and ammo capacity.]]
+
+ATT.SortOrder = 3
+
+ATT.Category = "bocw_lapa_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_magazine_mix1.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ReloadTimeMult = 0.75
+ATT.AimDownSightsTimeMult = 0.93
+ATT.PhysBulletMuzzleVelocityMult = 1.33
+
+ATT.ClipSizeOverride = 25
+
+ATT.AimDownSightsTimeMult = 1.2
+
+ATT.ActivateElements = {"lapa_mag_mix"}
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_magazine_mix1")
+
+ATT = {}
+
+ATT.PrintName = "STANAG 50 Rnd" --// 4
+ATT.CompactName = "50 RND"
+ATT.Icon = Material("entities/bocw_atts/magazines/lapa_extpro.png", "mips smooth")
+ATT.Description = [[High-capacity magazine holds 50 rounds of ammunition.
+
+The STANAG is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It acts as a high capacity mag, giving more ammo but giving the added downside of a worse aiming time and reload speed. There are two different Warsaw Pact equivalents in the Bakelite Mag and the Spetsnaz Mag.]]
+
+ATT.SortOrder = 4
+
+ATT.Category = "bocw_lapa_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_magazine_extpro.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ClipSizeOverride = 50
+
+ATT.ReloadTimeMult = 1.1
+ATT.AimDownSightsTimeMult = 1.15
+
+ATT.ActivateElements = {"lapa_mag_ext"}
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_magazine_extpro")
+
+ATT = {}
+
+ATT.PrintName = "Vandal Speed Loader" --// 5
+ATT.CompactName = "VANDAL SPD"
+ATT.Icon = Material("entities/bocw_atts/magazines/lapa_fastpro.png", "mips smooth")
+ATT.Description = [[Makeshift steel pull loop for greatly improved reload speed. Includes additional magazine.
+
+The Vandal Speed Loader is a type of Magazine attachment available for all Light Machine Guns, Sniper Rifles and Pistols alongside a large amount of the Submachine Guns in Call of Duty: Black Ops Cold War. It decreases reload speeds and gives an additional starting magazine but at the cost of increasing aiming time, however on Light Machine Guns, an additional general movement decrease is also given (this is not the case in Warzone).]]
+
+ATT.SortOrder = 5
+
+ATT.Category = "bocw_lapa_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_magazine_fastpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_lapa_magazine_fastpro.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ReloadTimeMult = 0.58
+ATT.SupplyLimitOverride = 5
+
+ATT.AimDownSightsTimeMult = 1.06
+
+ATT.ActivateElements = {"lapa_mag_fast"}
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_magazine_fastpro")
+
+ATT = {}
+
+ATT.PrintName = "Salvo 45 Rnd Fast Mag" --// 6
+ATT.CompactName = "45 RND FAST"
+ATT.Icon = Material("entities/bocw_atts/magazines/lapa_mixpro.png", "mips smooth")
+ATT.Description = [[Extended magazine made from lightweight polymers improves reload speed. Contains 45 rounds.
+
+The Salvo Fast Mag is a type of Magazine attachment available for most NATO weapons in Call of Duty: Black Ops Cold War. It functions as both as an Extended Magazine attachment and a Fast Mags attachment but at the cost of a drastically cut aim down sights time. The Warsaw Pact equivalent is the VDV Fast Mag.]]
+
+ATT.SortOrder = 6
+
+ATT.Category = "bocw_lapa_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_magazine_mixpro.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ClipSizeOverride = 45
+ATT.ReloadTimeMult = 0.67
+
+ATT.MultAimDownSightsTime = 1.25
+
+ATT.ActivateElements = {"lapa_mag_mix"}
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_magazine_mixpro")
+--========== HANDLE ===================
+ATT = {}
+
+ATT.PrintName = "Speed Tape" --// 1
+ATT.CompactName = "SPEED TAPE"
+ATT.Icon = Material("entities/bocw_atts/handles/lapa_speed.png", "mips smooth")
+ATT.Description = [[Duct tape applied to handle increases friction for improved aiming speed.
+
+The Speed Tape is a Handle attachment available for most Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It acts similar to the Quickdraw Handle and similar attachments from prior games. It decreases the time it takes to aim down sights. It has an alternate in the form of the Speed Grip.]]
+
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-ATT.Free = true
 
-ATT.Category = {"bocw_milano821_body"}
+ATT.Category = "bocw_lapa_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_mount_body.mdl"
-ATT.ModelBodygroups = "00"
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_handle_speed.mdl"
 
-ATT.Scale = 0.9
+ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.Attachments = {
-    {
-        PrintName = "BODY",
-        Bone = "tag_weapon",
-        Pos = Vector(-1.4, 0, 1.7),
-        Ang = Angle(0, 0, 90),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_submachineguns_body_laserwest", "bocw_submachineguns_body_mixwest"},
-    }
-}
+ATT.AimDownSightsTimeMult = 0.9
 
-ARC9.LoadAttachment(ATT, "bocw_milano821_mount_lasermix")
+ARC9.LoadAttachment(ATT, "bocw_lapa_handle_speed")
 
 ATT = {}
 
-ATT.PrintName = "Flashlight Mount"
-ATT.CompactName = "FLASH MNT"
-ATT.Icon = Material("entities/bocw_atts/mounts/flashlight.png", "mips smooth")
-ATT.Description = [[Barrel installed mount for flashlights on the Milano 821.]]
+ATT.PrintName = "Dropshot Wrap" --// 2
+ATT.CompactName = "DROPSHOT"
+ATT.Icon = Material("entities/bocw_atts/handles/lapa_dropshot.png", "mips smooth")
+ATT.Description = [[Tightly wrapped fabric bands to improve flinch stability when aiming from different stances.
+
+The Dropshot Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It decreases flinching from changing stances while also allowing for uninterrupted aiming when changing to prone.]]
+
 ATT.SortOrder = 1
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-ATT.Free = true
 
-ATT.Category = {"bocw_milano821_body"}
+ATT.Category = "bocw_lapa_wrap"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ksp45_mount_body.mdl"
-ATT.ModelBodygroups = "01"
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_handle_dropshot.mdl"
 
-ATT.Scale = 0.9
+ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, -120)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.Attachments = {
-    {
-        PrintName = "BODY",
-        Bone = "tag_weapon",
-        Pos = Vector(-1, 1.87, -1.09),
-        Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0.65, 0, 0),
-        Category = {"bocw_submachineguns_body_flashwest"},
-    }
-}
-
-ARC9.LoadAttachment(ATT, "bocw_milano821_mount_flashlight")
-
---
+ARC9.LoadAttachment(ATT, "bocw_lapa_handle_dropshot")
 
 ATT = {}
 
-ATT.PrintName = "Laser Mount"
-ATT.CompactName = "LASER MNT"
-ATT.Icon = Material("entities/bocw_atts/mounts/lasermixbody.png", "mips smooth")
-ATT.Description = [[Barrel installed mount for laser body attachments on the Bullfrog.]]
+ATT.PrintName = "Field Tape" --// 3
+ATT.CompactName = "FIELD TAPE"
+ATT.Icon = Material("entities/bocw_atts/handles/lapa_fieldtape.png", "mips smooth")
+ATT.Description = [[A layer of adhesive fabric tape absorbs shock to improve flinch stability.
+
+The Field Tape is a Handle attachment available for all weapons that allow attachments. It decreases flinching from being shot by a large degree.]]
+
+ATT.SortOrder = 3
+
+ATT.Category = "bocw_lapa_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_handle_fieldtape.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_handle_fieldtape")
+
+ATT = {}
+
+ATT.PrintName = "SASR Jungle Grip" --// 4
+ATT.CompactName = "SASR GRIP"
+ATT.Icon = Material("entities/bocw_atts/handles/lapa_sasrjungle.png", "mips smooth")
+ATT.Description = [[Makeshift combination of fabric tape and rubber bands to improve aiming speed and flinch stability.
+
+The SASR Jungle Grip is a Handle attachment available for NATO related Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It decreases flinching effect from being shot and decreases the time aiming time but at the cost of having a slower recovery time from sprinting. The Warsaw Pact equivalent is the Spetsnaz Field Grip.]]
+
+ATT.SortOrder = 4
+
+ATT.Category = "bocw_lapa_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_handle_sasrjungle.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.85
+
+ATT.SprintToFireTimeMult = 1.12
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_handle_sasrjungle")
+
+ATT = {}
+
+ATT.PrintName = "Serpent Wrap" --// 5
+ATT.CompactName = "SERPENT"
+ATT.Icon = Material("entities/bocw_atts/handles/lapa_serpent.png", "mips smooth")
+ATT.Description = [[Duct tape with an adhesive coating ensures a firm grip to improve aiming speed.
+
+The Serpent Wrap is a Handle attachment available for most Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It acts as a stronger Speed Tape with the downside of it increasing the sprint to firing time. It has an alternate form in the Serpent Grip.]]
+
+ATT.SortOrder = 5
+
+ATT.Category = "bocw_lapa_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_handle_serpent.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.75
+
+ATT.SprintToFireTimeMult = 1.1
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_handle_serpent")
+
+ATT = {}
+
+ATT.PrintName = "Airborne Elastic Wrap" --// 6
+ATT.CompactName = "AIRBORNE"
+ATT.Icon = Material("entities/bocw_atts/handles/lapa_airborne.png", "mips smooth")
+ATT.Description = [[Non-abrasive grip sleeve improves shooter stability while maintaining agility.
+
+The Airborne Elastic Wrap is a Handle attachment available for NATO related Primary Weapons, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. It acts as fusion of the Dropshot Wrap and the SASR Jungle Grip, giving increased aiming speed, flinch resistance, and the ability to aim while going prone, but at the cost of reduced sprint recover speed and movement speed while firing. The Warsaw Pact equivalent is the GRU Elastic Wrap.]]
+
+ATT.SortOrder = 6
+
+ATT.Category = "bocw_lapa_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_handle_airborne.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.7
+
+ATT.SprintToFireTimeMult = 1.15
+ATT.SpeedMultShooting = 0.85
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_handle_airborne")
+--========== STOCK ====================
+ATT = {}
+
+ATT.PrintName = "Tactical Stock" --// 1
+ATT.CompactName = "TAC STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/lapa_tactical.png", "mips smooth")
+ATT.Description = [[Lightweight cheek rest for improved walking speed when aiming down sights.
+
+The Tactical Stock is a Stock attachment available for all Primary Weapons and Shotguns in Call of Duty: Black Ops Cold War. It gives increased movement speed while aiming.]]
+
 ATT.SortOrder = 0
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-ATT.Free = true
 
-ATT.Category = {"bocw_bullfrog_body"}
+ATT.Category = "bocw_lapa_stock_tac"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_mount_body.mdl"
-ATT.ModelBodygroups = "00"
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_stock_tactical.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.Attachments = {
-    {
-        PrintName = "BODY",
-        Bone = "tag_weapon",
-        Pos = Vector(-2, 0.24, -0.25),
-        Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_submachineguns_body_lasereast", "bocw_submachineguns_body_mixeast"},
-    }
-}
+ATT.SpeedMultSights = 1.1
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_mount_lasermix")
+ARC9.LoadAttachment(ATT, "bocw_lapa_stock_tactical")
 
 ATT = {}
 
-ATT.PrintName = "Flashlight Mount"
-ATT.CompactName = "FLASH MNT"
-ATT.Icon = Material("entities/bocw_atts/mounts/flashlight.png", "mips smooth")
-ATT.Description = [[Barrel installed mount for flashlights on the Bullfrog.]]
-ATT.SortOrder = 1
-ATT.MenuCategory = "ARC9 - BOCW Attachments"
-ATT.Free = true
+ATT.PrintName = "Marathon Stock" --// 2
+ATT.CompactName = "MARATHON"
+ATT.Icon = Material("entities/bocw_atts/stocks/lapa_marathon.png", "mips smooth")
+ATT.Description = [[Contoured buttstock replacement reduces weight for improved sprint to fire time.
 
-ATT.Category = {"bocw_bullfrog_body"}
+The Marathon Stock is set of Stock attachments available in Call of Duty: Black Ops Cold War. It has three distinct variants that improve the delay between sprinting and firing. The first version of the attachment has alternates in the forms of the Wire Stock, Collapsed Stock, CQB Stock, and Shotgun Stock. The second has alternates in the form of the Buffer Tube, No Stock, and CQB Pad. The third version is exclusively for Shotguns.]]
 
-ATT.Model = "models/weapons/arc9/atts/bocw_bullfrog_mount_body.mdl"
-ATT.ModelBodygroups = "01"
+ATT.SortOrder = 2
+
+ATT.Category = "bocw_lapa_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_stock_collapsed.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.Attachments = {
-    {
-        PrintName = "BODY",
-        Bone = "tag_weapon",
-        Pos = Vector(-2, 0.75, -0.55),
-        Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_submachineguns_body_flasheast"},
-    }
-}
+ATT.SprintToFireTimeMult = 0.9
 
-ARC9.LoadAttachment(ATT, "bocw_bullfrog_mount_flashlight")
+ATT.ActivateElements = {"stockgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_stock_collapsed")
+
+ATT = {}
+
+ATT.PrintName = "Duster Stock" --// 3
+ATT.CompactName = "DUSTER STK"
+ATT.Icon = Material("entities/bocw_atts/stocks/lapa_duster.png", "mips smooth")
+ATT.Description = [[Durable stock with an aftermarket cheek rest to improve sliding speed.
+
+The Duster Stock is available as a stock attachment in Call of Duty: Black Ops Cold War. It gives increases speed while sliding, giving more distance per slide. It has an alternate in the form of the Duster Pad.]]
+
+ATT.SortOrder = 2
+
+ATT.Category = "bocw_lapa_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_stock_duster.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ActivateElements = {"stockgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_stock_duster")
+
+ATT = {}
+
+ATT.PrintName = "CQB Stock" --// 4
+ATT.CompactName = "CQB STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/lapa_cqb.png", "mips smooth")
+ATT.Description = [[Removed buttstock piece further reduces weapon weight for greatly improved sprint to fire time.
+
+The CQB Stock is a Stock attachment in Call of Duty: Black Ops Cold War. There are two variants, both which decrease the delay time between firing from sprinting while one has a stronger affect and decreases hip fire accuracy. It has alternates in the forms of the Wire Stock, Marathon Stock, Collapsed Stock, and Shotgun Stock.]]
+
+ATT.SortOrder = 3
+
+ATT.Category = "bocw_lapa_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_stock_nostock.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SprintToFireTimeMult = 0.7
+
+ATT.SpreadMultHipFire = 1.15
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_stock_nostock")
+
+ATT = {}
+
+ATT.PrintName = "SAS Combat Stock" --// 5
+ATT.CompactName = "SAS STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/lapa_sascombat.png", "mips smooth")
+ATT.Description = [[Cushioned cheek rest provides greater stability for improved movement speed when aiming and firing.
+
+The SAS Combat Stock is a Stock attachment available for all NATO related primary weapons and Shotguns. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The Warsaw Pact equivalent is the Spetsnaz PKM Stock and Spetsnaz Stock.]]
+
+ATT.SortOrder = 5
+
+ATT.Category = "bocw_lapa_stock_tac"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_stock_sascombat.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SpeedMultShooting = 1.05
+ATT.SpeedMultSighted = 1.15
+
+ATT.SpreadMultHipFire = 1.15
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_stock_sascombat")
+
+ATT = {}
+
+ATT.PrintName = "Raider Stock" --// 6
+ATT.CompactName = "RAIDER STK"
+ATT.Icon = Material("entities/bocw_atts/stocks/lapa_raider.png", "mips smooth")
+ATT.Description = [[Low-profile cheek rest increases comfortability for improved sprint recovery and walking speed when aiming.
+
+The Raider Stock is a Stock attachment available for some NATO related primary weapons. It gives greatly improved sprint to fire timing with improved movement speeds while aiming at the cost of a heavily reduced hip fire accuracy. It has an alternate NATO equivalent with the Raider Pad. The Warsaw Pact equivalents are the KGB Pad and KGB Skeletal Stock. While Shotguns get the Marathon Stock. The Type 63 also gets a unique variant that replaces the Spetsnaz Stock.]]
+
+ATT.SortOrder = 6
+
+ATT.Category = "bocw_lapa_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_stock_raider.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SprintToFireTimeMult = 0.7
+ATT.SpeedMultSighted = 1.1
+
+ATT.SpreadMultHipFire = 1.3
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_stock_raider")
+--[[
+ooooo     ooo   .oooooo.    ooooooooo.   
+`888'     `8'  d8P'  `Y8b   `888   `Y88. 
+ 888       8  888            888   .d88' 
+ 888       8  888            888ooo88P'  
+ 888       8  888     ooooo  888`88b.    
+ `88.    .8'  `88.    .88'   888  `88b.  
+   `YbodP'     `Y8bood8P'   o888o  o888o 
+]]
+--========== BARREL ===================
+ATT = {}
+
+ATT.PrintName = [[14.5" Extended]] --// 1
+ATT.CompactName = [[14.5" EXTND]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ugr_extended.png", "mips smooth")
+ATT.Description = [[Thin profile barrel forged from chromoly steel. Improves bullet velocity.
+
+Within Call of Duty: Black Ops Cold War, the Long Barrel returns as the Extended barrel family of barrel attachments, giving increased muzzle velocity for most weaponry it can be attached to.]]
+
+ATT.SortOrder = 14.5
+
+ATT.Category = "bocw_ugr_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_barrel_extended.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.PhysBulletMuzzleVelocityMult = 1.4
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_extended"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_barrel_extended")
+
+ATT = {}
+
+ATT.PrintName = [[10.9" Cavalry Lancer]] --// 2
+ATT.CompactName = [[10.9" CVLRY]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ugr_cavalry.png", "mips smooth")
+ATT.Description = [[Heavy profile barrel broach rifled to improve damage against enemy vehicles.
+
+The Cavalry Lancer barrel is an attachment type new to Call of Duty: Black Ops Cold War that acts similar to the Full Metal Jacket attachment from previous titles. It increases the damage multiplier to vehicles and various Scorestreaks. However, unlike FMJ, it only increases the damage multiplier and doesn't increase material penetration]]
+
+ATT.SortOrder = 10.9
+
+ATT.Category = "bocw_ugr_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_barrel_cavalry.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DamageTypeOverride = DMG_AIRBOAT
+ATT.ArmorPiercingMult = 3
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_cavalrylancer"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_barrel_cavalry")
+
+ATT = {}
+
+ATT.PrintName = [[12.8" VDV Reinforced]] --// 3
+ATT.CompactName = [[12.8" VDV]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ugr_reinforced.png", "mips smooth")
+ATT.Description = [[Heavy profile barrel button rifled to improve bullet velocity and damage range.
+
+The VDV Reinforced barrel is an attachment type available for Warsaw Pact related Assault Rifles, and Submachine Guns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed. The NATO equivalent is the Reinforced Heavy Barrel.]]
+
+ATT.SortOrder = 12.8
+
+ATT.Category = "bocw_ugr_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_barrel_reinforced.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.RangeMaxMult = 1.18
+ATT.PhysBulletMuzzleVelocityMult = 1.8
+
+ATT.SpeedMult = 0.96
+ATT.SpeedMultSights = 0.8
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_reinforced"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_barrel_vdvreinforced")
+
+ATT = {}
+
+ATT.PrintName = [[14.5" Liberator]] --// 4
+ATT.CompactName = [[14.5" LIBERATR]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ugr_liberator.png", "mips smooth")
+ATT.Description = [[Durable steel barrel with phosphate coating. Button rifled to improve bullet velocity.
+
+The Liberator barrel is an attachment type available for Warsaw Pact related Assault Rifles and Submachine Guns in Call of Duty: Black Ops Cold War. It increases muzzle velocity of shots while reducing the aiming movement speed. The NATO equivalent is the Ranger Barrel.]]
+
+ATT.SortOrder = 14.5
+
+ATT.Category = "bocw_ugr_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_barrel_liberator.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.PhysBulletMuzzleVelocityMult = 2
+
+ATT.SpeedMultSights = 0.75
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_liberator"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_barrel_liberator")
+
+ATT = {}
+
+ATT.PrintName = [[11.6" Rifled]]
+ATT.CompactName = [[11.6" RIFLED]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ugr_rifled.png", "mips smooth")
+ATT.Description = [[Nitride-treated barrel for enhanced durability to prevent bending and improve damage range.
+
+The Rifled barrel is an attachment type available for Submachine Guns in Call of Duty: Black Ops Cold War. It increases damage range at the cost of sprinting movement speed.]]
+
+ATT.SortOrder = 11.6
+
+ATT.Category = "bocw_ugr_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_barrel_rifled.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.RangeMaxMult = 1.25
+
+ATT.SpeedMult = 0.95
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_rifled"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_barrel_rifled")
+
+ATT = {}
+
+ATT.PrintName = [[10.7" Task Force]] --// 6
+ATT.CompactName = [[10.7" TFORCE]]
+ATT.Icon = Material("entities/bocw_atts/barrels/ugr_taskforce.png", "mips smooth")
+ATT.Description = [[Shortened steel barrel for improved bullet velocity, horizontal recoil control, and damage.
+
+The Task Force barrel is an attachment type available for most Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, Pistols, and Shotguns in Call of Duty: Black Ops Cold War. For Assault Rifles, Submachine Guns, and Pistols it gives increased damage, effective damage range, and bullet velocity but at the cost of increased overall recoil and the loss of a starting magazine.]]
+
+ATT.SortOrder = 10.7
+
+ATT.Category = "bocw_ugr_barrel"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_barrel_taskforce.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DamageMaxMult = 1.06
+ATT.RecoilSideMult = 0.88
+ATT.PhysBulletMuzzleVelocityMult = 1.75
+
+ATT.RecoilUpMult = 1.15
+ATT.RangeMaxMult = 0.85
+
+ATT.MuzzleParticleOverride_Priority = 100
+ATT.MuzzleDevice = true
+
+ATT.ActivateElements = {"barrel_taskforce"}
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_barrel_taskforce")
+--========== MAGAZINE =================
+ATT = {}
+
+ATT.PrintName = "Explosive Flechettes"
+ATT.CompactName = "EXPLOSIVE"
+ATT.Icon = Material("entities/bocw_atts/magazines/ugr_explosive.png", "mips smooth")
+ATT.Description = [[Flechette rounds modified with an explosive tip that detonates on impact.
+
+Explosive Flechettes is a unique attachment available for the UGR in Call of Duty: Black Ops Cold War.]]
+
+ATT.SortOrder = 0
+
+ATT.Category = "bocw_ugr_mag"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_magazine_explosive.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ClipSizeOverride = 30
+ATT.DamageMaxMult = 1.11
+
+ATT.ReloadTimeMult = 1.16
+ATT.AimDownSightsTimeMult = 1.08
+
+ATT.ActivateElements = {"ugr_mag_explosive"}
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_magazine_explosiveflechettes")
+--========== HANDLE ===================
+ATT = {}
+
+ATT.PrintName = "Speed Tape" --// 1
+ATT.CompactName = "SPEED TAPE"
+ATT.Icon = Material("entities/bocw_atts/handles/ugr_speed.png", "mips smooth")
+ATT.Description = [[Duct tape applied to handle increases fricion for improved aiming speed.
+
+The Speed Tape is a Handle attachment available for all Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It acts similar to the Quickdraw Handle and similar attachments from prior games. It decreases the time it takes to aim down sights.]]
+
+ATT.SortOrder = 0
+
+ATT.Category = "bocw_ugr_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_handle_speed.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.9
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_handle_speed")
+
+ATT = {}
+
+ATT.PrintName = "Dropshot Wrap" --// 2
+ATT.CompactName = "DROPSHOT"
+ATT.Icon = Material("entities/bocw_atts/handles/ugr_dropshot.png", "mips smooth")
+ATT.Description = [[Tightly wrapped fabric bands to improve flinch stability when aiming from different stances.
+
+The Dropshot Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It decreases flinching from changing stances while also allowing for uninterrupted aiming when changing to prone.]]
+
+ATT.SortOrder = 1
+
+ATT.Category = "bocw_ugr_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_handle_dropshot.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_handle_dropshot")
+
+ATT = {}
+
+ATT.PrintName = "Field Tape" --// 3
+ATT.CompactName = "FIELD TAPE"
+ATT.Icon = Material("entities/bocw_atts/handles/ugr_fieldtape.png", "mips smooth")
+ATT.Description = [[A layer of adhesive fabric tape absorbs shock to improve flinch stability.
+
+The Field Tape is a Handle attachment available for all weapons that allow attachments. It decreases flinching from being shot by a large degree.]]
+
+ATT.SortOrder = 3
+
+ATT.Category = "bocw_ugr_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_handle_fieldtape.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_handle_fieldtape")
+
+ATT = {}
+
+ATT.PrintName = "Spetsnaz Field Grip" --// 4
+ATT.CompactName = "SPETSNAZ"
+ATT.Icon = Material("entities/bocw_atts/handles/ugr_spetsnaz.png", "mips smooth")
+ATT.Description = [[Makeshift combination of fabric tape and rubber bands to improve aiming speed and flinch stability.
+
+The Spetsnaz Field Grip is a Handle attachment available for Warsaw Pact related Primary Weapons in Call of Duty: Black Ops Cold War. It decreases flinching effect from being shot and decreases the time aiming time but at the cost of having a slower recovery time from sprinting. The NATO equivalent is the SASR Jungle Grip.]]
+
+ATT.SortOrder = 4
+
+ATT.Category = "bocw_ugr_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_handle_spetsnaz.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.75
+
+ATT.SprintToFireTimeMult = 1.12
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_handle_spetnazfield")
+
+ATT = {}
+
+ATT.PrintName = "Serpent Wrap" --// 5
+ATT.CompactName = "SERPENT"
+ATT.Icon = Material("entities/bocw_atts/handles/ugr_serpent.png", "mips smooth")
+ATT.Description = [[Duct tape with an adhesive coating ensures a firm grip to improve aiming speed.
+
+The Serpent Wrap is a Handle attachment available for all Primary Weapons, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It acts as a stronger Speed Tape with the downside of it increasing the sprint to firing time.]]
+
+ATT.SortOrder = 5
+
+ATT.Category = "bocw_ugr_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_handle_serpent.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.75
+
+ATT.SprintToFireTimeMult = 1.1
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_handle_serpent")
+
+ATT = {}
+
+ATT.PrintName = "GRU Elastic Wrap" --// 6
+ATT.CompactName = "GRU ELASTIC"
+ATT.Icon = Material("entities/bocw_atts/handles/ugr_gruelastic.png", "mips smooth")
+ATT.Description = [[Non-abrasive grip sleeve improves shooter stability while maintaining agility.
+
+The GRU Elastic Wrap is a Handle attachment available for Warsaw Pact related Primary Weapons in Call of Duty: Black Ops Cold War. It acts as fusion of the Dropshot Tape and the Spetsnaz Field Grip, giving the effects of both alongside the downside of the SASR Jungle Grip and the added downside of decreased movement speed whiled aiming. The NATO equivalent is the Airborne Elastic Wrap.]]
+
+ATT.SortOrder = 6
+
+ATT.Category = "bocw_ugr_wrap"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_handle_gruelastic.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.AimDownSightsTimeMult = 0.7
+
+ATT.SprintToFireTimeMult = 1.15
+ATT.SpeedMultShootingMult = 0.9
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_handle_gruelastic")
+--========== STOCK ====================
+ATT = {}
+
+ATT.PrintName = "Tactical Stock" --// 1
+ATT.CompactName = "TAC STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/ugr_tactical.png", "mips smooth")
+ATT.Description = [[MIL-SPEC stock with integrated cheek rest to improve walking speed when aiming.
+
+The Tactical Stock is a Stock attachment available for all Primary Weapons and Shotguns in Call of Duty: Black Ops Cold War. It gives increased movement speed while aiming.]]
+
+ATT.SortOrder = 0
+
+ATT.Category = "bocw_ugr_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_stock_tactical.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SpeedMultSights = 1.1
+
+ATT.ActivateElements = {"stockgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_stock_tactical")
+
+ATT = {}
+
+ATT.PrintName = "Wire Stock" --// 2
+ATT.CompactName = "WIRE STCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/ugr_wire.png", "mips smooth")
+ATT.Description = [[Wire stock reduces weapon weight to improve sprint to fire time.
+
+The Wire Stock is a Stock attachment available in Call of Duty: Black Ops Cold War. It decreases the delay between sprinting and firing. It has alternates in the forms of the Marathon Stock, Collapsed Stock, CQB Stock and Shotgun Stock.]]
+
+ATT.SortOrder = 1
+
+ATT.Category = "bocw_ugr_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_stock_wire.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MultAimDownSightsTime = 0.9
+
+ATT.ActivateElements = {"stockgone"}
+
+ATT.SprintToFireTimeMult = 0.9
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_stock_wire")
+
+ATT = {}
+
+ATT.PrintName = "Duster Stock" --// 3
+ATT.CompactName = "DSTR STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/ugr_duster.png", "mips smooth")
+ATT.Description = [[Folding stock enables movement versatility to increase sliding speed.
+
+The Duster Stock is available as a stock attachment in Call of Duty: Black Ops Cold War. It gives increases speed while sliding, giving more distance per slide. It has an alternate in the form of the Duster Pad.]]
+
+ATT.SortOrder = 2
+
+ATT.Category = "bocw_ugr_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_stock_duster.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.ActivateElements = {"stockgone", "gripgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_stock_duster")
+
+ATT = {}
+
+ATT.PrintName = "No Stock" --// 4
+ATT.CompactName = "NO STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/ugr_nostock.png", "mips smooth")
+ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
+
+The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
+
+ATT.SortOrder = 3
+
+ATT.Category = "bocw_ugr_stock"
+
+ATT.SprintToFireTimeMult = 0.7
+
+ATT.SpreadMultHipFire = 1.15
+
+ATT.ActivateElements = {"stockgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_stock_nostock")
+
+ATT = {}
+
+ATT.PrintName = "Spetsnaz Stock" --// 5
+ATT.CompactName = "SPTZ STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/ugr_spetsnaz.png", "mips smooth")
+ATT.Description = [[Lightweight stock provides stability to improve movement speeds when aiming and firing.
+
+The Spetsnaz PKM Stock is one of the Stock attachments for Warsaw Pact related primary weapons alongside the Spetsnaz Stock. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The NATO equivalent is the SAS Combat Stock.]]
+
+ATT.SortOrder = 5
+
+ATT.Category = "bocw_ugr_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_stock_spetsnaz.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.SpeedMultShooting = 1.05
+ATT.SpeedMultSighted = 1.15
+
+ATT.SpreadMultHipFire = 1.15
+
+ATT.ActivateElements = {"stockgone"}
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_stock_spetsnaz")
+
+ATT = {}
+
+ATT.PrintName = "KGB Skeletal Stock" --// 6
+ATT.CompactName = "SKEL STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/ugr_kgbskeletal.png", "mips smooth")
+ATT.Description = [[Folding stock enables concealment versatility for improved sprint recovery and walking speed when aiming.
+
+The KGB Skeletal Stock is a Stock attachment available for some Warsaw Pact related primary weapons. It gives greatly improved sprint to fire timing with improved movement speeds while aiming at the cost of a heavily reduced hip fire accuracy. It has an alternate Warsaw Pact equivalent with the KGB Pad. The NATO equivalents are the Raider Pad and Raider Stock, while Shotguns get the Marathon Stock.]]
+
+ATT.SortOrder = 6
+
+ATT.Category = "bocw_ugr_stock"
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_stock_kgbskele.mdl"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MultAimDownSightsTime = 0.9
+
+ATT.ActivateElements = {"stockgone"}
+
+ATT.SprintToFireTimeMult = 1.3
+ATT.SpeedMultSighted = 1.1
+
+ATT.SpreadMultHipFire = 1.3
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_stock_kgbskeletal")
