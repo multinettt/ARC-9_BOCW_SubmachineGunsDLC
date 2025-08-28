@@ -1,19 +1,21 @@
-# ARC9 BOCW Submachine Guns
+# ARC9 BOCW Submachine Guns DLC
 
-5 BOCW SMGs on the base [ARC9](https://github.com/HaodongMo/ARC-9)
+7 more BOCW SMGs on the base [ARC9](https://github.com/HaodongMo/ARC-9)
 
 ## You need to have [Shared Content](https://github.com/multinettt/ARC-9_BOCW_Shared_Content) in order to avoid missing textures, materials and sounds.
 
 ## Customization is limited without [BOCW Attachments](https://github.com/multinettt/ARC-9_BOCW_Attachments)
 
 ## Weapons List:
-### Submachine Guns:
+### Submachine Guns DLC:
 
-- MP5 (MP5K)
-- Milano 821 (Type 821)
-- AK-74u (AKS-74U)
-- KSP 45
-- Bullfrog (PP-19 Bizon-2)
+- MAC-10
+- LC10
+- PPSh-41
+- OTs 9 (OTs-02 Kiparis)
+- TEC-9
+- LAPA
+- UGR (APS)
 
 ## Personalization:
 
