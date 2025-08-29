@@ -83,7 +83,7 @@ ATT.Description = [[Heavy profile barrel button rifled to improve bullet velocit
 
 The Reinforced Heavy barrel is an attachment type available for NATO related Assault Rifles, Submachine Guns, Pistols and Shotguns in Call of Duty: Black Ops Cold War. It increases damage range alongside increasing bullet velocity at the cost of movement speed while aiming and a minor decrease of sprinting speed, while for Shotguns it loses the bullet velocity in exchange for a fire rate increase. The Warsaw Pact equivalent is the VDV Reinforced Barrel.]]
 
-ATT.SortOrder = 9.5
+ATT.SortOrder = 6.1
 
 ATT.Category = "bocw_mac10_barrel"
 
@@ -192,6 +192,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.DamageMaxMult = 1.04
+ATT.RangeMinMult = 1.5
 ATT.RangeMaxMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.75
 
@@ -239,8 +240,8 @@ ARC9.LoadAttachment(ATT, "bocw_mac10_magazine_ext1")
 ATT = {}
 
 ATT.PrintName = "Fast Mag" --// 2
-ATT.CompactName = "JUNGLE MAG"
-ATT.Icon = Material("entities/bocw_atts/magazines/mac10_dual1.png", "mips smooth")
+ATT.CompactName = "FAST MAG"
+ATT.Icon = Material("entities/bocw_atts/magazines/mac10_fast1.png", "mips smooth")
 ATT.Description = [[Makeshift pull loop attached to magazine to improve reload speed.
 
 The Fast Mag is a Magazine attachment available for all Light Machine Guns and Pistols alongside most of the Submachine Guns and Sniper Rifles in Call of Duty: Black Ops Cold War. It increases reload speed with no penalty, same as jungle-style or taped magazines.]]
@@ -249,8 +250,8 @@ ATT.SortOrder = 2
 
 ATT.Category = "bocw_mac10_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_mac10_magazine_dual1.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mac10_magazine_dual1.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_magazine_fast1.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mac10_magazine_fast1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -258,9 +259,9 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ReloadTimeMult = 0.82
 
-ATT.ActivateElements = {"mac10_mag_dual"}
+ATT.ActivateElements = {"mac10_mag_fast"}
 
-ARC9.LoadAttachment(ATT, "bocw_mac10_magazine_dual1")
+ARC9.LoadAttachment(ATT, "bocw_mac10_magazine_fast1")
 
 ATT = {}
 
@@ -324,17 +325,17 @@ ATT = {}
 
 ATT.PrintName = "Vandal Speed Loader" --// 5
 ATT.CompactName = "VANDAL SPD"
-ATT.Icon = Material("entities/bocw_atts/magazines/mac10_dualpro.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/magazines/mac10_fastpro.png", "mips smooth")
 ATT.Description = [[Leather pull loop improves reload speed. Includes additional magazine.
 
-The SAS Mag Clamp is a Magazine attachment available for all NATO related Assault Rifles, Tactical Rifles and the MP5. It improves reload speeds in addition to giving an additional starting magazine but at the cost of a longer time to aim. The Warsaw Pact equivalent is the GRU Mag Clamp.]]
+The Vandal Speed Loader is a type of Magazine attachment available for all Light Machine Guns, Sniper Rifles and Pistols alongside a large amount of the Submachine Guns in Call of Duty: Black Ops Cold War. It decreases reload speeds and gives an additional starting magazine but at the cost of increasing aiming time, however on Light Machine Guns, an additional general movement decrease is also given (this is not the case in Warzone).]]
 
 ATT.SortOrder = 5
 
 ATT.Category = "bocw_mac10_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_mac10_magazine_dualpro.mdl"
-ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mac10_magazine_dualpro.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_mac10_magazine_fastpro.mdl"
+ATT.DropMagazineModelOverride = "models/weapons/arc9/atts/bocw_mac10_magazine_fastpro.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -345,9 +346,9 @@ ATT.SupplyLimitOverride = 5
 
 ATT.AimDownSightsTimeMult = 1.06
 
-ATT.ActivateElements = {"mac10_mag_dual"}
+ATT.ActivateElements = {"mac10_mag_fast"}
 
-ARC9.LoadAttachment(ATT, "bocw_mac10_magazine_dualpro")
+ARC9.LoadAttachment(ATT, "bocw_mac10_magazine_fastpro")
 
 ATT = {}
 
@@ -596,7 +597,7 @@ ATT = {}
 
 ATT.PrintName = "No Stock" --// 4
 ATT.CompactName = "NO STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/mac10_nostock.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/noicon.png", "mips smooth")
 ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
 
 The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
@@ -604,12 +605,6 @@ The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives 
 ATT.SortOrder = 3
 
 ATT.Category = "bocw_mac10_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_mac10_stock_nostock.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SprintToFireTimeMult = 0.7
 
