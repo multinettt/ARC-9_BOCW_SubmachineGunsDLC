@@ -4530,3 +4530,28 @@ ATT.SpeedMultSighted = 1.1
 ATT.SpreadMultHipFire = 1.3
 
 ARC9.LoadAttachment(ATT, "bocw_ugr_stock_kgbskeletal")
+
+--
+
+ATT = {}
+
+ATT.PrintName = "LC10 Muzzle Device"
+ATT.CompactName = "MUZZLE"
+ATT.Icon = Material("entities/bocw_atts/muzzles/mp5_base.png", "mips smooth")
+ATT.Description = [[Default LC10 muzzle device.]]
+
+ATT.SortOrder = -10
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_muzzle.mdl"
+
+ATT.Category = {"bocw_lc10_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride_Priority = 1000
+ATT.MuzzleDevice = true
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_lc10_muzzle_base")
