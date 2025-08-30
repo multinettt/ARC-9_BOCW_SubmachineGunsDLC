@@ -386,7 +386,7 @@ SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting v
 -------------------------- POSITIONS
 
 SWEP.IronSights = {
-    Pos = Vector(0, 0, 0),
+    Pos = Vector(0, -1.5, 0),
     Ang = Angle(0, 0, 0),
     Magnification = 1.4,
     Blur = true,
@@ -839,7 +839,7 @@ SWEP.Animations = {
         Source = "reload",
         Time = 2.2,
         NoMagSwap = true,
-        MinProgress = 0.7,
+        MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.MAC10_reload_magout", t = 0.2 },
             { s = "ARC9_BOCW.MAC10_reload_magin", t = 1 },
@@ -871,7 +871,7 @@ SWEP.Animations = {
     ["reload_empty"] = {
         Source = "reload_empty",
         Time = 3.27,
-        MinProgress = 0.55,
+        MinProgress = 0.45,
         MagSwapTime = 1,
         EventTable = {
             { s = "ARC9_BOCW.MAC10_reload_magout", t = 0.2 },
@@ -906,7 +906,7 @@ SWEP.Animations = {
     ["reload_ext"] = {
         Source = "reload_ext",
         Time = 2.2,
-        MinProgress = 0.7,
+        MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.MAC10_reload_magout", t = 0.2 },
             { s = "ARC9_BOCW.MAC10_reload_magin", t = 1 },
@@ -938,7 +938,7 @@ SWEP.Animations = {
     ["reload_empty_ext"] = {
         Source = "reload_ext_empty",
         Time = 3.27,
-        MinProgress = 0.55,
+        MinProgress = 0.45,
         MagSwapTime = 1,
         EventTable = {
             { s = "ARC9_BOCW.MAC10_reload_magout", t = 0.2 },
@@ -973,7 +973,7 @@ SWEP.Animations = {
     ["reload_fast"] = {
         Source = "reload_fast",
         Time = 2.2,
-        MinProgress = 0.6,
+        MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.MAC10_reload_magout", t = 0.2 },
             { s = "ARC9_BOCW.MAC10_reload_magin", t = 0.9 },
@@ -1005,7 +1005,7 @@ SWEP.Animations = {
     ["reload_empty_fast"] = {
         Source = "reload_fast_empty",
         Time = 3.27,
-        MinProgress = 0.5,
+        MinProgress = 0.45,
         DropMagAt = 0.55,
         EventTable = {
             { s = "ARC9_BOCW.MAC10_reload_magout", t = 0.2 },
@@ -1043,7 +1043,7 @@ SWEP.Animations = {
     ["reload_mix"] = {
         Source = "reload_mix",
         Time = 2.2,
-        MinProgress = 0.7,
+        MinProgress = 0.65,
         EventTable = {
             { s = "ARC9_BOCW.MAC10_reload_magout", t = 0.2 },
             { s = "ARC9_BOCW.MAC10_reload_magin", t = 0.9 },
@@ -1075,7 +1075,7 @@ SWEP.Animations = {
     ["reload_empty_mix"] = {
         Source = "reload_mix_empty",
         Time = 3.27,
-        MinProgress = 0.55,
+        MinProgress = 0.45,
         MagSwapTime = 1,
         EventTable = {
             { s = "ARC9_BOCW.MAC10_reload_magout", t = 0.2 },

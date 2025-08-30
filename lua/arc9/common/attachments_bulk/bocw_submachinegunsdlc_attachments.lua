@@ -856,6 +856,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.DamageMaxMult = 1.07
+ATT.DamageMinMult = 1.07
 ATT.RangeMaxMult = 1.5
 ATT.PhysBulletMuzzleVelocityMult = 1.75
 
@@ -1191,7 +1192,7 @@ The Tactical Stock is a Stock attachment available for all Primary Weapons and S
 
 ATT.SortOrder = 0
 
-ATT.Category = "bocw_lc10_stock_tac"
+ATT.Category = "bocw_lc10_stock"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_lc10_stock_tactical.mdl"
 
@@ -1264,7 +1265,7 @@ ATT.SortOrder = 3
 
 ATT.Category = "bocw_lc10_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_lc10_stock_marathon.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lc10_stock_nostock.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -1287,7 +1288,7 @@ The SAS Combat Stock is a Stock attachment available for all NATO related primar
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_lc10_stock_tac"
+ATT.Category = "bocw_lc10_stock"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_lc10_stock_sascombat.mdl"
 
