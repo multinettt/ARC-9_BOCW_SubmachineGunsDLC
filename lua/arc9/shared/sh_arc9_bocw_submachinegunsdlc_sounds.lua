@@ -262,3 +262,137 @@ sound.Add({
     volume = 1.0,
     sound = "weapons/arc9/bocw_lc10/lc10_fire_silenced.wav"
 })
+--[[
+ooooooooo.   ooooooooo.    .oooooo..o oooo                      .o     .o  
+`888   `Y88. `888   `Y88. d8P'    `Y8 `888                    .d88   o888  
+ 888   .d88'  888   .d88' Y88bo.       888 .oo.             .d'888    888  
+ 888ooo88P'   888ooo88P'   `"Y8888o.   888P"Y88b          .d'  888    888  
+ 888          888              `"Y88b  888   888  8888888 88ooo888oo  888  
+ 888          888         oo     .d8P  888   888               888    888  
+o888o        o888o        8""88888P'  o888o o888o             o888o  o888o 
+]]
+-- MAGAZINE
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_reload_magout",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_reload_magout.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_reload_magin",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_reload_magin.wav"
+})
+
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_reload_ext_magout",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_reload_ext_magout.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_reload_ext_magin",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_reload_ext_magin.wav"
+})
+
+-- CHARGING HANDLE
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_boltback",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_boltback.wav"
+})
+
+-- RELOAD FOLEY
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_reload_start",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_reload_start.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_reload_end",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_reload_end.wav"
+})
+
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_empty_move_part1",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_empty_move_part1.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_empty_move_part2",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_empty_move_part2.wav"
+})
+
+-- INSPECT FOLEY
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_inspect_part1",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_inspect_part1.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_inspect_part2",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_inspect_part2.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_inspect_part3",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_inspect_part3.wav"
+})
+
+-- PULLOUT PUTAWAY
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_draw",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_draw.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_holster",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_holster.wav"
+})
+-----------------------------------------------
+-- FIRING SOUNDS
+
+sound.Add({ -- BLACK OPS COLD WAR
+    name = "ARC9_BOCW.PPSh41_fire",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_fire.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.PPSh41_fire_silenced",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_ppsh41/ppsh41_fire_silenced.wav"
+})

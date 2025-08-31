@@ -1436,7 +1436,7 @@ ARC9.LoadAttachment(ATT, "bocw_ppsh41_barrel_reinforced")
 ATT = {}
 
 ATT.PrintName = [[14.9" Ranger]] --// 4
-ATT.CompactName = [[14.9" RANGER]]
+ATT.CompactName = [[14.9" RANGR]]
 ATT.Icon = Material("entities/bocw_atts/barrels/ppsh41_ranger.png", "mips smooth")
 ATT.Description = [[Durable steel barrel with phosphate coating. Button rifled to improve bullet velocity.
 
@@ -1565,7 +1565,7 @@ ATT = {}
 
 ATT.PrintName = "Fast Mag" --// 2
 ATT.CompactName = "FAST MAG"
-ATT.Icon = Material("entities/bocw_atts/magazines/ppsh41_dual1.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/magazines/ppsh41_fast1.png", "mips smooth")
 ATT.Description = [[Makeshift pull loop attached to magazine to improve reload speed.
 
 The Fast Mag is a Magazine attachment available for all Light Machine Guns and Pistols alongside most of the Submachine Guns and Sniper Rifles in Call of Duty: Black Ops Cold War. It increases reload speed with no penalty, same as jungle-style or taped magazines.]]
@@ -1883,7 +1883,7 @@ ATT.SortOrder = 1
 
 ATT.Category = "bocw_ppsh41_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_stock_wire.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_stock_marathon.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
