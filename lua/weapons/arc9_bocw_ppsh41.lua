@@ -485,60 +485,45 @@ SWEP.AttachmentElements = {
             {5, 1},
         }
     },
-    ["foregripmount"] = {
-        Bodygroups = {
-            {6, 1},
-        }
-    },
-    ["bodymount_lasermix"] = {
-        Bodygroups = {
-            {7, 1},
-        }
-    },
-    ["bodymount_flashlight"] = {
-        Bodygroups = {
-            {7, 2},
-        }
-    },
     ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(2.94, 0, 0),
+                Pos = Vector(2.09, 0, 0),
             },
         },
     },
     ["barrel_cavalry"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(4.53, 0, 0),
+                Pos = Vector(0.81, 0, 0),
             },
         },
     },
     ["barrel_reinforced"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(3.72, 0, 0),
+                Pos = Vector(3.6, 0, 0),
             },
         },
     },
     ["barrel_ranger"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(2.93, 0, 0),
+                Pos = Vector(2.4, 0, 0),
             }
         },
     },
     ["barrel_rifled"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(4.53, 0, 0),
+                Pos = Vector(3.69, 0, 0),
             },
         },
     },
     ["barrel_taskforce"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(3.72, 0, 0),
+                Pos = Vector(5.26, 0, -0.18),
             }
         },
     },
@@ -606,9 +591,9 @@ SWEP.Attachments = {
     {
         PrintName = "MUZZLE",
         Bone = "tag_muzzle",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(0.23, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(1, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_ppsh41_muzzle", "bocw_smg_muzzle_west45"},
         InstalledElements = {"muzzlegone"},
     },
@@ -642,10 +627,10 @@ SWEP.Attachments = {
     {
         PrintName = "UNDRBARREL",
         Bone = "tag_weapon",
-        Pos = Vector(-7, -4.42, 5.53),
+        Pos = Vector(-6.6, -4.4, 6.45),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(20.25, 4.5, -5),
-        Category = {"bocw_ppsh41_underbarrel", "bocw_smg_underbarrel_west"},
+        Category = {"bocw_ppsh41_underbarrel", "bocw_smg_underbarrel_east"},
         InstalledElements = {"foregripmount"},
     },
     {
@@ -662,7 +647,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-2.75, 0, 1.25),
+        Icon_Offset = Vector(-3, 0, 1),
         Category = {"bocw_ppsh41_wrap"},
     },
     {
@@ -670,7 +655,7 @@ SWEP.Attachments = {
         Bone = "tag_weapon",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(-4, 0, 0),
+        Icon_Offset = Vector(-4.5, 0, 0.5),
         Category = {"bocw_ppsh41_stock"},
         InstalledElements = {"stockgone"},
     },
@@ -704,6 +689,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
+
+    if attached["bocw_ppsh41_underbarrel"] or attached["bocw_smg_underbarrel_east"] then
+        if attached["bocw_ppsh41_barrel_rifled"] or attached["bocw_ppsh41_barrel_taskforce"] then
+            vm:SetBodygroup(6, 0)
+        else
+            vm:SetBodygroup(6, 1) -- foregripmount logic
+        end
+    end
 end
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)

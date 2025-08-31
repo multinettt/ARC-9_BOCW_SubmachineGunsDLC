@@ -1484,6 +1484,15 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.DrawFunc = function(swep, model)
+
+	local elements = swep:GetElements()
+
+	if elements["bocw_ppsh41_underbarrel"] or elements["bocw_smg_underbarrel_east"] then
+        model:SetBodygroup(1,1)
+    end
+end
+
 ATT.RangeMinMult = 1.25
 
 ATT.SpeedMultSprint = 0.95
@@ -1515,6 +1524,15 @@ ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_barrel_taskforce.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DrawFunc = function(swep, model)
+
+	local elements = swep:GetElements()
+
+	if elements["bocw_ppsh41_underbarrel"] or elements["bocw_smg_underbarrel_east"] then
+        model:SetBodygroup(1,1)
+    end
+end
 
 ATT.DamageMaxMult = 1.07
 ATT.RangeMaxMult = 1.5
