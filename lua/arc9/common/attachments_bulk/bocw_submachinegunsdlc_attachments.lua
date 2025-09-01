@@ -2047,6 +2047,15 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.DrawFunc = function(swep, model)
+
+	local elements = swep:GetElements()
+
+	if elements["bocw_ots9_underbarrel"] or elements["bocw_smg_underbarrel_east"] then
+        model:SetBodygroup(1,1)
+    end
+end
+
 ATT.PhysBulletMuzzleVelocityMult = 1.4
 
 ATT.MuzzleParticleOverride_Priority = 100
@@ -2076,6 +2085,15 @@ ATT.Model = "models/weapons/arc9/atts/bocw_ots9_barrel_cavalry.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DrawFunc = function(swep, model)
+
+	local elements = swep:GetElements()
+
+	if elements["bocw_ots9_underbarrel"] or elements["bocw_smg_underbarrel_east"] then
+        model:SetBodygroup(1,1)
+    end
+end
 
 ATT.DamageTypeOverride = DMG_AIRBOAT
 ATT.ArmorPiercingMult = 3
@@ -2107,6 +2125,15 @@ ATT.Model = "models/weapons/arc9/atts/bocw_ots9_barrel_reinforced.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DrawFunc = function(swep, model)
+
+	local elements = swep:GetElements()
+
+	if elements["bocw_ots9_underbarrel"] or elements["bocw_smg_underbarrel_east"] then
+        model:SetBodygroup(1,1)
+    end
+end
 
 ATT.RangeMinMult = 1.18
 ATT.PhysBulletMuzzleVelocityMult = 1.8
@@ -2142,6 +2169,15 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.DrawFunc = function(swep, model)
+
+	local elements = swep:GetElements()
+
+	if elements["bocw_ots9_underbarrel"] or elements["bocw_smg_underbarrel_east"] then
+        model:SetBodygroup(1,1)
+    end
+end
+
 ATT.PhysBulletMuzzleVelocityMult = 2
 
 ATT.SpeedMultSighted = 0.75
@@ -2174,6 +2210,15 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.DrawFunc = function(swep, model)
+
+	local elements = swep:GetElements()
+
+	if elements["bocw_ots9_underbarrel"] or elements["bocw_smg_underbarrel_east"] then
+        model:SetBodygroup(1,1)
+    end
+end
+
 ATT.RangeMinMult = 1.25
 
 ATT.SpeedMultSprint = 0.95
@@ -2205,6 +2250,15 @@ ATT.Model = "models/weapons/arc9/atts/bocw_ots9_barrel_taskforce.mdl"
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.DrawFunc = function(swep, model)
+
+	local elements = swep:GetElements()
+
+	if elements["bocw_ots9_underbarrel"] or elements["bocw_smg_underbarrel_east"] then
+        model:SetBodygroup(1,1)
+    end
+end
 
 ATT.DamageMaxMult = 1.06
 ATT.RangeMaxMult = 1.5
@@ -2245,7 +2299,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.ClipSizeOverride = 30
 
-ATT.ReloadTimeMult = 1.36
+ATT.ReloadTimeMult = 1.1
 
 ATT.ActivateElements = {"ots9_mag_ext"}
 
@@ -2255,7 +2309,7 @@ ATT = {}
 
 ATT.PrintName = "Fast Mag" --// 2
 ATT.CompactName = "FAST MAG"
-ATT.Icon = Material("entities/bocw_atts/magazines/ots9_dual1.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/magazines/ots9_fast1.png", "mips smooth")
 ATT.Description = [[Makeshift pull loop attached to magazine to improve reload speed.
 
 The Fast Mag is a Magazine attachment available for all Light Machine Guns and Pistols alongside most of the Submachine Guns and Sniper Rifles in Call of Duty: Black Ops Cold War. It increases reload speed with no penalty, same as jungle-style or taped magazines.]]
@@ -2397,7 +2451,7 @@ ATT = {}
 
 ATT.PrintName = "Speed Tape" --// 1
 ATT.CompactName = "SPEED TAPE"
-ATT.Icon = Material("entities/bocw_atts/handles/ots9speed.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/handles/ots9_speed.png", "mips smooth")
 ATT.Description = [[Duct tape applied to handle increases friction for improved aiming speed.
 
 The Speed Tape is a Handle attachment available for most Primary Weapons, Shotguns and Pistols in Call of Duty: Black Ops Cold War. It acts similar to the Quickdraw Handle and similar attachments from prior games. It decreases the time it takes to aim down sights. It has an alternate in the form of the Speed Grip.]]
@@ -2609,18 +2663,18 @@ ARC9.LoadAttachment(ATT, "bocw_ots9_stock_duster")
 
 ATT = {}
 
-ATT.PrintName = "Spetsnaz Stock" --// 4
-ATT.CompactName = "SPETSNAZ"
-ATT.Icon = Material("entities/bocw_atts/stocks/ots9_cqb.png", "mips smooth")
+ATT.PrintName = "No Stock" --// 4
+ATT.CompactName = "NO STOCK"
+ATT.Icon = Material("entities/bocw_atts/stocks/ots9_nostock.png", "mips smooth")
 ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
 
-The Spetsnaz Stock is one of the Stock attachments for Warsaw Pact related primary weapons alongside the Spetsnaz PKM Stock. It gives greatly improved movement speed while aiming with a bit of movement speed while shooting but at the cost of hip fire accuracy. The NATO equivalent is the SAS Combat Stock.]]
+The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
 
 ATT.SortOrder = 3
 
 ATT.Category = "bocw_ots9_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ots9_stock_cqb.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_stock_nostock.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -2632,7 +2686,7 @@ ATT.SpreadMultHipFire = 1.15
 
 ATT.ActivateElements = {"stockgone"}
 
-ARC9.LoadAttachment(ATT, "bocw_ots9_stock_cqb")
+ARC9.LoadAttachment(ATT, "bocw_ots9_stock_nostock")
 
 ATT = {}
 
@@ -2665,7 +2719,7 @@ ARC9.LoadAttachment(ATT, "bocw_ots9_stock_spetsnaz")
 ATT = {}
 
 ATT.PrintName = "KGB Skeletal Stock" --// 6
-ATT.CompactName = "KGB SKELETAL"
+ATT.CompactName = "KGB STOCK"
 ATT.Icon = Material("entities/bocw_atts/stocks/ots9_kgbskeletal.png", "mips smooth")
 ATT.Description = [[Lightweight stock perfectly balanced for improved sprint recovery and movement speeds when aiming.
 
