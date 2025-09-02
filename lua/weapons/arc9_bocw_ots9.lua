@@ -966,7 +966,7 @@ SWEP.Animations = {
         },
     },
     ["reload_empty_ext"] = {
-        Source = "reload_empty_ext",
+        Source = "reload_ext_empty",
         Time = 3,
         MinProgress = 0.55,
         MagSwapTime = 1,

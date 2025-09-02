@@ -3267,7 +3267,7 @@ The Tactical Stock is a Stock attachment available for all Primary Weapons and S
 
 ATT.SortOrder = 0
 
-ATT.Category = "bocw_tec9_stock_tac"
+ATT.Category = "bocw_tec9_stock"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_tec9_stock_tactical.mdl"
 
@@ -3286,7 +3286,7 @@ ATT.CompactName = "COLLAPSED"
 ATT.Icon = Material("entities/bocw_atts/stocks/tec9_collapsed.png", "mips smooth")
 ATT.Description = [[Collapsed wire stock reduces weight to improve sprint recovery time.
 
-The Duster Stock is available as a stock attachment in Call of Duty: Black Ops Cold War. It gives increases speed while sliding, giving more distance per slide. It has an alternate in the form of the Duster Pad.]]
+The Collapsed Stock is a stock attachment available for the MP5 and TEC-9 in Call of Duty: Black Ops Cold War. It decreases the delay between sprinting and firing. It has alternates in the forms of the Wire Stock, Marathon Stock, CQB Stock, and Shotgun Stock.]]
 
 ATT.SortOrder = 2
 
@@ -3298,7 +3298,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.SpeedMult = 1.05
+ATT.SprintToFireTimeMult = 0.9
 
 ATT.ActivateElements = {"stockgone"}
 
@@ -3333,7 +3333,7 @@ ATT = {}
 
 ATT.PrintName = "No Stock" --// 4
 ATT.CompactName = "NO STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/tec9_nostock.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/noicon.png", "mips smooth")
 ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
 
 The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
@@ -3341,12 +3341,6 @@ The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives 
 ATT.SortOrder = 3
 
 ATT.Category = "bocw_tec9_stock"
-
-ATT.Model = "models/weapons/arc9/atts/bocw_tec9_stock_nostock.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SprintToFireTimeMult = 0.7
 
@@ -3365,7 +3359,7 @@ The SAS Combat Stock is a Stock attachment available for all NATO related primar
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_tec9_stock_tac"
+ATT.Category = "bocw_tec9_stock"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_tec9_stock_sascombat.mdl"
 

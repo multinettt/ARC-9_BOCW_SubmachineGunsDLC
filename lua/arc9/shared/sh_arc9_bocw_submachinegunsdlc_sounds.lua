@@ -516,3 +516,144 @@ sound.Add({
     volume = 1.0,
     sound = "weapons/arc9/bocw_ots9/ots9_fire_silenced.wav"
 })
+--[[
+ooooooooooooo oooooooooooo   .oooooo.            .ooooo.   
+8'   888   `8 `888'     `8  d8P'  `Y8b          888' `Y88. 
+     888       888         888                  888    888 
+     888       888oooo8    888                   `Vbood888 
+     888       888    "    888          8888888       888' 
+     888       888       o `88b    ooo              .88P'  
+    o888o     o888ooooood8  `Y8bood8P'            .oP'     
+]]
+-- MAGAZINE
+sound.Add({
+    name = "ARC9_BOCW.TEC9_reload_magout",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_reload_magout.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_reload_maginstart",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_reload_maginstart.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_reload_magin",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_reload_magin.wav"
+})
+
+-- CHARGING HANDLE
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_boltbackstart",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_boltbackstart.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_boltback",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_boltback.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_boltrelease",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_boltrelease.wav"
+})
+
+-- RELOAD FOLEY
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_reload_start",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_reload_start.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_reload_end",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_reload_end.wav"
+})
+
+-- INSPECT FOLEY
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_inspect_part1",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_inspect_part1.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_inspect_part2",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_inspect_part2.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_inspect_part3",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_inspect_part3.wav"
+})
+
+-- PULLOUT PUTAWAY
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_ready",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_ready.wav"
+})
+
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_draw",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_draw.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_holster",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_holster.wav"
+})
+
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_draw_quick",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_draw_quick.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.TEC9_holster_quick",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_tec9/tec9_holster_quick.wav"
+})
+-----------------------------------------------
+-- FIRING SOUNDS
+
+sound.Add({ -- BLACK OPS COLD WAR
+    name = "ARC9_BOCW.TEC9_fire",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = "weapons/arc9/bocw_tec9/tec9_fire.wav"
+})
