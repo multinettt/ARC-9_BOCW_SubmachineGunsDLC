@@ -657,3 +657,84 @@ sound.Add({ -- BLACK OPS COLD WAR
     level = 100,
     sound = "weapons/arc9/bocw_tec9/tec9_fire.wav"
 })
+--[[
+ooooo              .o.       ooooooooo.         .o.       
+`888'             .888.      `888   `Y88.      .888.      
+ 888             .8"888.      888   .d88'     .8"888.     
+ 888            .8' `888.     888ooo88P'     .8' `888.    
+ 888           .88ooo8888.    888           .88ooo8888.   
+ 888       o  .8'     `888.   888          .8'     `888.  
+o888ooooood8 o88o     o8888o o888o        o88o     o8888o 
+]]
+-- MAGAZINE
+sound.Add({
+    name = "ARC9_BOCW.LAPA_reload_magout",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_lapa/lapa_reload_magout.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.LAPA_reload_magin",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_lapa/lapa_reload_magin.wav"
+})
+
+-- CHARGING HANDLE
+
+sound.Add({
+    name = "ARC9_BOCW.LAPA_boltback",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_lapa/lapa_boltback.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.LAPA_boltrelease",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_lapa/lapa_boltrelease.wav"
+})
+
+-- RELOAD FOLEY
+
+sound.Add({
+    name = "ARC9_BOCW.LAPA_reload_start",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_lapa/lapa_reload_start.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.LAPA_reload_end",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_lapa/lapa_reload_end.wav"
+})
+
+-- INSPECT FOLEY
+
+sound.Add({
+    name = "ARC9_BOCW.LAPA_inspect",
+    channel = CHAN_ITEM,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_lapa/lapa_inspect.wav"
+})
+-----------------------------------------------
+-- FIRING SOUNDS
+
+sound.Add({ -- BLACK OPS COLD WAR
+    name = "ARC9_BOCW.LAPA_fire",
+    channel = CHAN_AUTO,
+    volume = 1.0,
+    level = 100,
+    sound = "weapons/arc9/bocw_lapa/lapa_fire.wav"
+})
+
+sound.Add({
+    name = "ARC9_BOCW.LAPA_fire_silenced",
+    channel = CHAN_STATIC,
+    volume = 1.0,
+    sound = "weapons/arc9/bocw_lapa/lapa_fire_silenced.wav"
+})

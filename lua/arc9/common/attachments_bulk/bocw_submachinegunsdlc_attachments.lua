@@ -3411,7 +3411,7 @@ o888ooooood8 o88o     o8888o o888o        o88o     o8888o
 ATT = {}
 
 ATT.PrintName = [[8.9" Extended]] --// 1
-ATT.CompactName = [[8.9" EXTND]]
+ATT.CompactName = [[8.9" EXTEND]]
 ATT.Icon = Material("entities/bocw_atts/barrels/lapa_extended.png", "mips smooth")
 ATT.Description = [[Extended bead blasted barrel features a thin profile for improved fire rate and bullet velocity.
 
@@ -3484,7 +3484,7 @@ ATT.CompactName = [[12.4" M03]]
 ATT.Icon = Material("entities/bocw_atts/barrels/lapa_reinforced.png", "mips smooth")
 ATT.Description = [[Extended barrel reinforced with a graphite fiber wrapping includes a vented heat shroud for improved damage range and fire rate.
 
-The M03 Reinforced barrel is a unique attachment available for the LAPA in Call of Duty: Black Ops Cold War. It give increased damage range alongside a minor increase to the rate of fire at the cost of a worsened aimed movement speed and aiming speed.]]
+The M03 Reinforced barrel is a unique attachment available for the LAPA in Call of Duty: Black Ops Cold War. It gives increased damage range alongside a minor increase to the rate of fire at the cost of a worsened aimed movement speed and aiming speed.]]
 
 ATT.SortOrder = 12.4
 
@@ -3581,8 +3581,8 @@ ARC9.LoadAttachment(ATT, "bocw_lapa_barrel_lighttactical")
 ATT = {}
 
 ATT.PrintName = [[7.9" BR Compact]] --// 6
-ATT.CompactName = [[7.9" TASKF]]
-ATT.Icon = Material("entities/bocw_atts/barrels/lapa_taskforce.png", "mips smooth")
+ATT.CompactName = [[7.9" BR C]]
+ATT.Icon = Material("entities/bocw_atts/barrels/lapa_brcompact.png", "mips smooth")
 ATT.Description = [[Compact barrel precision machined from stainless steel for improved damage and horizontal recoil control.
 
 The BR Compact barrel is a unique attachment available for the LAPA in Call of Duty: Black Ops Cold War. It give increased damage alongside better horizontal recoil control at the cost of a worsened damage range and vertical recoil.]]
@@ -3591,7 +3591,7 @@ ATT.SortOrder = 7.9
 
 ATT.Category = "bocw_lapa_barrel"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_lapa_barrel_taskforce.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_barrel_brcompact.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -3673,7 +3673,7 @@ ATT.CompactName = "AX PRIMER"
 ATT.Icon = Material("entities/bocw_atts/magazines/lapa_mix1.png", "mips smooth")
 ATT.Description = [[Lightweight magazine contains 25 rounds using advanced alloy primers for high kinetic transmission.
 
-The AX Primer Short Mag is a unique attachment available for the LAPA in Call of Duty: Black Ops Cold War, Call of Duty: Warzone and Call of Duty: Mobile. In Black Ops Cold War , the AX Primer Short Mag gives increased reload speed, bullet velocity and a minor increase to aiming speed while reducing magazine capacity, max starting ammo and ammo capacity.]]
+The AX Primer Short Mag is a unique attachment available for the LAPA in Call of Duty: Black Ops Cold War, Call of Duty: Warzone and Call of Duty: Mobile. In Black Ops Cold War, the AX Primer Short Mag gives increased reload speed, bullet velocity and a minor increase to aiming speed while reducing magazine capacity, max starting ammo and ammo capacity.]]
 
 ATT.SortOrder = 3
 
@@ -3934,7 +3934,7 @@ The Tactical Stock is a Stock attachment available for all Primary Weapons and S
 
 ATT.SortOrder = 0
 
-ATT.Category = "bocw_lapa_stock_tac"
+ATT.Category = "bocw_lapa_stock"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_lapa_stock_tactical.mdl"
 
@@ -3959,7 +3959,7 @@ ATT.SortOrder = 2
 
 ATT.Category = "bocw_lapa_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_lapa_stock_collapsed.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_stock_marathon.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
@@ -3969,7 +3969,7 @@ ATT.SprintToFireTimeMult = 0.9
 
 ATT.ActivateElements = {"stockgone"}
 
-ARC9.LoadAttachment(ATT, "bocw_lapa_stock_collapsed")
+ARC9.LoadAttachment(ATT, "bocw_lapa_stock_marathon")
 
 ATT = {}
 
@@ -3998,7 +3998,7 @@ ATT = {}
 
 ATT.PrintName = "CQB Stock" --// 4
 ATT.CompactName = "CQB STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/lapa_cqb.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/stocks/lapa_marathon.png", "mips smooth")
 ATT.Description = [[Removed buttstock piece further reduces weapon weight for greatly improved sprint to fire time.
 
 The CQB Stock is a Stock attachment in Call of Duty: Black Ops Cold War. There are two variants, both which decrease the delay time between firing from sprinting while one has a stronger affect and decreases hip fire accuracy. It has alternates in the forms of the Wire Stock, Marathon Stock, Collapsed Stock, and Shotgun Stock.]]
@@ -4007,17 +4007,11 @@ ATT.SortOrder = 3
 
 ATT.Category = "bocw_lapa_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_lapa_stock_nostock.mdl"
-
-ATT.Scale = 1
-ATT.ModelOffset = Vector(0, 0, 0)
-ATT.ModelAngleOffset = Angle(0, 0, 0)
-
 ATT.SprintToFireTimeMult = 0.7
 
 ATT.SpreadMultHipFire = 1.15
 
-ARC9.LoadAttachment(ATT, "bocw_lapa_stock_nostock")
+ARC9.LoadAttachment(ATT, "bocw_lapa_stock_cqb")
 
 ATT = {}
 
@@ -4030,7 +4024,7 @@ The SAS Combat Stock is a Stock attachment available for all NATO related primar
 
 ATT.SortOrder = 5
 
-ATT.Category = "bocw_lapa_stock_tac"
+ATT.Category = "bocw_lapa_stock"
 
 ATT.Model = "models/weapons/arc9/atts/bocw_lapa_stock_sascombat.mdl"
 
