@@ -3431,6 +3431,7 @@ ATT.RPMMult = 1.08
 ATT.PhysBulletMuzzleVelocityMult = 1.33
 
 ATT.DamageMaxMult = 0.94
+ATT.DamageMinMult = 0.94
 
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
@@ -3462,6 +3463,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.DamageTypeOverride = DMG_AIRBOAT
 ATT.RangeMinMult = 1.25
+ATT.RangeMaxMult = 1.25
 ATT.ArmorPiercingMult = 2.66
 
 ATT.SpeedMultShooting = 0.94
@@ -3497,6 +3499,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.RangeMinMult = 1.17
+ATT.RangeMaxMult = 1.17
 ATT.RPMMult = 1.04
 
 ATT.SpeedMultSighted = 0.8
@@ -3531,6 +3534,7 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.RangeMinMult = 1.17
+ATT.RangeMaxMult = 1.17
 ATT.PhysBulletMuzzleVelocityMult = 1.66
 
 ATT.SpeedMultSighted = 0.8
@@ -3564,9 +3568,11 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.DamageMaxMult = 1.03
+ATT.DamageMinMult = 1.03
 ATT.RPMMult = 1.04
 
 ATT.RangeMinMult = 0.75
+ATT.RangeMaxMult = 0.75
 ATT.PhysBulletMuzzleVelocityMult = 0.87
 
 ATT.MuzzleParticleOverride_Priority = 100
@@ -3598,9 +3604,11 @@ ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.DamageMaxMult = 1.06
+ATT.DamageMinMult = 1.06
 ATT.RecoilSideMult = 0.88
 
 ATT.RangeMinMult = 0.67
+ATT.RangeMaxMult = 0.67
 ATT.RecoilUpMult = 1.13
 
 ATT.MuzzleParticleOverride_Priority = 100
@@ -4129,7 +4137,7 @@ ATT.ArmorPiercingMult = 3
 ATT.MuzzleParticleOverride_Priority = 100
 ATT.MuzzleDevice = true
 
-ATT.ActivateElements = {"barrel_cavalrylancer"}
+ATT.ActivateElements = {"barrel_cavalry"}
 
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
@@ -4172,7 +4180,7 @@ ARC9.LoadAttachment(ATT, "bocw_ugr_barrel_vdvreinforced")
 ATT = {}
 
 ATT.PrintName = [[14.5" Liberator]] --// 4
-ATT.CompactName = [[14.5" LIBERATR]]
+ATT.CompactName = [[14.5" LIBRTR]]
 ATT.Icon = Material("entities/bocw_atts/barrels/ugr_liberator.png", "mips smooth")
 ATT.Description = [[Durable steel barrel with phosphate coating. Button rifled to improve bullet velocity.
 
@@ -4281,19 +4289,20 @@ ATT.SortOrder = 0
 
 ATT.Category = "bocw_ugr_mag"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ugr_magazine_explosive.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_magazine_ext1.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.DamageTypeOverride = DMG_BLAST
 ATT.ClipSizeOverride = 30
 ATT.DamageMaxMult = 1.11
 
 ATT.ReloadTimeMult = 1.16
 ATT.AimDownSightsTimeMult = 1.08
 
-ATT.ActivateElements = {"ugr_mag_explosive"}
+ATT.ActivateElements = {"ugr_mag_ext"}
 
 ARC9.LoadAttachment(ATT, "bocw_ugr_magazine_explosiveflechettes")
 --========== HANDLE ===================
@@ -4441,7 +4450,7 @@ ARC9.LoadAttachment(ATT, "bocw_ugr_handle_gruelastic")
 ATT = {}
 
 ATT.PrintName = "Tactical Stock" --// 1
-ATT.CompactName = "TAC STOCK"
+ATT.CompactName = "TACTICAL"
 ATT.Icon = Material("entities/bocw_atts/stocks/ugr_tactical.png", "mips smooth")
 ATT.Description = [[MIL-SPEC stock with integrated cheek rest to improve walking speed when aiming.
 
@@ -4459,14 +4468,12 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMultSights = 1.1
 
-ATT.ActivateElements = {"stockgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_ugr_stock_tactical")
 
 ATT = {}
 
 ATT.PrintName = "Wire Stock" --// 2
-ATT.CompactName = "WIRE STCK"
+ATT.CompactName = "WIRE STOCK"
 ATT.Icon = Material("entities/bocw_atts/stocks/ugr_wire.png", "mips smooth")
 ATT.Description = [[Wire stock reduces weapon weight to improve sprint to fire time.
 
@@ -4484,8 +4491,6 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.MultAimDownSightsTime = 0.9
 
-ATT.ActivateElements = {"stockgone"}
-
 ATT.SprintToFireTimeMult = 0.9
 
 ARC9.LoadAttachment(ATT, "bocw_ugr_stock_wire")
@@ -4493,7 +4498,7 @@ ARC9.LoadAttachment(ATT, "bocw_ugr_stock_wire")
 ATT = {}
 
 ATT.PrintName = "Duster Stock" --// 3
-ATT.CompactName = "DSTR STOCK"
+ATT.CompactName = "DUSTER"
 ATT.Icon = Material("entities/bocw_atts/stocks/ugr_duster.png", "mips smooth")
 ATT.Description = [[Folding stock enables movement versatility to increase sliding speed.
 
@@ -4509,15 +4514,13 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ActivateElements = {"stockgone", "gripgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_ugr_stock_duster")
 
 ATT = {}
 
 ATT.PrintName = "No Stock" --// 4
 ATT.CompactName = "NO STOCK"
-ATT.Icon = Material("entities/bocw_atts/stocks/ugr_nostock.png", "mips smooth")
+ATT.Icon = Material("entities/bocw_atts/noicon.png", "mips smooth")
 ATT.Description = [[Removed stock enables concealment versatility to improve sprint recovery time.
 
 The No Stock attachment reappears in Call of Duty: Black Ops Cold War. It gives a much improved sprint to fire time at the cost of a worsened hip fire spread. It has alternates in the forms of Buffer Tube, CQB Pad, and Marathon Stock.]]
@@ -4530,14 +4533,12 @@ ATT.SprintToFireTimeMult = 0.7
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stockgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_ugr_stock_nostock")
 
 ATT = {}
 
 ATT.PrintName = "Spetsnaz Stock" --// 5
-ATT.CompactName = "SPTZ STOCK"
+ATT.CompactName = "SPETSNAZ"
 ATT.Icon = Material("entities/bocw_atts/stocks/ugr_spetsnaz.png", "mips smooth")
 ATT.Description = [[Lightweight stock provides stability to improve movement speeds when aiming and firing.
 
@@ -4558,14 +4559,12 @@ ATT.SpeedMultSighted = 1.15
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stockgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_ugr_stock_spetsnaz")
 
 ATT = {}
 
 ATT.PrintName = "KGB Skeletal Stock" --// 6
-ATT.CompactName = "SKEL STOCK"
+ATT.CompactName = "SKELETAL"
 ATT.Icon = Material("entities/bocw_atts/stocks/ugr_kgbskeletal.png", "mips smooth")
 ATT.Description = [[Folding stock enables concealment versatility for improved sprint recovery and walking speed when aiming.
 
@@ -4575,15 +4574,13 @@ ATT.SortOrder = 6
 
 ATT.Category = "bocw_ugr_stock"
 
-ATT.Model = "models/weapons/arc9/atts/bocw_ugr_stock_kgbskele.mdl"
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_stock_kgbskeletal.mdl"
 
 ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.MultAimDownSightsTime = 0.9
-
-ATT.ActivateElements = {"stockgone"}
 
 ATT.SprintToFireTimeMult = 1.3
 ATT.SpeedMultSighted = 1.1
