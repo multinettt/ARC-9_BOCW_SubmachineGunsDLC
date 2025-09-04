@@ -655,15 +655,74 @@ SWEP.Attachments = {
     },
     {
         PrintName = "STICKER 2",
+        Bone = "tag_weapon",
         Category = "stickers",
         StickerModel = "models/weapons/arc9/stickers/bocw_ppsh41_sticker2.mdl",
         CosmeticOnly = true,
+        ExcludeElements = {"tacticalstock", "spetsnazstock", "mixstock", "cqbstock"}
+    },
+    {
+        PrintName = "STICKER 2",
+        Bone = "tag_weapon",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_ppsh41_sticker2_tactical.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"tacticalstock"}
+    },
+    {
+        PrintName = "STICKER 2",
+        Bone = "tag_weapon",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_ppsh41_sticker2_spetsnaz.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"spetsnazstock"}
+    },
+    {
+        PrintName = "STICKER 2",
+        Bone = "tag_weapon",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_ppsh41_sticker2_mixstock.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"mixstock"}
+    },
+    {
+        PrintName = "STICKER 2",
+        Bone = "tag_weapon",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_ppsh41_sticker2_cqb.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"cqbstock"}
     },
     {
         PrintName = "STICKER 3",
         Category = "stickers",
         StickerModel = "models/weapons/arc9/stickers/bocw_ppsh41_sticker3.mdl",
         CosmeticOnly = true,
+        ExcludeElements = {"spetsnazstock", "mixstock", "cqbstock"}
+    },
+    {
+        PrintName = "STICKER 3",
+        Bone = "tag_weapon",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_ppsh41_sticker3_spetsnaz.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"spetsnazstock"}
+    },
+    {
+        PrintName = "STICKER 3",
+        Bone = "tag_weapon",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_ppsh41_sticker3_mixstock.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"mixstock"}
+    },
+    {
+        PrintName = "STICKER 3",
+        Bone = "tag_weapon",
+        Category = "stickers",
+        StickerModel = "models/weapons/arc9/stickers/bocw_ppsh41_sticker3_cqb.mdl",
+        CosmeticOnly = true,
+        RequireElements = {"cqbstock"}
     },
 }
 

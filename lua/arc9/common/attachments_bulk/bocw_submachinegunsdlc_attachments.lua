@@ -1536,6 +1536,15 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
+ATT.DrawFunc = function(swep, model)
+
+	local elements = swep:GetElements()
+
+	if elements["bocw_ppsh41_muzzle"] or elements["bocw_smg_muzzle_east"] then
+        model:SetBodygroup(1,1) -- remove muzzle when custom muzzle attached
+    end
+end
+
 ATT.PhysBulletMuzzleVelocityMult = 2
 
 ATT.SpeedMultSighted = 0.75
@@ -2089,7 +2098,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMultSights = 1.1
 
-ATT.ActivateElements = {"gripgone"}
+ATT.ActivateElements = {"tacticalstock"}
 
 ARC9.LoadAttachment(ATT, "bocw_ppsh41_stock_tactical")
 
@@ -2137,7 +2146,7 @@ ATT.ModelAngleOffset = Angle(0, 0, 0)
 
 ATT.SpeedMult = 1.05
 
-ATT.ActivateElements = {"gripgone"}
+ATT.ActivateElements = {"mixstock"}
 
 ARC9.LoadAttachment(ATT, "bocw_ppsh41_stock_duster")
 
@@ -2164,7 +2173,7 @@ ATT.SprintToFireTimeMult = 0.7
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"stockgone"}
+ATT.ActivateElements = {"cqbstock"}
 
 ARC9.LoadAttachment(ATT, "bocw_ppsh41_stock_cqb")
 
@@ -2192,7 +2201,7 @@ ATT.SpeedMultSighted = 1.15
 
 ATT.SpreadMultHipFire = 1.15
 
-ATT.ActivateElements = {"gripgone"}
+ATT.ActivateElements = {"spetsnazstock"}
 
 ARC9.LoadAttachment(ATT, "bocw_ppsh41_stock_spetsnaz")
 
@@ -2220,7 +2229,7 @@ ATT.SpeedMultSighted = 1.1
 
 ATT.SpreadMultHipFire = 1.3
 
-ATT.ActivateElements = {"gripgone"}
+ATT.ActivateElements = {"mixstock"}
 
 ARC9.LoadAttachment(ATT, "bocw_ppsh41_stock_raider")
 --[[
