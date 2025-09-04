@@ -622,10 +622,10 @@ SWEP.Attachments = {
     {
         PrintName = "UNDRBARREL",
         Bone = "tag_weapon",
-        Pos = Vector(-11.5, -4.42, 6.05),
+        Pos = Vector(-11.9, -4.41, 6.25),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(20.25, 4.5, -5),
-        Category = {"bocw_ots9_underbarrel", "bocw_smg_underbarrel_east"},
+        Category = {"bocw_ots9_underbarrel"},
         InstalledElements = {"foregripmount"},
     },
     {
