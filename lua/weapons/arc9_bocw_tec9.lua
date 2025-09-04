@@ -614,11 +614,11 @@ SWEP.Attachments = {
     },
     {
         PrintName = "UNDRBARREL",
-        Bone = "tag_weapon",
-        Pos = Vector(-13.4, -4.42, 5.53),
+        Bone = "tag_barrel",
+        Pos = Vector(2.35, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(20.25, 4.5, -5),
-        Category = {"bocw_tec9_underbarrel", "bocw_smg_underbarrel_west"},
+        Icon_Offset = Vector(0, 0, -0.5),
+        Category = {"bocw_tec9_mount_underbarrel"},
         InstalledElements = {"foregripmount"},
     },
     {
@@ -693,7 +693,7 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
     end
 
     if attached["bocw_tec9_muzzle_fullautorepeater"] then
-        vm:SetBodygroup(5, 2)-- charging handle logic
+        vm:SetBodygroup(5, 2)
     end
 end
 
