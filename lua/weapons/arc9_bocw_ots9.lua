@@ -422,7 +422,7 @@ SWEP.SightMidPoint = {
 
 -- Position for customizing
 SWEP.CustomizeAng = Angle(90, 0, 0)
-SWEP.CustomizePos = Vector(10, 33, 4)
+SWEP.CustomizePos = Vector(10, 34, 4)
 SWEP.CustomizeRotateAnchor = Vector(10, 0, -4)
 
 SWEP.CustomizeSnapshotFOV = 70

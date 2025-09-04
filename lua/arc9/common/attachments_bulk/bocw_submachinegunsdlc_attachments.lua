@@ -3117,6 +3117,46 @@ ooooooooooooo oooooooooooo   .oooooo.            .ooooo.
      888       888       o `88b    ooo              .88P'  
     o888o     o888ooooood8  `Y8bood8P'            .oP'     
 ]]
+--========== MUZZLE ===================
+ATT = {}
+
+ATT.PrintName = "Full Auto Repeater" -- TEC-9
+ATT.CompactName = "FULL AUTO"
+ATT.Icon = Material("entities/bocw_atts/muzzles/ppsh41_compensatorpro.png", "mips smooth")
+ATT.Description = [[Internal barrel and receiver adjustments conver the weapon's fire type to full-auto fire.
+
+The Full Auto Repeater is a Muzzle Attachment available for the TEC-9 Submachine Gun in Call of Duty: Black Ops Cold War. It converts the default fire type of the TEC-9 from Semi-Automatic to Automatic while giving a major boost to the fire rate while decreasing the damage, effective range, and a minor amount of horizontal recoil.]]
+
+ATT.SortOrder = 6
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_compensatorpro.mdl"
+
+ATT.Category = {"bocw_tec9_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride = "muzzleflash_4"
+ATT.MuzzleParticleOverride_Priority = 10
+ATT.MuzzleDevice = true
+
+ATT.FiremodesOverride = {
+    {
+        Mode = -1,
+    },
+}
+
+ATT.RPMMult = 1.45
+
+ATT.DamageMaxMult = 0.82
+ATT.DamageMinMult = 0.82
+ATT.RecoilSideMult = 1.05
+ATT.RangeMaxMult = 0.75
+ATT.RangeMinMult = 0.75
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_tec9_muzzle_fullautorepeater")
 --========== BARREL ===================
 ATT = {}
 

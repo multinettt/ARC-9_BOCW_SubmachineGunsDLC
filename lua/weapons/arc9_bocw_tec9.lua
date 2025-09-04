@@ -181,6 +181,8 @@ SWEP.Firemodes = {
     },
 }
 
+SWEP.RunawayBurst = false
+
 -------------------------- RECOIL
 
 SWEP.Recoil = 1
@@ -482,42 +484,42 @@ SWEP.AttachmentElements = {
     ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(2.94, 0, 0),
+                Pos = Vector(0.98, 0, 0.02),
             },
         },
     },
     ["barrel_cavalry"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(4.53, 0, 0),
+                Pos = Vector(1.15, 0, 0.02),
             },
         },
     },
     ["barrel_reinforced"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(3.72, 0, 0),
+                Pos = Vector(4.38, 0, 0.02),
             },
         },
     },
     ["barrel_ranger"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(2.93, 0, 0),
+                Pos = Vector(2.75, 0, 0.02),
             }
         },
     },
     ["barrel_rifled"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(4.53, 0, 0),
+                Pos = Vector(5.05, 0, 0.02),
             },
         },
     },
     ["barrel_taskforce"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(3.72, 0, 0),
+                Pos = Vector(6.99, 0, 0),
             }
         },
     },
@@ -577,10 +579,10 @@ SWEP.Attachments = {
     {
         PrintName = "MUZZLE",
         Bone = "tag_muzzle",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(-0.2, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(1, 0, 0),
-        Category = {"bocw_tec9_muzzle", "bocw_smg_muzzle_west45"},
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bocw_tec9_muzzle"},
         InstalledElements = {"muzzlegone"},
     },
     {
@@ -685,6 +687,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
+
+    if attached["bocw_tec9_muzzle_burstfirerepeater"] then
+        vm:SetBodygroup(5, 1)-- charging handle logic
+    end
+
+    if attached["bocw_tec9_muzzle_fullautorepeater"] then
+        vm:SetBodygroup(5, 2)-- charging handle logic
+    end
 end
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)
