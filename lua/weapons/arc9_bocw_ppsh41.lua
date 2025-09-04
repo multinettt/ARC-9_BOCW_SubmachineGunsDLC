@@ -539,14 +539,6 @@ SWEP.AttachmentSlotMods = {
 
 -- Adjust the stats of specific attachments when applied to this gun
 SWEP.AttachmentTableOverrides = {
-    ["bocw_body_flashlight_west"] = {
-        ModelOffset = Vector(0,0.02,-0.98),
-        Scale = 1,
-    },
-    ["bocw_body_flashlightpro_west"] = {
-        ModelOffset = Vector(0,0.02,-0.98),
-        Scale = 1,
-    },
     ["bocw_optic_visiontech2x"] = {
         VisualRecoil = 0.1
     },
@@ -594,7 +586,7 @@ SWEP.Attachments = {
         Pos = Vector(0.23, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_ppsh41_muzzle", "bocw_smg_muzzle_west45"},
+        Category = {"bocw_ppsh41_muzzle", "bocw_smg_muzzle_east"},
         InstalledElements = {"muzzlegone"},
     },
     {

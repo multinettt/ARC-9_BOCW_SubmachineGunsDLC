@@ -1337,6 +1337,90 @@ ooooooooo.   ooooooooo.    .oooooo..o oooo                      .o     .o
  888          888         oo     .d8P  888   888               888    888  
 o888o        o888o        8""88888P'  o888o o888o             o888o  o888o 
 ]]
+--========== MUZZLE ===================
+ATT = {}
+
+ATT.PrintName = "Muzzle Brake 7.62"
+ATT.CompactName = "MZLBRK 762"
+ATT.Icon = Material("entities/bocw_atts/muzzles/ppsh41_compensator1.png", "mips smooth")
+ATT.Description = [[Redirects gases upwards and to the sides to counter unwanted muzzle rise.
+
+The Muzzle Brake returns in Call of Duty: Black Ops Cold War as a Muzzle attachment available for Assault Rifles, Submachine Guns, Tactical Rifles, Light Machine Guns, and Pistols. It increases control over vertical recoil.]]
+
+ATT.SortOrder = 1
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_compensator1.mdl"
+
+ATT.Category = {"bocw_ppsh41_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride = "muzzleflash_4"
+ATT.MuzzleParticleOverride_Priority = 10
+ATT.MuzzleDevice = true
+
+ATT.RecoilUpMult = 0.96
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_muzzle_compensator1")
+
+ATT = {}
+
+ATT.PrintName = "Flash Guard 7.62"
+ATT.CompactName = "FLSHGRD 762"
+ATT.Icon = Material("entities/bocw_atts/muzzles/ppsh41_flashhider1.png", "mips smooth")
+ATT.Description = [[Lightweight flash hider reduces muzzle flash to conceal position.
+
+The Flash Guard returns in Call of Duty: Black Ops Cold War as a Muzzle attachment set available for all Primary Weapons and handguns, excluding the sniper rifles and shotguns. For sniper rifles, they have the Flash Hider, and shotguns can use the Flash Cone. These two attachments are identical to the Flash Guard.]]
+
+ATT.SortOrder = 2
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_flashhider1.mdl"
+
+ATT.Category = {"bocw_ppsh41_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride = "muzzleflash_pistol"
+ATT.MuzzleParticleOverride_Priority = 10
+ATT.MuzzleDevice = true
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_muzzle_flashhider1")
+
+ATT = {}
+
+ATT.PrintName = "Spetsnaz Compensator"
+ATT.CompactName = "SPETSNAZ"
+ATT.Icon = Material("entities/bocw_atts/muzzles/ppsh41_compensatorpro.png", "mips smooth")
+ATT.Description = [[Lightweight ported compensator expels gases upwards to reduce muzzle rise.
+
+The Spetsnaz Compensator is a Muzzle attachment available for Warsaw Pact related Primary Weapons in Call of Duty: Black Ops Cold War. It increases control over vertical recoil at the cost of some horizontal recoil. The NATO equivalent is the Infantry Compensator.]]
+
+ATT.SortOrder = 4
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_compensatorpro.mdl"
+
+ATT.Category = {"bocw_ppsh41_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+ATT.Scale = 1
+
+ATT.MuzzleParticleOverride = "muzzleflash_6"
+ATT.MuzzleParticleOverride_Priority = 10
+ATT.MuzzleDevice = true
+
+ATT.RecoilUpMult = 0.88
+ATT.RecoilSideMult = 1.08
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_muzzle_compensatorpro")
 --========== BARREL ===================
 ATT = {}
 
