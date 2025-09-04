@@ -601,20 +601,10 @@ SWEP.Attachments = {
     {
         PrintName = "BODY",
         Bone = "tag_barrel",
-        Pos = Vector(-1.5, 0.9, 0),
+        Pos = Vector(-0.65, 0.81, -0.45),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_submachineguns_body_laserwest", "bocw_submachineguns_body_mixwest"},
-        InstalledElements = {"bodymount_lasermix"},
-    },
-    {
-        Hidden = true,
-        MergeSlots = {4,5},
-        Bone = "tag_barrel",
-        Pos = Vector(-1.5, 1.58, -0.045),
-        Ang = Angle(0, 0, 0),
-        Category = {"bocw_submachineguns_body_flashwest"},
-        InstalledElements = {"bodymount_flashlight"},
+        Category = {"bocw_ppsh41_body"},
     },
     {
         PrintName = "UNDRBARREL",

@@ -4818,3 +4818,69 @@ ATT.MuzzleDevice = true
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_lc10_muzzle_base")
+
+--
+
+ATT = {}
+
+ATT.PrintName = "Laser Mount"
+ATT.CompactName = "LASER MNT"
+ATT.Icon = Material("entities/bocw_atts/mounts/lasermixbody.png", "mips smooth")
+ATT.Description = [[Receiver installed mount for laser and flashlight body attachments on the PPSh-41.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+ATT.Free = true
+
+ATT.Category = {"bocw_ppsh41_body"}
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_mount_body.mdl"
+ATT.ModelBodygroups = "00"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.Attachments = {
+    {
+        PrintName = "BODY",
+        Bone = "tag_weapon",
+        Pos = Vector(-0.56, 1.09, -0.65),
+        Ang = Angle(0, 0, -45),
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bocw_submachineguns_body_lasereast", "bocw_submachineguns_body_flasheast"},
+    }
+}
+
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_mount_laserlight")
+
+ATT = {}
+
+ATT.PrintName = "Flat Mount"
+ATT.CompactName = "FLAT MOUNT"
+ATT.Icon = Material("entities/bocw_atts/mounts/flashlight.png", "mips smooth")
+ATT.Description = [[Receiver installed mount for lasers on the PPSh-41.]]
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+ATT.Free = true
+
+ATT.Category = {"bocw_ppsh41_body"}
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_mount_body.mdl"
+ATT.ModelBodygroups = "01"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.Attachments = {
+    {
+        PrintName = "BODY",
+        Bone = "tag_weapon",
+        Pos = Vector(-0.56, 1.05, -0.4),
+        Ang = Angle(0, 0, -45),
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bocw_submachineguns_body_mixeast"},
+    }
+}
+
+ARC9.LoadAttachment(ATT, "bocw_ppsh41_mount_flat")
