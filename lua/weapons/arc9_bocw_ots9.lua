@@ -679,19 +679,9 @@ SWEP.Attachments = {
     },
     {
         PrintName = "STICKER 3", 
-        Bone = "tag_clip",
         Category = "stickers",
         StickerModel = "models/weapons/arc9/stickers/bocw_ots9_sticker3.mdl",
         CosmeticOnly = true,
-        ExcludeElements = {"ots9_mag_ext"}
-    },
-    {
-        PrintName = "STICKER 3", 
-        Bone = "tag_clip",
-        Category = "stickers",
-        StickerModel = "models/weapons/arc9/stickers/bocw_ots9_sticker3_ext.mdl",
-        CosmeticOnly = true,
-        RequireElements = {"ots9_mag_ext"}
     },
 }
 
@@ -713,6 +703,12 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
     
     local elements = swep:GetElements()
 
+    if anim == "ready" then
+        if elements["bocw_ots9_stock"] then
+            return anim .. "_nostock"
+        end
+    end
+
     if elements["ots9_mag_ext"] then
         return anim .. "_ext"
     end
@@ -723,10 +719,6 @@ SWEP.Hook_TranslateAnimation = function(swep, anim)
 
     if elements["ots9_mag_mix"] then
         return anim .. "_mix"
-    end
-
-    if elements["bocw_ots9_stock"] then
-        return anim .. "_nostock"
     end
 end
 
@@ -972,13 +964,12 @@ SWEP.Animations = {
         MagSwapTime = 1,
         EventTable = {
             { s = "ARC9_BOCW.OTs9_reload_start", t = 0 },
-            { s = "ARC9_BOCW.OTs9_reload_magoutstart", t = 0.5 },
-            { s = "ARC9_BOCW.OTs9_reload_magout", t = 0.7 },
-            { s = "ARC9_BOCW.OTs9_reload_magin", t = 1.2 },
-            { s = "ARC9_BOCW.OTs9_empty_rattle", t = 1.6 },
-            { s = "ARC9_BOCW.OTs9_boltback", t = 2 },
-            { s = "ARC9_BOCW.OTs9_boltrelease", t = 2.1 },
-            { s = "ARC9_BOCW.OTs9_reload_end", t = 2.3 },
+            { s = "ARC9_BOCW.OTs9_reload_empty_magout", t = 0.6 },
+            { s = "ARC9_BOCW.OTs9_reload_magin", t = 1.25 },
+            { s = "ARC9_BOCW.OTs9_reload_rattle", t = 1.7 },
+            { s = "ARC9_BOCW.OTs9_boltback", t = 2.15 },
+            { s = "ARC9_BOCW.OTs9_boltrelease", t = 2.3 },
+            { s = "ARC9_BOCW.OTs9_reload_end", t = 2.5 },
         },
         IKTimeLine = {
             {

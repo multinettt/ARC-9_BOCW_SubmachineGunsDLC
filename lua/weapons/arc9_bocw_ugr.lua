@@ -628,7 +628,7 @@ SWEP.Attachments = {
         Pos = Vector(-3.2, -4.42, 6.81),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(20.25, 4.5, -5),
-        Category = {"bocw_ugr_underbarrel", "bocw_smg_underbarrel_west"},
+        Category = {"bocw_ugr_underbarrel", "bocw_smg_underbarrel_east"},
         InstalledElements = {"foregripmount"},
     },
     {
