@@ -2241,6 +2241,98 @@ ARC9.LoadAttachment(ATT, "bocw_ppsh41_stock_raider")
 `88b    d88'      888      o.  )88b        .88P'  
  `Y8bood8P'      o888o     8""888P'      .oP'     
 ]]
+--========== MUZZLE ===================
+ATT = {}
+
+ATT.PrintName = "Spetsnaz Compensator"
+ATT.CompactName = "SPETSNAZ"
+ATT.Icon = Material("entities/bocw_atts/muzzles/ots9_compensatorpro.png", "mips smooth")
+ATT.Description = [[Lightweight ported compensator expels gases upwards to reduce muzzle rise.
+
+The Spetsnaz Compensator is a Muzzle attachment available for Warsaw Pact related Primary Weapons in Call of Duty: Black Ops Cold War. It increases control over vertical recoil at the cost of some horizontal recoil. The NATO equivalent is the Infantry Compensator.]]
+
+ATT.SortOrder = 4
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_compensatorpro.mdl"
+
+ATT.Category = {"bocw_ots9_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+ATT.Scale = 1
+
+ATT.MuzzleParticleOverride = "muzzleflash_6"
+ATT.MuzzleParticleOverride_Priority = 10
+ATT.MuzzleDevice = true
+
+ATT.RecoilUpMult = 0.88
+ATT.RecoilSideMult = 1.08
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_muzzle_compensatorpro")
+
+ATT = {}
+
+ATT.PrintName = "KGB Eliminator"
+ATT.CompactName = "ELIMINATOR"
+ATT.Icon = Material("entities/bocw_atts/muzzles/ots9_flashhiderpro.png", "mips smooth")
+ATT.Description = [[Reduces muzzle flash and vents gases to the sides to reduce muzzle rise.
+
+The KGB Eliminator is a Muzzle attachment available for Warsaw Pact related Assault Rifles, Submachine Guns, Tactical Rifles, and Light Machine Guns within Call of Duty: Black Ops Cold War. It increases control over vertical recoil and increases the concealment of the muzzle flash at the cost of some horizontal recoil alongside reduced shooting movement speed. The NATO equivalent is the SOCOM Eliminator.]]
+
+ATT.SortOrder = 5
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_flashhiderpro.mdl"
+
+ATT.Category = {"bocw_ots9_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride = "muzzleflash_pistol"
+ATT.MuzzleParticleOverride_Priority = 10
+ATT.MuzzleDevice = true
+
+ATT.RecoilUpMult = 0.83
+
+ATT.SpeedMultShooting = 0.9
+ATT.RecoilSideMult = 1.07
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_muzzle_flashhiderpro")
+
+ATT = {}
+
+ATT.PrintName = "GRU Suppressor"
+ATT.CompactName = "GRU SUPP"
+ATT.Icon = Material("entities/bocw_atts/muzzles/ots9_suppressorpro.png", "mips smooth")
+ATT.Description = [[Traps gas to reduce muzzle rise and maintain control. Provides flash and sound suppression.
+
+The GRU Silencer is a Muzzle attachment available exclusively for the Type 63 within Call of Duty: Black Ops Cold War. It increases control over vertical recoil and gives full concealment of the muzzle flash at the cost of reduced bullet speed. The NATO equivalent is the Agency Silencer.]]
+
+ATT.SortOrder = 6
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ots9_suppressorpro.mdl"
+
+ATT.Category = {"bocw_ots9_muzzle"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.MuzzleParticleOverride = "muzzleflash_suppressed"
+ATT.MuzzleParticleOverride_Priority = 10
+ATT.MuzzleDevice = true
+ATT.Silencer = true
+
+ATT.RecoilUpMult = 0.85
+
+ATT.PhysBulletMuzzleVelocityMult = 0.75
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ots9_muzzle_suppressorpro")
 --========== BARREL ===================
 ATT = {}
 

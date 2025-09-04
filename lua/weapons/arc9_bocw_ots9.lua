@@ -8,7 +8,7 @@
 
 --   BASE  : ARC9
 --   BUILD : v2025.9
---   SR.NO : 
+--   SR.NO : N/A
 
 
   .oooooo.   ooooooooooooo              .ooooo.   
@@ -492,42 +492,42 @@ SWEP.AttachmentElements = {
     ["barrel_extended"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.7, 0, 0),
+                Pos = Vector(1.15, 0, 0),
             },
         },
     },
     ["barrel_cavalry"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.2, 0, 0),
+                Pos = Vector(0, 0, 0),
             },
         },
     },
     ["barrel_reinforced"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(1.56, 0, 0),
+                Pos = Vector(1.75, 0, 0),
             },
         },
     },
-    ["barrel_ranger"] = {
+    ["barrel_liberator"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(3.7, 0, 0),
+                Pos = Vector(1.04, 0, 0),
             }
         },
     },
     ["barrel_rifled"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(2.32, 0, 0),
+                Pos = Vector(1.7, 0, 0),
             },
         },
     },
     ["barrel_taskforce"] = {
         AttPosMods = {
             [2] = {
-                Pos = Vector(3.28, 0, 0),
+                Pos = Vector(2, 0, 0),
             }
         },
     },
@@ -590,7 +590,7 @@ SWEP.Attachments = {
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_ots9_muzzle", "bocw_smg_muzzle_west45"},
+        Category = {"bocw_ots9_muzzle"},
     },
     {
         PrintName = "BARREL",
