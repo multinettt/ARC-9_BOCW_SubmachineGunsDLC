@@ -5184,3 +5184,37 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "bocw_tec9_mount_flashlight")
+
+--
+
+ATT = {}
+
+ATT.PrintName = "Foregrip Mount"
+ATT.CompactName = "GRIP MOUNT"
+ATT.Icon = Material("entities/bocw_atts/mounts/lasermixbody.png", "mips smooth")
+ATT.Description = [[Barrel installed mount for foregrips on the LAPA.]]
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+ATT.Free = true
+
+ATT.Category = {"bocw_lapa_mount_underbarrel"}
+
+ATT.Model = "models/weapons/arc9/atts/bocw_lapa_mount_foregrip.mdl"
+ATT.ModelBodygroups = "01"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.Attachments = {
+    {
+        PrintName = "UNDRBARREL",
+        Bone = "tag_weapon",
+        Pos = Vector(20.5, -4.4, -4),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(20.25, 4.5, -5),
+        Category = {"bocw_lapa_underbarrel", "bocw_smg_underbarrel_west"},
+    }
+}
+
+ARC9.LoadAttachment(ATT, "bocw_lapa_mount_foregrip")

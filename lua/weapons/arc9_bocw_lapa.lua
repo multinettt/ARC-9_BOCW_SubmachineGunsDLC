@@ -571,9 +571,9 @@ SWEP.Attachments = {
     {
         PrintName = "MUZZLE",
         Bone = "tag_muzzle",
-        Pos = Vector(0, 0, 0),
+        Pos = Vector(-0.04, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(1, 0, 0),
+        Icon_Offset = Vector(0, 0, 0),
         Category = {"bocw_lapa_muzzle", "bocw_smg_muzzle_west9"},
         InstalledElements = {"muzzlegone"},
     },
@@ -607,11 +607,10 @@ SWEP.Attachments = {
     {
         PrintName = "UNDRBARREL",
         Bone = "tag_weapon",
-        Pos = Vector(-13.4, -4.42, 5.53),
+        Pos = Vector(8.6, 0, 1.6),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(20.25, 4.5, -5),
-        Category = {"bocw_lapa_underbarrel", "bocw_smg_underbarrel_west"},
-        InstalledElements = {"foregripmount"},
+        Icon_Offset = Vector(0, 0, 0),
+        Category = {"bocw_lapa_mount_underbarrel"},
     },
     {
         PrintName = "MAGAZINE",
