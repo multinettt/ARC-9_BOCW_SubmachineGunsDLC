@@ -477,11 +477,6 @@ SWEP.AttachmentElements = {
             {4, 1},
         }
     },
-    ["foregripmount"] = {
-        Bodygroups = {
-            {5, 1},
-        }
-    },
     ["bodymount_lasermix"] = {
         Bodygroups = {
             {6, 1},
@@ -625,11 +620,10 @@ SWEP.Attachments = {
     {
         PrintName = "UNDRBARREL",
         Bone = "tag_weapon",
-        Pos = Vector(-3.2, -4.42, 6.81),
+        Pos = Vector(-3.2, -4.41, 6.98),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(20.25, 4.5, -5),
-        Category = {"bocw_ugr_underbarrel", "bocw_smg_underbarrel_east"},
-        InstalledElements = {"foregripmount"},
+        Category = {"bocw_ugr_underbarrel"},
     },
     {
         PrintName = "MAGAZINE",
@@ -687,6 +681,14 @@ SWEP.Hook_ModifyBodygroups = function(self, data)
 
     local vm = data.model
     local attached = data.elements
+
+    if attached["bocw_ugr_underbarrel"] then
+        if attached["bocw_ugr_underbarrel_redcellforegrip"] then
+            vm:SetBodygroup(5, 0)
+        else
+            vm:SetBodygroup(5, 1) -- foregripmount logic
+        end
+    end
 end
 
 SWEP.Hook_TranslateAnimation = function(swep, anim)

@@ -4680,6 +4680,127 @@ ATT.ActivateElements = {"barrel_taskforce"}
 ATT.MenuCategory = "ARC9 - BOCW Attachments"
 
 ARC9.LoadAttachment(ATT, "bocw_ugr_barrel_taskforce")
+--========== UNDERBARREL ==============
+ATT = {}
+
+ATT.PrintName = "Foregrip"
+ATT.CompactName = "FOREGRIP"
+ATT.Icon = Material("entities/bocw_atts/underbarrels/ugr_foregrip.png", "mips smooth")
+ATT.Description = [[Standard wooden foregrip for improved recoil control.
+
+The Grip returns in Call of Duty: Black Ops Cold War as the Foregrip and it is an Underbarrel attachment available for Assault Rifles, Light Machine Guns and Submachine Guns. It increases control over horizontal recoil. For the MAC-10, it also helps with controlling vertical recoil. The KSP 45 lacks the Foregrip in favor of the Front Grip.]]
+
+ATT.SortOrder = 1
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_foregrip.mdl"
+
+ATT.Category = {"bocw_ugr_underbarrel"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 5
+
+ATT.RecoilSideMult = 0.82
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_underbarrel_foregrip")
+
+ATT = {}
+
+ATT.PrintName = "Red Cell Foregrip"
+ATT.CompactName = "RED CELL"
+ATT.Icon = Material("entities/bocw_atts/underbarrels/ugr_redcell.png", "mips smooth")
+ATT.Description = [[Vertical metal foregrip for improved combat maneuverability.
+
+The Red Cell Foregrip is an Underbarrel attachment available for all Submachine Guns in Call of Duty: Black Ops Cold War. It increases the speed of sprinting and giving a increased speed to melee attacks but at the cost of general movement speeds.]]
+
+ATT.SortOrder = 2
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ugr_redcell.mdl"
+
+ATT.Category = {"bocw_ugr_underbarrel"}
+
+ATT.ModelOffset = Vector(-0.23, 0.07, -0.13)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 5
+
+ATT.SpeedMultSprint = 1.04
+ATT.BashSpeedMult = 1.3
+
+ATT.SpeedMult = 0.97
+ATT.SpeedMultShooting = 0.97
+ATT.SpeedMultSighted = 0.97
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_underbarrel_redcellforegrip")
+
+ATT = {}
+
+ATT.PrintName = "Spetsnaz Grip"
+ATT.CompactName = "SPETSNAZ"
+ATT.Icon = Material("entities/bocw_atts/underbarrels/ugr_spetsnaz.png", "mips smooth")
+ATT.Description = [[Short wooden foregrip for improved recoil control.
+
+The Spetsnaz Grip is an Underbarrel attachment available for all Warsaw Pact related Primary weapons. It improves recoil in both horizontal and vertical, primary horizontal but at the cost of a lowered movement speed while shooting. The NATO equivalent is the Field Agent Grip.]]
+
+ATT.SortOrder = 5
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_spetsnazgrip.mdl"
+
+ATT.Category = {"bocw_ugr_underbarrel"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 5
+
+ATT.RecoilUpMult = 0.94
+ATT.RecoilSideMult = 0.8
+
+ATT.SpeedMultShooting = 0.7
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_underbarrel_spetsnazgrip")
+
+ATT = {}
+
+ATT.PrintName = "Spetsnaz Speedgrip"
+ATT.CompactName = "SPEEDGRIP"
+ATT.Icon = Material("entities/bocw_atts/underbarrels/ugr_speedgrip.png", "mips smooth")
+ATT.Description = [[Repurposed polymer pistol grip for improved sprint speed and recoil control.
+
+The Spetsnaz Speedgrip is an Underbarrel attachment available Warsaw Pact related Primary weapons. It improves horizontal recoil and movement speed while sprinting but at the cost of a lowered general movement speeds. The NATO equivalent is the SFOD Speedgrip alongside the alternate Warsaw Pact VDV Speedgrip.]]
+
+ATT.SortOrder = 6
+
+ATT.Model = "models/weapons/arc9/atts/bocw_ppsh41_speedgrip.mdl"
+
+ATT.Category = {"bocw_ugr_underbarrel"}
+
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.LHIK = true
+ATT.LHIK_Priority = 5
+
+ATT.SpeedMultSprint = 1.03
+ATT.RecoilSideMult = 0.82
+
+ATT.SpeedMult = 0.94
+ATT.SpeedMultShooting = 0.94
+ATT.SpeedMultSighted = 0.94
+
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+
+ARC9.LoadAttachment(ATT, "bocw_ugr_underbarrel_spetsnazspeedgrip")
 --========== MAGAZINE =================
 ATT = {}
 
