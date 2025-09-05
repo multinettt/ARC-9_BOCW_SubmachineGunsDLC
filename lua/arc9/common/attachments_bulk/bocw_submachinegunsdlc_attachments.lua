@@ -5118,3 +5118,69 @@ ATT.Attachments = {
 }
 
 ARC9.LoadAttachment(ATT, "bocw_tec9_mount_foregrip")
+
+--
+
+ATT = {}
+
+ATT.PrintName = "Laser Mount"
+ATT.CompactName = "LASER MNT"
+ATT.Icon = Material("entities/bocw_atts/mounts/lasermixbody.png", "mips smooth")
+ATT.Description = [[Barrel installed mount for laser body attachments on the TEC-9.]]
+ATT.SortOrder = 0
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+ATT.Free = true
+
+ATT.Category = {"bocw_tec9_body"}
+
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_mount_body.mdl"
+ATT.ModelBodygroups = "00"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.Attachments = {
+    {
+        PrintName = "BODY",
+        Bone = "tag_barrel",
+        Pos = Vector(0.35, 0.9, -0.2),
+        Ang = Angle(0, 0, -20),
+        Icon_Offset = Vector(0, 0, 1),
+        Category = {"bocw_submachineguns_body_laserwest", "bocw_submachineguns_body_mixwest"},
+    }
+}
+
+ARC9.LoadAttachment(ATT, "bocw_tec9_mount_lasermix")
+
+ATT = {}
+
+ATT.PrintName = "Flashlight Mount"
+ATT.CompactName = "FLASH MNT"
+ATT.Icon = Material("entities/bocw_atts/mounts/flashlight.png", "mips smooth")
+ATT.Description = [[Barrel installed mount for flashlights on the TEC-9.]]
+ATT.SortOrder = 1
+ATT.MenuCategory = "ARC9 - BOCW Attachments"
+ATT.Free = true
+
+ATT.Category = {"bocw_tec9_body"}
+
+ATT.Model = "models/weapons/arc9/atts/bocw_tec9_mount_body.mdl"
+ATT.ModelBodygroups = "01"
+
+ATT.Scale = 1
+ATT.ModelOffset = Vector(0, 0, 0)
+ATT.ModelAngleOffset = Angle(0, 0, 0)
+
+ATT.Attachments = {
+    {
+        PrintName = "BODY",
+        Bone = "tag_weapon",
+        Pos = Vector(0.5, 1.77, -0.69),
+        Ang = Angle(0, 0, 0),
+        Icon_Offset = Vector(0, 0, 0.5),
+        Category = {"bocw_submachineguns_body_flashwest"},
+    }
+}
+
+ARC9.LoadAttachment(ATT, "bocw_tec9_mount_flashlight")
