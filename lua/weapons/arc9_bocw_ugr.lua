@@ -147,7 +147,7 @@ SWEP.BottomlessClip = false -- Weapon never has to reload
 SWEP.ReloadWhileSprint = true -- This weapon can reload while the user is sprinting.
 SWEP.ReloadInSights = true -- This weapon can aim down sights while reloading.
 
-SWEP.CanFireUnderwater = false -- This weapon can shoot while underwater.
+SWEP.CanFireUnderwater = true -- This weapon can shoot while underwater.
 
 SWEP.ShouldDropMag = false
 SWEP.ShouldDropMagEmpty = false
@@ -593,14 +593,14 @@ SWEP.Attachments = {
         Pos = Vector(-0.1, 0, 0),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_ugr_muzzle", "bocw_smg_muzzle_east9"},
+        Category = {"bocw_ugr_muzzle"},
     },
     {
         PrintName = "BARREL",
         Bone = "tag_barrel",
         Pos = Vector(0, 0, 0),
         Ang = Angle(0, 0, 0),
-        Icon_Offset = Vector(3, 0, 0),
+        Icon_Offset = Vector(7, 0, 0),
         Category = {"bocw_ugr_barrel"},
         InstalledElements = {"barrelgone"},
     },
