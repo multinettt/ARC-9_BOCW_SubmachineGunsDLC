@@ -605,7 +605,7 @@ SWEP.Attachments = {
         Pos = Vector(6, 1.43, 0.65),
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(0, 0, 0),
-        Category = {"bocw_submachineguns_body_lasereast", "bocw_submachineguns_body_flasheast"},
+        Category = {"bocw_ugr_body_lasereast", "bocw_ugr_body_flasheast"},
         InstalledElements = {"bodymount_lasermix"},
     },
     {
