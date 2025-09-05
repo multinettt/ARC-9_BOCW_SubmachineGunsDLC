@@ -614,7 +614,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(20.25, 4.5, -5),
         Category = {"bocw_ots9_underbarrel"},
-        InstalledElements = {"foregripmount"},
     },
     {
         PrintName = "MAGAZINE",

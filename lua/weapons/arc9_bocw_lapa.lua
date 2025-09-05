@@ -636,7 +636,6 @@ SWEP.Attachments = {
         Ang = Angle(0, 0, 0),
         Icon_Offset = Vector(-7, 0, 2.5),
         Category = {"bocw_lapa_stock"},
-        InstalledElements = {"stockgone"},
     },
     {
         PrintName = "CAMO",

@@ -4403,8 +4403,6 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ActivateElements = {"stockgone"}
-
 ARC9.LoadAttachment(ATT, "bocw_lapa_stock_duster")
 
 ATT = {}
@@ -4423,6 +4421,8 @@ ATT.Category = "bocw_lapa_stock"
 ATT.SprintToFireTimeMult = 0.7
 
 ATT.SpreadMultHipFire = 1.15
+
+ATT.ActivateElements = {"stockgone"}
 
 ARC9.LoadAttachment(ATT, "bocw_lapa_stock_cqb")
 
