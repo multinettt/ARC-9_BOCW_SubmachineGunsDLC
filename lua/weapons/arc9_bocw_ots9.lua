@@ -187,8 +187,8 @@ SWEP.Firemodes = {
 -------------------------- RECOIL
 
 SWEP.Recoil = 1
-SWEP.RecoilSide = -0.2
-SWEP.RecoilUp = 0.4
+SWEP.RecoilSide = -0.4
+SWEP.RecoilUp = 0.5
 
 SWEP.RecoilRandomUp = 0.01
 SWEP.RecoilRandomSide = 0.01
@@ -203,7 +203,7 @@ SWEP.Spread = math.rad(1 / 37.5)
 SWEP.SpreadMultRecoil = 1.8
 
 SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(80 / 37.5)
+SWEP.SpreadAddHipFire = math.rad(110 / 37.5)
 SWEP.SpreadAddMove = math.rad(100 / 37.5)
 SWEP.SpreadAddMidAir = math.rad(100 / 37.5)
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)

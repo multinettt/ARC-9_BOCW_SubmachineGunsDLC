@@ -186,8 +186,8 @@ SWEP.RunawayBurst = false
 -------------------------- RECOIL
 
 SWEP.Recoil = 1
-SWEP.RecoilSide = -0.2
-SWEP.RecoilUp = 0.4
+SWEP.RecoilSide = -0.5
+SWEP.RecoilUp = 0.8
 
 SWEP.RecoilRandomUp = 0.01
 SWEP.RecoilRandomSide = 0.01
@@ -207,7 +207,7 @@ SWEP.SpreadAddMove = math.rad(100 / 37.5)
 SWEP.SpreadAddMidAir = math.rad(100 / 37.5)
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
-SWEP.RecoilPatternDrift = 20
+SWEP.RecoilPatternDrift = 14
 
 SWEP.UseVisualRecoil = true
 
@@ -656,20 +656,10 @@ SWEP.Attachments = {
         CosmeticOnly = true,
     },
     {
-        PrintName = "STICKER 3", 
-        Bone = "tag_clip",
+        PrintName = "STICKER 3",
         Category = "stickers",
         StickerModel = "models/weapons/arc9/stickers/bocw_tec9_sticker3.mdl",
         CosmeticOnly = true,
-        ExcludeElements = {"tec9_mag_ext"}
-    },
-    {
-        PrintName = "STICKER 3", 
-        Bone = "tag_clip",
-        Category = "stickers",
-        StickerModel = "models/weapons/arc9/stickers/bocw_tec9_sticker3_ext.mdl",
-        CosmeticOnly = true,
-        RequireElements = {"tec9_mag_ext"}
     },
 }
 

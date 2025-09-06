@@ -187,8 +187,8 @@ SWEP.Firemodes = {
 -------------------------- RECOIL
 
 SWEP.Recoil = 1
-SWEP.RecoilSide = -0.2
-SWEP.RecoilUp = 0.4
+SWEP.RecoilSide = -1
+SWEP.RecoilUp = 1
 
 SWEP.RecoilRandomUp = 0.01
 SWEP.RecoilRandomSide = 0.01
@@ -203,12 +203,12 @@ SWEP.Spread = math.rad(1 / 37.5)
 SWEP.SpreadMultRecoil = 1.8
 
 SWEP.SpreadMultSights = 0.1
-SWEP.SpreadAddHipFire = math.rad(80 / 37.5)
+SWEP.SpreadAddHipFire = math.rad(110 / 37.5)
 SWEP.SpreadAddMove = math.rad(100 / 37.5)
 SWEP.SpreadAddMidAir = math.rad(100 / 37.5)
 -- SWEP.SpreadAddShooting = math.rad(5 / 37.5) -- math.rad(108 / 37.5)
 
-SWEP.RecoilPatternDrift = 20
+SWEP.RecoilPatternDrift = 5
 
 SWEP.UseVisualRecoil = true
 
@@ -692,19 +692,9 @@ SWEP.Attachments = {
     },
     {
         PrintName = "STICKER 3", 
-        Bone = "tag_clip",
         Category = "stickers",
         StickerModel = "models/weapons/arc9/stickers/bocw_mac10_sticker3.mdl",
         CosmeticOnly = true,
-        ExcludeElements = {"mac10_mag_ext"}
-    },
-    {
-        PrintName = "STICKER 3", 
-        Bone = "tag_clip",
-        Category = "stickers",
-        StickerModel = "models/weapons/arc9/stickers/bocw_mac10_sticker3_ext.mdl",
-        CosmeticOnly = true,
-        RequireElements = {"mac10_mag_ext"}
     },
 }
 

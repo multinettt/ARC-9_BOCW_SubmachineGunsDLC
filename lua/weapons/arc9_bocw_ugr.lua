@@ -187,11 +187,11 @@ SWEP.Firemodes = {
 -------------------------- RECOIL
 
 SWEP.Recoil = 1
-SWEP.RecoilSide = -0.2
-SWEP.RecoilUp = 0.4
+SWEP.RecoilSide = -0.4
+SWEP.RecoilUp = 0.7
 
-SWEP.RecoilRandomUp = 0.01
-SWEP.RecoilRandomSide = 0.01
+SWEP.RecoilRandomUp = 0.11
+SWEP.RecoilRandomSide = 0.41
 
 SWEP.RecoilDissipationRate = 40 -- How much recoil dissipates per second.
 SWEP.RecoilResetTime = 0.1 -- How long the gun must go before the recoil pattern starts to reset.
