@@ -369,7 +369,7 @@ SWEP.StripperClipBGs = {}
 SWEP.HideBones = {
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = {
-    [1] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate"},
+    [1] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate", "tag_bullet_deplete_sqtl_03_animate"},
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -844,6 +844,7 @@ SWEP.Animations = {
         Time = 3.1,
         MinProgress = 0.5,
         MagSwapTime = 1,
+        DropMagAt = 0.5,
         EventTable = {
             { s = "ARC9_BOCW.TEC9_reload_start", t = 0 },
             { s = "ARC9_BOCW.TEC9_reload_magout", t = 0.3 },
@@ -852,6 +853,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.TEC9_boltback", t = 1.9 },
             { s = "ARC9_BOCW.TEC9_boltrelease", t = 2 },
             { s = "ARC9_BOCW.TEC9_reload_end", t = 2.3 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 0.5 },
+            { hide = 0, t = 0.8 },
         },
         IKTimeLine = {
             {
@@ -915,6 +919,7 @@ SWEP.Animations = {
         Time = 3.1,
         MinProgress = 0.5,
         MagSwapTime = 1,
+        DropMagAt = 0.5,
         EventTable = {
             { s = "ARC9_BOCW.TEC9_reload_start", t = 0 },
             { s = "ARC9_BOCW.TEC9_reload_magout", t = 0.3 },
@@ -923,6 +928,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.TEC9_boltback", t = 1.9 },
             { s = "ARC9_BOCW.TEC9_boltrelease", t = 2 },
             { s = "ARC9_BOCW.TEC9_reload_end", t = 2.3 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 0.5 },
+            { hide = 0, t = 0.8 },
         },
         IKTimeLine = {
             {
@@ -985,7 +993,7 @@ SWEP.Animations = {
         Source = "reload_fast_empty",
         Time = 3.1,
         MinProgress = 0.5,
-        DropMagAt = 0.55,
+        DropMagAt = 0.5,
         EventTable = {
             { s = "ARC9_BOCW.TEC9_reload_start", t = 0 },
             { s = "ARC9_BOCW.TEC9_reload_magout", t = 0.2 },
@@ -994,6 +1002,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.TEC9_boltback", t = 1.9 },
             { s = "ARC9_BOCW.TEC9_boltrelease", t = 2 },
             { s = "ARC9_BOCW.TEC9_reload_end", t = 2.2 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 0.5 },
+            { hide = 0, t = 0.8 },
         },
         IKTimeLine = {
             {
@@ -1057,6 +1068,7 @@ SWEP.Animations = {
         Time = 3.1,
         MinProgress = 0.5,
         MagSwapTime = 1,
+        DropMagAt = 0.5,
         EventTable = {
             { s = "ARC9_BOCW.TEC9_reload_start", t = 0 },
             { s = "ARC9_BOCW.TEC9_reload_magout", t = 0.2 },
@@ -1065,6 +1077,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.TEC9_boltback", t = 1.9 },
             { s = "ARC9_BOCW.TEC9_boltrelease", t = 2 },
             { s = "ARC9_BOCW.TEC9_reload_end", t = 2.2 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 0.5 },
+            { hide = 0, t = 0.8 },
         },
         IKTimeLine = {
             {

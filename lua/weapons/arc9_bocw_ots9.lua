@@ -371,7 +371,8 @@ SWEP.HideBones = {
     "tag_clip1"
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = {
-    [1] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate"},
+    [1] = {"tag_clip1"},
+    [2] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate", "tag_bullet_deplete_sqtl_03_animate"},
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -848,6 +849,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.OTs9_reload_rattle", t = 0.8 },
             { s = "ARC9_BOCW.OTs9_reload_magin", t = 1.4 },
             { s = "ARC9_BOCW.OTs9_reload_end", t = 1.9 },
+            { hide = 1, t = 0 },
         },
         IKTimeLine = {
             {
@@ -877,6 +879,7 @@ SWEP.Animations = {
         Time = 3,
         MinProgress = 0.55,
         MagSwapTime = 1,
+        DropMagAt = 1,
         EventTable = {
             { s = "ARC9_BOCW.OTs9_reload_start", t = 0 },
             { s = "ARC9_BOCW.OTs9_reload_empty_magout", t = 0.6 },
@@ -885,6 +888,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.OTs9_boltback", t = 2.15 },
             { s = "ARC9_BOCW.OTs9_boltrelease", t = 2.3 },
             { s = "ARC9_BOCW.OTs9_reload_end", t = 2.5 },
+            { hide = 0, t = 0 },
+            { hide = 2, t = 1 },
         },
         IKTimeLine = {
             {
@@ -920,6 +925,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.OTs9_reload_rattle", t = 0.8 },
             { s = "ARC9_BOCW.OTs9_reload_magin", t = 1.4 },
             { s = "ARC9_BOCW.OTs9_reload_end", t = 1.9 },
+            { hide = 1, t = 0 },
         },
         IKTimeLine = {
             {
@@ -949,6 +955,7 @@ SWEP.Animations = {
         Time = 3,
         MinProgress = 0.55,
         MagSwapTime = 1,
+        DropMagAt = 1,
         EventTable = {
             { s = "ARC9_BOCW.OTs9_reload_start", t = 0 },
             { s = "ARC9_BOCW.OTs9_reload_empty_magout", t = 0.6 },
@@ -957,6 +964,8 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.OTs9_boltback", t = 2.15 },
             { s = "ARC9_BOCW.OTs9_boltrelease", t = 2.3 },
             { s = "ARC9_BOCW.OTs9_reload_end", t = 2.5 },
+            { hide = 0, t = 0 },
+            { hide = 2, t = 1 },
         },
         IKTimeLine = {
             {

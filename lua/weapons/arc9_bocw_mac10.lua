@@ -873,12 +873,16 @@ SWEP.Animations = {
         Time = 3.27,
         MinProgress = 0.45,
         MagSwapTime = 1,
+        DropMagAt = 0.55,
         EventTable = {
             { s = "ARC9_BOCW.MAC10_reload_magout", t = 0.2 },
             { s = "ARC9_BOCW.MAC10_reload_magin", t = 1 },
             { s = "ARC9_BOCW.MAC10_reload_boltback", t = 1.85 },
             { s = "ARC9_BOCW.MAC10_reload_boltrelease", t = 2.05 },
             { s = "ARC9_BOCW.MAC10_reload_end", t = 2.5 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 0.55 },
+            { hide = 0, t = 0.8 },
         },
         IKTimeLine = {
             {
@@ -940,12 +944,16 @@ SWEP.Animations = {
         Time = 3.27,
         MinProgress = 0.45,
         MagSwapTime = 1,
+        DropMagAt = 0.55,
         EventTable = {
             { s = "ARC9_BOCW.MAC10_reload_magout", t = 0.2 },
             { s = "ARC9_BOCW.MAC10_reload_magin", t = 1 },
             { s = "ARC9_BOCW.MAC10_reload_boltback", t = 1.85 },
             { s = "ARC9_BOCW.MAC10_reload_boltrelease", t = 2.05 },
             { s = "ARC9_BOCW.MAC10_reload_end", t = 2.5 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 0.55 },
+            { hide = 0, t = 0.8 },
         },
         IKTimeLine = {
             {
@@ -1015,7 +1023,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.MAC10_reload_end", t = 2.5 },
             { hide = 0, t = 0 },
             { hide = 1, t = 0.55 },
-            { hide = 0, t = 0.9 },
+            { hide = 0, t = 0.8 },
         },
         IKTimeLine = {
             {
@@ -1077,12 +1085,16 @@ SWEP.Animations = {
         Time = 3.27,
         MinProgress = 0.45,
         MagSwapTime = 1,
+        DropMagAt = 0.55,
         EventTable = {
             { s = "ARC9_BOCW.MAC10_reload_magout", t = 0.2 },
             { s = "ARC9_BOCW.MAC10_reload_magin", t = 0.9 },
             { s = "ARC9_BOCW.MAC10_reload_boltback", t = 1.85 },
             { s = "ARC9_BOCW.MAC10_reload_boltrelease", t = 2.05 },
             { s = "ARC9_BOCW.MAC10_reload_end", t = 2.5 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 0.55 },
+            { hide = 0, t = 0.8 },
         },
         IKTimeLine = {
             {

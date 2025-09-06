@@ -894,12 +894,16 @@ SWEP.Animations = {
         Time = 2.93,
         MinProgress = 0.5,
         MagSwapTime = 1,
+        DropMagAt = 0.5,
         EventTable = {
             { s = "ARC9_BOCW.PPSh41_reload_start", t = 0 },
             { s = "ARC9_BOCW.PPSh41_reload_magout", t = 0.2 },
             { s = "ARC9_BOCW.PPSh41_reload_magin", t = 1 },
             { s = "ARC9_BOCW.PPSh41_boltback", t = 2 },
             { s = "ARC9_BOCW.PPSh41_reload_end", t = 2.4 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 0.5 },
+            { hide = 0, t = 0.8 },
         },
         IKTimeLine = {
             {
@@ -962,12 +966,16 @@ SWEP.Animations = {
         Time = 3.27,
         MinProgress = 0.45,
         MagSwapTime = 1,
+        DropMagAt = 0.5,
         EventTable = {
             { s = "ARC9_BOCW.PPSh41_reload_start", t = 0 },
             { s = "ARC9_BOCW.PPSh41_reload_ext_magout", t = 0.2 },
             { s = "ARC9_BOCW.PPSh41_reload_ext_magin", t = 1.1 },
             { s = "ARC9_BOCW.PPSh41_boltback", t = 2.2 },
             { s = "ARC9_BOCW.PPSh41_reload_end", t = 2.8 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 0.5 },
+            { hide = 0, t = 0.8 },
         },
         IKTimeLine = {
             {

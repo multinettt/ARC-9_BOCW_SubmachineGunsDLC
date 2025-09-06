@@ -2645,7 +2645,7 @@ ARC9.LoadAttachment(ATT, "bocw_ots9_underbarrel_spetsnazspeedgrip")
 ATT = {}
 
 ATT.PrintName = "30 Rnd" --// 1
-ATT.CompactName = "55 RND"
+ATT.CompactName = "30 RND"
 ATT.Icon = Material("entities/bocw_atts/magazines/ots9_ext1.png", "mips smooth")
 ATT.Description = [[Extended magazine holds 30 rounds.
 
@@ -2774,7 +2774,7 @@ ATT.Scale = 1
 ATT.ModelOffset = Vector(0, 0, 0)
 ATT.ModelAngleOffset = Angle(0, 0, 0)
 
-ATT.ReloadTimeMult = 0.4
+ATT.ReloadTimeMult = 0.6
 ATT.SupplyLimitOverride = 5
 
 ATT.AimDownSightsTimeMult = 1.06

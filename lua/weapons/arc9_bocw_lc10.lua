@@ -160,7 +160,7 @@ SWEP.DropMagazineTime = 2
 SWEP.DropMagazineQCA = 4 -- QC Attachment drop mag from, would drop from shell port if not defined
 SWEP.DropMagazinePos = Vector(0, 0, 0) -- offsets
 SWEP.DropMagazineAng = Angle(0, -90, -90)
-SWEP.DropMagazineVelocity = Vector(0, -100, 0) -- Put something here if your anim throws the mag with force
+SWEP.DropMagazineVelocity = Vector(0, 0, -60) -- Put something here if your anim throws the mag with force
 
 -------------------------- FIREMODES
 
@@ -368,7 +368,9 @@ SWEP.HideBones = {
     "tag_clip1"
 } -- bones to hide in third person and customize menu. {"list", "of", "bones"}
 SWEP.ReloadHideBoneTables = {
-    [1] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate"},
+    [1] = {"tag_clip1"},
+    [2] = {"tag_clip", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate", "tag_bullet_deplete_sqtl_03_animate", "tag_bullet_deplete_sqtl_04_animate", "tag_bullet_deplete_sqtl_05_animate", "tag_bullet_deplete_sqtl_06_animate", "tag_bullet_deplete_sqtl_07_animate", "tag_bullet_deplete_sqtl_08_animate", "tag_bullet_deplete_sqtl_09_animate", "tag_bullet_deplete_sqtl_10_animate", "tag_bullet_deplete_sqtl_11_animate", "tag_bullet_deplete_sqtl_12_animate", "tag_bullet_deplete_sqtl_13_animate", "tag_bullet_deplete_sqtl_14_animate", "tag_bullet_deplete_sqtl_15_animate"},
+    [3] = {"tag_clip", "tag_clip1", "tag_bullet_deplete_sqtl_00_animate", "tag_bullet_deplete_sqtl_01_animate", "tag_bullet_deplete_sqtl_02_animate", "tag_bullet_deplete_sqtl_03_animate", "tag_bullet_deplete_sqtl_04_animate", "tag_bullet_deplete_sqtl_05_animate", "tag_bullet_deplete_sqtl_06_animate", "tag_bullet_deplete_sqtl_07_animate", "tag_bullet_deplete_sqtl_08_animate", "tag_bullet_deplete_sqtl_09_animate", "tag_bullet_deplete_sqtl_10_animate", "tag_bullet_deplete_sqtl_11_animate", "tag_bullet_deplete_sqtl_12_animate", "tag_bullet_deplete_sqtl_13_animate", "tag_bullet_deplete_sqtl_14_animate", "tag_bullet_deplete_sqtl_15_animate"},
 }
 
 SWEP.PoseParameters = {} -- Poseparameters to manage. ["parameter"] = starting value.
@@ -834,6 +836,7 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.LC10_reload_maggrab", t = 0.8 },
             { s = "ARC9_BOCW.LC10_reload_magin", t = 1.2 },
             { s = "ARC9_BOCW.LC10_reload_end", t = 1.7 },
+            { hide = 1, t = 0 },
         },
         IKTimeLine = {
             {
@@ -863,6 +866,7 @@ SWEP.Animations = {
         Time = 2.9,
         MinProgress = 0.55,
         MagSwapTime = 1,
+        DropMagAt = 1.15,
         EventTable = {
             { s = "ARC9_BOCW.LC10_reload_start", t = 0 },
             { s = "ARC9_BOCW.LC10_reload_magoutstart", t = 0.5 },
@@ -872,6 +876,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.LC10_boltback", t = 2 },
             { s = "ARC9_BOCW.LC10_boltrelease", t = 2.1 },
             { s = "ARC9_BOCW.LC10_reload_end", t = 2.3 },
+            { hide = 0, t = 0 },
+            { hide = 2, t = 1.15 },
+            { hide = 0, t = 2.6 },
         },
         IKTimeLine = {
             {
@@ -900,11 +907,15 @@ SWEP.Animations = {
         Source = "reload_fast",
         Time = 2.3,
         MinProgress = 0.7,
+        DropMagAt = 1.1,
         EventTable = {
             { s = "ARC9_BOCW.LC10_reload_start", t = 0 },
             { s = "ARC9_BOCW.LC10_reload_magout", t = 0.6 },
             { s = "ARC9_BOCW.LC10_reload_magin", t = 1.1 },
             { s = "ARC9_BOCW.LC10_reload_end", t = 1.6 },
+            { hide = 0, t = 0 },
+            { hide = 2, t = 1.1 },
+            { hide = 0, t = 2.2 },
         },
         IKTimeLine = {
             {

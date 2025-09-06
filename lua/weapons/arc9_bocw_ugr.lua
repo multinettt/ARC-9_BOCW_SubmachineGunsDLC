@@ -839,6 +839,7 @@ SWEP.Animations = {
         Time = 3.27,
         MinProgress = 0.45,
         MagSwapTime = 1,
+        DropMagAt = 0.8,
         EventTable = {
             { s = "ARC9_BOCW.UGR_reload_start", t = 0 },
             { s = "ARC9_BOCW.UGR_reload_magoutstart", t = 0.2 },
@@ -847,6 +848,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.UGR_reload_magin", t = 1.6 },
             { s = "ARC9_BOCW.UGR_boltback", t = 2.5 },
             { s = "ARC9_BOCW.UGR_reload_end", t = 2.9 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 0.8 },
+            { hide = 0, t = 1.4 },
         },
         IKTimeLine = {
             {
@@ -911,6 +915,7 @@ SWEP.Animations = {
         Time = 3.27,
         MinProgress = 0.45,
         MagSwapTime = 1,
+        DropMagAt = 0.8,
         EventTable = {
             { s = "ARC9_BOCW.UGR_reload_start", t = 0 },
             { s = "ARC9_BOCW.UGR_reload_magoutstart", t = 0.2 },
@@ -919,6 +924,9 @@ SWEP.Animations = {
             { s = "ARC9_BOCW.UGR_reload_magin", t = 1.6 },
             { s = "ARC9_BOCW.UGR_boltback", t = 2.5 },
             { s = "ARC9_BOCW.UGR_reload_end", t = 2.9 },
+            { hide = 0, t = 0 },
+            { hide = 1, t = 0.8 },
+            { hide = 0, t = 1.4 },
         },
         IKTimeLine = {
             {
