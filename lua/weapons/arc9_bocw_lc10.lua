@@ -680,7 +680,7 @@ SWEP.Attachments = {
         CosmeticOnly = true,
     },
     {
-        PrintName = "STICKER 3", 
+        PrintName = "STICKER 3",
         Category = "stickers",
         StickerModel = "models/weapons/arc9/stickers/bocw_lc10_sticker3.mdl",
         CosmeticOnly = true,

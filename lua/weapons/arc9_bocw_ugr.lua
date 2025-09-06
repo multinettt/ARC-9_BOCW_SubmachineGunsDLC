@@ -131,7 +131,7 @@ SWEP.TracerSize = 0.5
 
 -------------------------- MAGAZINE
 
-SWEP.Ammo = "pistol" -- What ammo type this gun uses.
+SWEP.Ammo = "ar2" -- What ammo type this gun uses.
 
 SWEP.ChamberSize = 0 -- The amount of rounds this gun can chamber.
 SWEP.ClipSize = 27 -- Self-explanatory.
@@ -541,6 +541,14 @@ SWEP.AttachmentSlotMods = {
 
 -- Adjust the stats of specific attachments when applied to this gun
 SWEP.AttachmentTableOverrides = {
+    ["bocw_submachineguns_muzzle_silencer_east545"] = {
+        ModelOffset = Vector(-0.2,0,0),
+        Scale = 1,
+    },
+    ["bocw_submachineguns_muzzle_silencerpro_east545"] = {
+        ModelOffset = Vector(-0.08,0,0),
+        Scale = 1,
+    },
     ["bocw_optic_visiontech2x"] = {
         VisualRecoil = 0.1
     },
